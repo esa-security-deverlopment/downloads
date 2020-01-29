@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html xmlns="http://www.w3.org/1999/xhtml" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <head style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <meta name="viewport" content="width=device-width, initial-scale=1.0" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <meta name="format-detection" content="date=no" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <meta name="format-detection" content="telephone=no" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <meta name="format-detection" content="address=no" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <style type="text/css" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px">
+
+		* {
+			margin: 0;
+			font-family: 'Arial', sans-serif;
+			box-sizing: border-box;
+			font-size: 14px;
+		}
+
+		img {
+			max-width: 100%;
+			margin: 0;
+		}
+
+		body {
+			-webkit-font-smoothing: antialiased;
+			
+			width: 100% !important;
+			height: 100%;
+		}
+
+		table td {
+			vertical-align: top;
+		}
+
+		body {
+			background-color: #eee;
+		}
+
+		.body-wrap {
+			background-color: #eee;
+			width: 100%;
+		}
+
+		.container {
+			display: block !important;
+			max-width: 600px !important;
+			margin: 0 auto !important;
+			/* makes it centered */
+			clear: both !important;
+		}
+
+		.content {
+			max-width: 600px;
+			margin: 0 auto;
+			display: block;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.main {
+			border-radius: 3px;
+		}
+
+		.card {
+			box-shadow: 0 3px 6px -3px rgba(0,0,0,.3);
+		}
+
+		.content-wrap {
+			padding: 6px;
+			background-color: #fff;
+		}
+
+		.content-block {
+			padding: 6px 16px;
+		}
+
+		.content-block>p {
+			color: #505050;
+		}
+
+		td.content-block-image {
+			line-height: 0;
+			padding: 0;
+			font-size: 0px;
+		}
+
+		.header {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		.footer {
+			width: 100%;
+			clear: both;
+			color: #999;
+		}
+
+		.footer p,
+		.footer a,
+		.footer td {
+			font-size: 12px;
+		}
+
+		.footer .content-block {
+			padding: 30px 20px 20px;
+			color: #999;
+		}
+
+		.header-banner {
+			padding: 16px 10px;
+			border-radius: 4px 4px 0 0;
+			background-color: #4b88f2;
+		}
+
+		.header-banner .text {
+			text-align: center;
+			font-size: 18px;
+			font-weight: 500;
+			line-height: 18px;
+			color: #fff;
+		}
+
+		.header-banner .logo {
+			width: 51px;
+			height: 18px;
+			max-width: none;
+		}
+
+		h1,
+		h2,
+		h3 {
+			font-family: 'Trebuchet MS', sans-serif;
+			color: #505050;
+			line-height: 1.2em;
+		}
+
+		h1 {
+			font-size: 25px;
+			font-weight: 500;
+			margin: 6px 0 6px 0;
+		}
+
+		h2 {
+			font-size: 15px;
+			margin: 6px 0 0;
+			font-weight: 600;
+		}
+
+		h3 {
+			font-size: 16px;
+		}
+
+		p,
+		ul,
+		ol {
+			margin-bottom: 10px;
+			font-weight: normal;
+			color: #505050;
+		}
+
+		p li,
+		ul li,
+		ol li {
+			margin-left: 5px;
+			list-style-position: inside;
+		}
+
+		em {
+			font-size: 14px;
+			font-style: normal;
+			color: #505050;
+		}
+
+		a {
+			color: #348eda;
+			margin: 0;
+			padding: 0;
+		}
+
+		@media only screen and (min-width: 641px) {
+			td.content-block-image {
+				padding: 0 !important;
+			}
+			.footer .content-block {
+				padding: 20px 55px 20px !important;
+			}
+			.footer .left {
+				float: left !important;
+				text-align: left !important;
+				width: 45% !important;
+			}
+			.footer .right {
+				float: right !important;
+				text-align: right !important;
+				width: 45% !important;
+			}
+			.header-banner {
+				padding: 16px !important;
+			}
+		}
+
+		@media only screen and (max-width: 640px) {
+			.container {
+				width: 100% !important;
+			}
+			.row {
+				display: block !important;
+			}
+		}
+
+		img {
+			width: 30px;
+		}
+
+		.info-box {
+			border: 2px dotted orange;
+			padding: 10px;
+		}
+
+		tr.intro-text {
+			background-color: orange;
+		}
+
+		.intro-text * {
+			font-size: 14px;
+			color: white;
+		}
+
+		.intro-text a {
+			text-decoration: underline;
+		}
+		.intro-text h3 {
+			color: white;
+			margin-bottom: 10px;
+		}
+		.intro-text img {
+		float: left !important;
+		margin: 15px 20px !important;
+		}
+		.intro-text .center {
+			margin: 0 !important;
+			width: auto;
+		}
+		.intro-text .content {
+			margin: 10px 10px !important;
+		}
+
+		.divider {
+			border-bottom: 1px solid #f1f1f1;
+			margin: 4px 0 8px;
+		}
+
+		.cta-text {
+			margin-bottom: 20px;
+		}
+
+		.btn-primary {
+			text-decoration: none;
+			color: #FFF;
+			background-color: #4b88f2;
+			border: solid #4b88f2;
+			border-width: 6px 20px;
+			line-height: 2em;
+			text-align: center;
+			cursor: pointer;
+			display: inline-block;
+			border-radius: 2px;
+			font-size: 14px;
+		}
+
+		.btn-secondary {
+			text-decoration: none;
+			color: #4b88f2;
+			background-color: #fff;
+			border: solid #4b88f2;
+			border-width: 1px;
+			line-height: 2em;
+			/* 2em * 14px = 28px, use px to get airier line-height also in Thunderbird, and Yahoo!, Outlook.com, AOL webmail clients */
+			/*line-height: 28px;*/
+			text-align: center;
+			cursor: pointer;
+			display: inline-block;
+			border-radius: 2px;
+			font-size: 14px;
+			width: auto;
+
+			padding: 4px 8px;
+		}
+
+		.btn-large {
+			font-size: 16px;
+			border-width: 10px 20px;
+		}
+
+	</style> </head> <body itemscope itemtype="http://schema.org/EmailMessage" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;background-color: #eee;-webkit-font-smoothing: antialiased;width: 100% !important;height: 100%"> <table class="body-wrap" cellpadding="0" cellspacing="0" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;background-color: #eee;width: 100%"><tr style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <td style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top"></td> <td class="container" width="600" style="margin: 0 auto !important;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top;display: block !important;max-width: 600px !important;clear: both !important"> <div class="content" style="margin: 10px;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;max-width: 600px;display: block"> <table class="main" width="100%" cellpadding="0" cellspacing="0" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;border-radius: 3px"> <tr style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <td class="header-banner" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top;padding: 16px !important;border-radius: 4px 4px 0 0;background-color: #4b88f2"> <table width="100%" height="18px" cellpadding="0" cellspacing="0" style="min-width:100%;margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"><tr style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <td style="width: 70px;min-width:70px;margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top"> <a href="http://c.booli.se/track/click/30046337/www.booli.se?p=eyJzIjoiNnBaSVp3VGNDZ0llNl9OYnFhdkNKRlh6R3cwIiwidiI6MSwicCI6IntcInVcIjozMDA0NjMzNyxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL3d3dy5ib29saS5zZVxcXC8_dXRtX3NvdXJjZT1ib29saSZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1zdGF0aXN0aWNzLW1haWwmdXRtX2NvbnRlbnQ9bG9nbyZ0b2tlbj0yNTdmNDQwYWVkMWRmYWY3Y2FlMzY2MGJmNmQ4NTE0NFwiLFwiaWRcIjpcIjNkZWE2YTYyMGFhZTQ5ZDVhMjg0MTRmNjE3OWExMjkzXCIsXCJ1cmxfaWRzXCI6W1wiMTYwOWNhMzZjZGNlNzcxNzEyODkxYmVlYzU0ZWNkMWEyZmI4N2U1MlwiXX0ifQ" target="_blank" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;color: #348eda;padding: 0"> <img width="51" class="logo" src="https://bcdn.se/components/booli.se-assets/img/logo/white@2x.79a43c3b.png" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;width: 51px;max-width: none;height: 18px"></a> </td> <td style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top"> <div class="text" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 18px;text-align: center;font-weight: 500;line-height: 18px;color: #fff"> Månadsstatistik för december </div> </td> <td style="width: 70px;min-width:70px;margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top"> </td> </tr></table> </td> </tr> <tr class="card" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;box-shadow: 0 3px 6px -3px rgba(0,0,0,.3)"> <td class="content-wrap" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top;padding: 6px;background-color: #fff"> <table width="100%" cellpadding="0" cellspacing="0" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"><tr style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <td class="content-block" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top;padding: 6px 16px"> <h1 class="center" style="margin: 6px 0 6px 0;font-family: 'Trebuchet MS', sans-serif;box-sizing: border-box;font-size: 25px;color: #505050;line-height: 1.2em;font-weight: 500;text-align: center">Göteborg</h1> <p style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;margin-bottom: 10px;font-weight: normal;color: #505050"> Här kan du se statistik för <b style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px">Göteborg</b> under <b style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px">december</b> jämfört med samma månad förra året. Statistiken gäller <b style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px">hus</b> och är baserad på aktuella annonser samt slutpriser som vi har sett senaste månaden. På våra <a href="http://c.booli.se/track/click/30046337/www.booli.se?p=eyJzIjoiSFFoNnZfSGF0Y3lac3J3T3BzY25yZWNiZXAwIiwidiI6MSwicCI6IntcInVcIjozMDA0NjMzNyxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL3d3dy5ib29saS5zZVxcXC9zdlxcXC9hcnRpY2xlc1xcXC8xNTIyMzQ2LXZhZC1iZXR5ZGVyLXN0YXRpc3Rpa2VuLWktbWFuYWRzbWVqbGV0LW9jaC1wYS1rb250b3NpZGFuP3V0bV9zb3VyY2U9Ym9vbGkmdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249c3RhdGlzdGljcy1tYWlsJnV0bV9jb250ZW50PXN1cHBvcnQtbGlua1wiLFwiaWRcIjpcIjNkZWE2YTYyMGFhZTQ5ZDVhMjg0MTRmNjE3OWExMjkzXCIsXCJ1cmxfaWRzXCI6W1wiZTQ4ZDBiMWM2OGViYjNkZDU1NTdhZmEyMWMwMjUwZDA2MDdmMzkxMFwiXX0ifQ" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;color: #348eda;padding: 0">supportsidor</a> kan du läsa mer om vad statistiken betyder. </p> </td> </tr></table> </td> </tr> <tr style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <td style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top"> </td> </tr> <tr class="card" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;box-shadow: 0 3px 6px -3px rgba(0,0,0,.3)"> <td class="content-wrap" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top;padding: 6px;background-color: #fff"> <table width="100%" cellpadding="0" cellspacing="0" class="center" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;text-align: center"><tr style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <td class="content-block" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top;padding: 6px 16px"> <img alt="" src="http://bcdn.se/images/mail/house.png" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;width: 30px;max-width: 100%"><h2 style="margin: 6px 0 0;font-family: 'Trebuchet MS', sans-serif;box-sizing: border-box;font-size: 15px;font-weight: 600;color: #505050;line-height: 1.2em">Hur många bostäder såldes förra månaden?</h2> <h1 style="margin: 6px 0 6px 0;font-family: 'Trebuchet MS', sans-serif;box-sizing: border-box;font-size: 25px;color: #505050;line-height: 1.2em;font-weight: 500">58 st</h1> <p style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;margin-bottom: 10px;font-weight: normal;color: #505050">Ner från 66 st december 2018</p> </td> </tr></table> </td> </tr> <tr style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <td style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top"> </td> </tr> <tr class="card" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;box-shadow: 0 3px 6px -3px rgba(0,0,0,.3)"> <td class="content-wrap" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top;padding: 6px;background-color: #fff"> <table width="100%" cellpadding="0" cellspacing="0" class="center" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;text-align: center"><tr style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <td class="content-block" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top;padding: 6px 16px"> <img alt="" src="http://bcdn.se/images/mail/people.png" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;width: 30px;max-width: 100%"><h2 style="margin: 6px 0 0;font-family: 'Trebuchet MS', sans-serif;box-sizing: border-box;font-size: 15px;font-weight: 600;color: #505050;line-height: 1.2em">Hur många budgivare per försäljning?</h2> <h1 style="margin: 6px 0 6px 0;font-family: 'Trebuchet MS', sans-serif;box-sizing: border-box;font-size: 25px;color: #505050;line-height: 1.2em;font-weight: 500">2,9 st</h1> <p style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;margin-bottom: 10px;font-weight: normal;color: #505050">Ingen skillnad från 2,9 st december 2018</p> </td> </tr></table> </td> </tr> <tr style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <td style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top"> </td> </tr> <tr class="card" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;box-shadow: 0 3px 6px -3px rgba(0,0,0,.3)"> <td class="content-wrap" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top;padding: 6px;background-color: #fff"> <table width="100%" cellpadding="0" cellspacing="0" class="center" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;text-align: center"><tr style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <td class="content-block" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top;padding: 6px 16px"> <img alt="" src="http://bcdn.se/images/mail/diagram.png" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;width: 30px;max-width: 100%"><h2 style="margin: 6px 0 0;font-family: 'Trebuchet MS', sans-serif;box-sizing: border-box;font-size: 15px;font-weight: 600;color: #505050;line-height: 1.2em">Hur många annonser prissänktes?</h2> <h1 style="margin: 6px 0 6px 0;font-family: 'Trebuchet MS', sans-serif;box-sizing: border-box;font-size: 25px;color: #505050;line-height: 1.2em;font-weight: 500">6,1 %</h1> <p style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;margin-bottom: 10px;font-weight: normal;color: #505050">Ner från 10,2 % december 2018</p> </td> </tr></table> </td> </tr> <tr style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <td style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top"> </td> </tr> <tr style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <td class="content-block" align="center" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top;padding: 6px 16px"> <p class="cta-text" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;margin-bottom: 20px;font-weight: normal;color: #505050"> Vill du veta mer? På din kontosida hittar du mer statistik om Göteborg. </p> <a href="http://c.booli.se/track/click/30046337/www.booli.se?p=eyJzIjoic2FrWVp6dnhKR3otZm56cnRKSlZtVjFFbzU4IiwidiI6MSwicCI6IntcInVcIjozMDA0NjMzNyxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL3d3dy5ib29saS5zZVxcXC9rb250b1xcXC9taW4tYm9zdGFkP3V0bV9zb3VyY2U9Ym9vbGkmdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249c3RhdGlzdGljcy1tYWlsJnV0bV90ZXJtPWNhcmRzLTMmdXRtX2NvbnRlbnQ9RyVDMyVCNnRlYm9yZyZ0b2tlbj0yNTdmNDQwYWVkMWRmYWY3Y2FlMzY2MGJmNmQ4NTE0NCNib3N0YWRzbWFya25hZGVuXCIsXCJpZFwiOlwiM2RlYTZhNjIwYWFlNDlkNWEyODQxNGY2MTc5YTEyOTNcIixcInVybF9pZHNcIjpbXCJlNDhkMGIxYzY4ZWJiM2RkNTU1N2FmYTIxYzAyNTBkMDYwN2YzOTEwXCJdfSJ9" target="_blank" class="btn-primary btn-large" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 16px;color: #FFF;padding: 0;text-decoration: none;background-color: #4b88f2;border: solid #4b88f2;border-width: 10px 20px;line-height: 2em;text-align: center;cursor: pointer;display: inline-block;border-radius: 2px"> Mer statistik </a> </td> </tr> <tr style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <td style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top"> </td> </tr> <tr class="card" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;box-shadow: 0 3px 6px -3px rgba(0,0,0,.3)"> <td class="content-wrap" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top;padding: 6px;background-color: #fff"> <table width="100%" cellpadding="0" cellspacing="0" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <tr style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <td style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top"> <img src="https://blog.bcdn.se/blogg/wp-content/uploads/2019/12/the-christmas-spirit_statistikmejl.jpg" style="width: 100%;margin-bottom: 8px;margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;max-width: 100%"> </td> </tr> <tr style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <td class="content-block" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top;padding: 6px 16px"> <h2 style="margin: 6px 0 0;font-family: 'Trebuchet MS', sans-serif;box-sizing: border-box;font-size: 15px;font-weight: 600;color: #505050;line-height: 1.2em">Betalat för mycket ränta under 2019?</h2> </td> </tr> <tr style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <td class="content-block" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top;padding: 6px 16px"> <p style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;margin-bottom: 10px;font-weight: normal;color: #505050">Jämför din nuvarande bolåneränta med SBAB:s Räntematchen och se om du kan göra något roligare för pengarna nästa år!</p> </td> </tr> <tr style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <td class="content-block" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top;padding: 6px 16px"> <div class="divider" style="margin: 4px 0 8px;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;border-bottom: 1px solid #f1f1f1"></div> </td> </tr> <tr class="center" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;text-align: center"> <td class="content-block" style="border-bottom: 8px solid transparent;margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top;padding: 6px 16px"> <a class="btn-secondary" href="http://c.booli.se/track/click/30046337/www.sbab.se?p=eyJzIjoiQnRubGY2YVAtMGF2NFZOcFJxLTkzTzVuM1dBIiwidiI6MSwicCI6IntcInVcIjozMDA0NjMzNyxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL3d3dy5zYmFiLnNlXFxcLzFcXFwvcHJpdmF0XFxcL2xhbmFcXFwvYm9sYW5cXFwvYm9sYW5fLV9zYV9mdW5rYXJfZGV0XFxcL3JhbnRlbWF0Y2hlbi5odG1sP2ZrPTIwMDAwMSZhcD1ib29saSZ1dG1fc291cmNlPWJvb2xpJnV0bV9tZWRpdW09bWFpbCZ1dG1fY2FtcGFpZ249cmFudGVtYXRjaGVuJnV0bV9jb250ZW50PXN0YXRpc3Rpa21lamxcIixcImlkXCI6XCIzZGVhNmE2MjBhYWU0OWQ1YTI4NDE0ZjYxNzlhMTI5M1wiLFwidXJsX2lkc1wiOltcIjZjMDdhM2ZiZThmMDM2NGY1MjhkNzkxY2UwZDBlYjZhYjQ3ZDEwNDlcIl19In0" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;color: #4b88f2;padding: 4px 8px;text-decoration: none;background-color: #fff;border: solid #4b88f2;border-width: 1px;line-height: 2em;text-align: center;cursor: pointer;display: inline-block;border-radius: 2px;width: auto"> Utmana din ränta nu </a> </td> </tr> </table> </td> </tr> </table> <div class="footer" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;width: 100%;clear: both;color: #999"> <table width="100%" cellpadding="0" cellspacing="0" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"><tr style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> <td class="content-block" align="center" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 12px;vertical-align: top;padding: 20px 55px 20px !important;color: #999"> Du får det här mailet för att du tidigare har skapat en bostadsbevakning på booli.se. Hantera dina inställningar på <a href="http://c.booli.se/track/click/30046337/www.booli.se?p=eyJzIjoic2o1bm4yY2YzeGY1eENuYTZxbFZ1eDNITmpJIiwidiI6MSwicCI6IntcInVcIjozMDA0NjMzNyxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL3d3dy5ib29saS5zZVxcXC9rb250bz91dG1fc291cmNlPWJvb2xpJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPXN0YXRpc3RpY3MtbWFpbCZ1dG1fY29udGVudD1mb290ZXItYWNjb3VudCZ0b2tlbj0yNTdmNDQwYWVkMWRmYWY3Y2FlMzY2MGJmNmQ4NTE0NFwiLFwiaWRcIjpcIjNkZWE2YTYyMGFhZTQ5ZDVhMjg0MTRmNjE3OWExMjkzXCIsXCJ1cmxfaWRzXCI6W1wiYjRhNDU3NTdhMzg5ZjFlZDllYjlmYWQ2Y2QzODY1N2YzMzlkM2Q0MlwiLFwiYjkzZWM1NjYwOGZiMzAyZmVhN2E4MDE5ZDdjMGU4ZTcyMzlmYzAzM1wiLFwiY2I1NWQ4NTEwMmM1Yzg2YzIyY2I0ZWIwY2E5MTRiNjZlZmM5YzE5YlwiXX0ifQ" target="_blank" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 12px;color: #348eda;padding: 0">booli.se</a> <br style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"><br style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px"> Tryck <a href="http://c.booli.se/track/click/30046337/www.booli.se?p=eyJzIjoiQXR1RnAxV3NCZUhpdmRvOWlhZDlvNjJrSU9jIiwidiI6MSwicCI6IntcInVcIjozMDA0NjMzNyxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL3d3dy5ib29saS5zZVxcXC9tYWlsXFxcL3Vuc3Vic2NyaWJlP21haWw9U3RhdGlzdGljcyZ0b2tlbj0yNTdmNDQwYWVkMWRmYWY3Y2FlMzY2MGJmNmQ4NTE0NFwiLFwiaWRcIjpcIjNkZWE2YTYyMGFhZTQ5ZDVhMjg0MTRmNjE3OWExMjkzXCIsXCJ1cmxfaWRzXCI6W1wiOTExYjhjNGU0NTY1N2MzOTEwZjY1NGIwZWVkMzVhNDM4ZjIyNGMwYlwiLFwiYjkzZWM1NjYwOGZiMzAyZmVhN2E4MDE5ZDdjMGU4ZTcyMzlmYzAzM1wiLFwiMDY3NmU2ODIzMmRkMjYwZGE0ZTI3MzllMDlmYmU0OGM1YzA2NmFjYlwiXX0ifQ" target="_self" style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 12px;color: #348eda;padding: 0">här</a> om du inte längre vill få det här mailet. </td> </tr></table> </div> </div> </td> <td style="margin: 0;font-family: 'Arial', sans-serif;box-sizing: border-box;font-size: 14px;vertical-align: top"></td> </tr></table> <img src="http://c.booli.se/track/open.php?u=30046337&id=3dea6a620aae49d5a28414f6179a1293" height="1" width="1"></body> </html>

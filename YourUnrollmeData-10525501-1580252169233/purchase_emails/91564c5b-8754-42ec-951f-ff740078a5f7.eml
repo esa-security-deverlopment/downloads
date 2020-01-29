@@ -1,0 +1,297 @@
+Delivered-To: protection@firewicca.com
+Received: by 2002:a9d:17c5:0:0:0:0:0 with SMTP id j63csp5405873otj;
+        Wed, 22 Jan 2020 07:29:42 -0800 (PST)
+X-Google-Smtp-Source: APXvYqxCG5m2s0R/wTSatwe3sVpWdiDv1ybi2DcTx94O6iFtHKMGDkX2JVCVDgEbLuMd1qVe1aAt
+X-Received: by 2002:a1c:7519:: with SMTP id o25mr3506289wmc.14.1579706982735;
+        Wed, 22 Jan 2020 07:29:42 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1579706982; cv=none;
+        d=google.com; s=arc-20160816;
+        b=KmX4Y9YPW18iW1FyY5Ud5W3Bo0lnKnIQ5SmCb4jRmorNXaV4GG2O0pYvuP1M0nrmXa
+         85OmGpIj8DVR+jsQgM3fp/fMMp8ZjguTqQpbvGQ/MsqtEyCqg/IkvjrqlW+PiADk5zQc
+         yiNaAKpYUbC4QUbsUb8bDaDsfX8HFvuIof2WjkAL8v2RTez90pA2AC8eueraG8kXAsD6
+         9ejYnqm56ERdXSQAO+QPZw6BX4RROaMzeOLajC6B6HgqREiUIOpoVsMVHsVZBhCxS67H
+         rw7rOAeDL4W5fs0N/djmdfXaDibAPt5rmH9vinWVB7jMciaD/TxBbDrES0PfvevX/WQ0
+         RYCg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:errors-to:message-type:content-transfer-encoding:mime-version
+         :subject:message-id:from:date:dkim-signature;
+        bh=f8mbWdfPjmeHek2RRIuQLcFiSzbn7ZsVbXFrWCUdZYg=;
+        b=xba2mDMlTK8HUdfgUJr2wueTTxShCTqz58g9/bDzvZ4AQaoeZDSEZLPhmk0LFp2SJh
+         tMObUNMpPRXmEvJfBz3IlEkYpXtysDy5nTFrXgE7zPSW67D/Qb1erl+f1QXi1ss2xZuG
+         ic2OUlEPssE/JfBKao3Oq+8Lp4IZYEw2fQZ3EqQENvV1+NGH0pfV3OTqqTJ8Kg+xxLlu
+         2d5YVZmh2+/4sTDiEZJhbzdfWR3Eat0oxf1Hq83ZiS6/1W0MBIxh4hP4dDC1WCV+cUFt
+         i5P21GW4VfELqDXKtUp02WylPNaV+8gBg69+DOtyUgrTL1TdA+9UPb0g0Is88IJSE6Av
+         QWCA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@public.govdelivery.com header.s=13q2 header.b=eOsYqIOE;
+       spf=pass (google.com: domain of messages@public.govdelivery.com designates 69.5.87.201 as permitted sender) smtp.mailfrom=messages@public.govdelivery.com
+Return-Path: <messages@public.govdelivery.com>
+Received: from mailer087201.service.govdelivery.com (mailer087201.service.govdelivery.com. [69.5.87.201])
+        by mx.google.com with ESMTP id k16si37504910wrw.155.2020.01.22.07.29.42
+        for <protection@firewicca.com>;
+        Wed, 22 Jan 2020 07:29:42 -0800 (PST)
+Received-SPF: pass (google.com: domain of messages@public.govdelivery.com designates 69.5.87.201 as permitted sender) client-ip=69.5.87.201;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@public.govdelivery.com header.s=13q2 header.b=eOsYqIOE;
+       spf=pass (google.com: domain of messages@public.govdelivery.com designates 69.5.87.201 as permitted sender) smtp.mailfrom=messages@public.govdelivery.com
+Received: from prod-bulletinprocessor2.ep.gdi ([10.23.0.10])
+	by mailer087201.service.govdelivery.com (-); Wed, 22 Jan 2020 15:29:41 +0000
+X-VirtualServer: Default, mailer087201.service.govdelivery.com, 172.25.30.201
+X-Destination-ID: protection@firewicca.com
+X-SMFBL: cHJvdGVjdGlvbkBmaXJld2ljY2EuY29t
+X-VirtualServerGroup: Default
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=public.govdelivery.com; s=13q2; i=@public.govdelivery.com; h=Date:
+	From:Message-ID:Subject:Mime-Version:Content-Type:
+	Content-Transfer-Encoding:X-AccountCode:message-type:Errors-To:
+	X-MailingID:X-SMHeaderMap:To; bh=f8mbWdfPjmeHek2RRIuQLcFiSzbn7Zs
+	VbXFrWCUdZYg=; b=eOsYqIOEaD6k+iY2tBFoKavLIkBIQSKg4yOK1DLXEj+jZqI
+	uX82VopJk0JhPmVr9ENnkTHnlVNFpwC1OH0VJoZSAwXD/jfVDCNvKXPVMDWkYWZ4
+	3+ylnqb1QF9WT1BIi8CuECo3pC9QhJR8VGGteY0QTbv7npLE86tXZa9T0v/n9hK5
+	wOKhtbwK8fJePm3W27Dl8Uj6XLZ8oJQK4Gbo2puqLzVhla5YHvlYEy4AXJFOhXtL
+	M1EluJsFrjtKC4fxCyruAmCxAcR4Yx7bizYQ4G6LqboFwk13TfDba89yVj48POko
+	YWMH85mwRcsWzuM2VeaDrppfhyTiG1oYQCy6lWw==
+Date: Wed, 22 Jan 2020 09:29:41 -0600
+From: Hawaii Department of Transportation <hdot@public.govdelivery.com>
+Message-ID: <5e286a653590b_1b45312851d0883eb@prod-evo-bg6.ep.gdi.mail>
+Subject: Subscription Change Confirmation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e286a6533993_1b45312851d08822b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-AccountCode: HIDOT
+message-type: subscription_acknowledgement
+Errors-To: messages@public.govdelivery.com
+X-MailingID: 121865353505575::1774650947::0::PRD-ZIPMAIL-1774650947::::1
+X-SMHeaderMap: mid="X-MailingID"
+To: protection@firewicca.com
+ReceivedDate: Wed, 22 Jan 2020 15:29:42 +0000 (UTC)
+
+
+----==_mimepart_5e286a6533993_1b45312851d08822b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+You have made the following changes to your Hawaii Department of Transpor=
+tation subscriptions:
+
+*You subscribed to topics:*
+
+
+  * CLC - Hawaii Island =
+
+  * EC - Lanai =
+
+  * EC - Oahu =
+
+  * EC - Kauai =
+
+  * PN - Hawaii Island =
+
+  * PN - Maui =
+
+  * PN - Molokai =
+
+  * PN - Lanai =
+
+  * PN - Oahu =
+
+  * PN - Kauai =
+
+  * Highway Safety =
+
+  * CLC - Maui =
+
+  * Innovation =
+
+  * Airports - Emergency Information =
+
+  * Harbors - Public Notices =
+
+  * Harbors - Emergency Information =
+
+  * CLC - Molokai =
+
+  * CLC - Lanai =
+
+  * CLC - Oahu =
+
+  * CLC - Kauai =
+
+  * EC - Hawaii Island =
+
+  * EC - Maui =
+
+  * EC - Molokai =
+
+
+You will receive an email update when new information becomes available.
+
+Stay Connected with Hawaii Department of Transportation: Facebook [ https=
+://www.facebook.com/HawaiiDepartmentOfTransportation ]Twitter [ http://tw=
+itter.com/DOTHawaii ]Govdelivery <dotpao@hawaii.gov> SUBSCRIBER SERVICES:=
+
+Manage Subscriptions [ https://public.govdelivery.com/accounts/HIDOT/subs=
+criber/edit?preferences=3Dtrue#tab1 ] | Unsubscribe All [ https://public.=
+govdelivery.com/accounts/HIDOT/subscriber/one_click_unsubscribe?verificat=
+ion=3D4.fd07816ca6169e8d6329a6f91e922d7a&destination=3Dprotection%40firew=
+icca.com ] | Help [ https://subscriberhelp.granicus.com/s/ ]  =
+
+________________________________________________________________________
+
+This email was sent to protection@firewicca.com using GovDelivery Communi=
+cations Cloud, on behalf of: Hawaii Department of Transportation  707 17t=
+h St, Suite 4000  Denver, CO 80202 GovDelivery logo [ https://subscriberh=
+elp.granicus.com/ ]
+
+----==_mimepart_5e286a6533993_1b45312851d08822b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns=3D"http://www.w3.org/1=
+999/xhtml" xml:lang=3D"en" lang=3D"en" xml:lang=3D"en">
+<head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DU=
+TF-8" />
+<title></title>
+
+</head>
+<body style=3D"">
+
+
+  <a id=3D"gd_top" name=3D"gd_top"></a>
+
+<p style=3D"margin-bottom: 1em;">You have made the following changes to y=
+our Hawaii Department of Transportation subscriptions:</p>
+<p style=3D"margin-bottom: 1em;"><strong>You subscribed to topics:</stron=
+g></p>
+<ul><li>CLC - Hawaii Island</li>
+<li>EC - Lanai</li>
+<li>EC - Oahu</li>
+<li>EC - Kauai</li>
+<li>PN - Hawaii Island</li>
+<li>PN - Maui</li>
+<li>PN - Molokai</li>
+<li>PN - Lanai</li>
+<li>PN - Oahu</li>
+<li>PN - Kauai</li>
+<li>Highway Safety</li>
+<li>CLC - Maui</li>
+<li>Innovation</li>
+<li>Airports - Emergency Information</li>
+<li>Harbors - Public Notices</li>
+<li>Harbors - Emergency Information</li>
+<li>CLC - Molokai</li>
+<li>CLC - Lanai</li>
+<li>CLC - Oahu</li>
+<li>CLC - Kauai</li>
+<li>EC - Hawaii Island</li>
+<li>EC - Maui</li>
+<li>EC - Molokai</li>
+</ul>
+<p style=3D"margin-bottom: 1em;">You will receive an email update when ne=
+w information becomes available.</p>
+
+<div id=3D"mail_footer">
+<table class=3D"mobile-footer" style=3D"width: 600px;" width=3D"600" cell=
+spacing=3D"0" cellpadding=3D"0" align=3D"center">
+<tbody>
+<tr>
+<td style=3D"font-family: arial, helvetica, sans-serif !important; font-s=
+ize: 13px; text-align: center; padding: 20px 0 10px;" align=3D"center"><f=
+ont face=3D"arial,helvetica,sans-serif">Stay Connected with Hawaii Depart=
+ment of Transportation:</font></td>
+</tr>
+<tr>
+<td style=3D"padding: 10px;" align=3D"center"><font face=3D"arial,helveti=
+ca,sans-serif"><a href=3D"https://lnks.gd/l/eyJ0eXAiOiJKV1QiLCJhbGciOiJIU=
+zI1NiJ9.eyJhY2NvdW50X2lkIjozODEwMywibWVzc2FnZV90eXBlIjoic3Vic2NyaXB0aW9uX=
+2Fja25vd2xlZGdlbWVudCIsInN1YnNjcmliZXJfaWQiOjEwOTY4MzQyMjQsIm1lc3NhZ2VfaW=
+QiOjU0ODU2ODE5OCwidXJpIjoiZXZvOnRyYW5zYWN0aW9uYWw6ZW1haWw6Y2xpY2siLCJ1cmw=
+iOiJodHRwczovL3d3dy5mYWNlYm9vay5jb20vSGF3YWlpRGVwYXJ0bWVudE9mVHJhbnNwb3J0=
+YXRpb24ifQ.Zf-a3Jhc2QLpYoUikebbRLcmuUTCHW2kLZqBNcUgWXY" target=3D"_blank"=
+ rel=3D"noopener"><img src=3D"https://content.govdelivery.com/attachments=
+/fancy_images/implementation/2016/02/754187/facebook_original.png" alt=3D=
+"Facebook" width=3D"32" style=3D"height: auto;" /></a>=C2=A0<a href=3D"ht=
+tps://lnks.gd/l/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50X2lkIjoz=
+ODEwMywibWVzc2FnZV90eXBlIjoic3Vic2NyaXB0aW9uX2Fja25vd2xlZGdlbWVudCIsInN1Y=
+nNjcmliZXJfaWQiOjEwOTY4MzQyMjQsIm1lc3NhZ2VfaWQiOjU0ODU2ODE5OCwidXJpIjoiZX=
+ZvOnRyYW5zYWN0aW9uYWw6ZW1haWw6Y2xpY2siLCJ1cmwiOiJodHRwOi8vdHdpdHRlci5jb20=
+vRE9USGF3YWlpIn0.sdfWSOyuGGdvR3WC4F4USwlpfx0qscJqazKs-O9jmTc" target=3D"_=
+blank" rel=3D"noopener"><img src=3D"https://content.govdelivery.com/attac=
+hments/fancy_images/implementation/2016/02/754151/twitter_original.png" a=
+lt=3D"Twitter" width=3D"32" style=3D"height: auto;" /></a>=C2=A0<a href=3D=
+"mailto:dotpao@hawaii.gov" target=3D"_blank" rel=3D"noopener"><img src=3D=
+"https://content.govdelivery.com/attachments/fancy_images/implementation/=
+2016/02/754150/govdelivery_original.jpg" alt=3D"Govdelivery" width=3D"32"=
+ style=3D"height: auto;" /></a></font></td>
+</tr>
+<tr>
+<td style=3D"text-align: center; font-family: arial, helvetica, sans-seri=
+f; font-size: 13px; padding: 10px 0 20px;" align=3D"center">
+<font face=3D"arial,helvetica,sans-serif">SUBSCRIBER SERVICES:</font><br =
+/><font face=3D"arial,helvetica,sans-serif"><a href=3D"https://lnks.gd/l/=
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50X2lkIjozODEwMywibWVzc2Fn=
+ZV90eXBlIjoic3Vic2NyaXB0aW9uX2Fja25vd2xlZGdlbWVudCIsInN1YnNjcmliZXJfaWQiO=
+jEwOTY4MzQyMjQsIm1lc3NhZ2VfaWQiOjU0ODU2ODE5OCwidXJpIjoiZXZvOnRyYW5zYWN0aW=
+9uYWw6ZW1haWw6Y2xpY2siLCJ1cmwiOiJodHRwczovL3B1YmxpYy5nb3ZkZWxpdmVyeS5jb20=
+vYWNjb3VudHMvSElET1Qvc3Vic2NyaWJlci9lZGl0P3ByZWZlcmVuY2VzPXRydWUjdGFiMSJ9=
+.26PVJC1MfQ217yFyzLuRt3uKtpXX9sm2q0N4JKeqq4s" title=3D"Manage Subscriptio=
+ns">Manage Subscriptions</a> =C2=A0|=C2=A0 <a href=3D"https://lnks.gd/l/e=
+yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50X2lkIjozODEwMywibWVzc2FnZ=
+V90eXBlIjoic3Vic2NyaXB0aW9uX2Fja25vd2xlZGdlbWVudCIsInN1YnNjcmliZXJfaWQiOj=
+EwOTY4MzQyMjQsIm1lc3NhZ2VfaWQiOjU0ODU2ODE5OCwidXJpIjoiZXZvOnRyYW5zYWN0aW9=
+uYWw6ZW1haWw6Y2xpY2siLCJ1cmwiOiJodHRwczovL3B1YmxpYy5nb3ZkZWxpdmVyeS5jb20v=
+YWNjb3VudHMvSElET1Qvc3Vic2NyaWJlci9vbmVfY2xpY2tfdW5zdWJzY3JpYmU_dmVyaWZpY=
+2F0aW9uPTQuZmQwNzgxNmNhNjE2OWU4ZDYzMjlhNmY5MWU5MjJkN2FcdTAwMjZhbXA7ZGVzdG=
+luYXRpb249cHJvdGVjdGlvbiU0MGZpcmV3aWNjYS5jb20ifQ.Ds-Rtda5Be491F3idOKEl-fs=
+JiCZtBpihlhtODwYo-A" title=3D"Unsubscribe from All Topics">Unsubscribe Al=
+l</a> =C2=A0|=C2=A0 <a href=3D"https://lnks.gd/l/eyJ0eXAiOiJKV1QiLCJhbGci=
+OiJIUzI1NiJ9.eyJhY2NvdW50X2lkIjozODEwMywibWVzc2FnZV90eXBlIjoic3Vic2NyaXB0=
+aW9uX2Fja25vd2xlZGdlbWVudCIsInN1YnNjcmliZXJfaWQiOjEwOTY4MzQyMjQsIm1lc3NhZ=
+2VfaWQiOjU0ODU2ODE5OCwidXJpIjoiZXZvOnRyYW5zYWN0aW9uYWw6ZW1haWw6Y2xpY2siLC=
+J1cmwiOiJodHRwczovL3N1YnNjcmliZXJoZWxwLmdyYW5pY3VzLmNvbS9zLyJ9.leP8TxR3v6=
+EYQvGYmFfYs211MecFHHJd1QpXLff8Nm8" target=3D"_blank" rel=3D"noopener">Hel=
+p</a></font>
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<div id=3D"tagline">
+<hr />
+<table style=3D"width: 100%;" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0">
+<tbody>
+<tr>
+<td style=3D"color: #757575; font-size: 10px; font-family: Arial;" width=3D=
+"89%">This email was sent to protection@firewicca.com using GovDelivery C=
+ommunications Cloud, on behalf of: Hawaii Department of Transportation =C2=
+=B7 707 17th St, Suite 4000 =C2=B7 Denver, CO 80202</td>
+<td align=3D"right" width=3D"11%"><a href=3D"https://lnks.gd/l/eyJ0eXAiOi=
+JKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50X2lkIjozODEwMywibWVzc2FnZV90eXBlIj=
+oic3Vic2NyaXB0aW9uX2Fja25vd2xlZGdlbWVudCIsInN1YnNjcmliZXJfaWQiOjEwOTY4MzQ=
+yMjQsIm1lc3NhZ2VfaWQiOjU0ODU2ODE5OCwidXJpIjoiZXZvOnRyYW5zYWN0aW9uYWw6ZW1h=
+aWw6Y2xpY2siLCJ1cmwiOiJodHRwczovL3N1YnNjcmliZXJoZWxwLmdyYW5pY3VzLmNvbS8if=
+Q.WE2gZ9cb474aRT5rBTuc11WNvPztNCsj8ig4F7fMcuo" target=3D"_blank" rel=3D"n=
+oopener"><img src=3D"https://content.govdelivery.com/images/govd-logo-dar=
+k.png" border=3D"0" alt=3D"GovDelivery logo" width=3D"115" /></a></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<img src=3D'https://lnks.gd/o/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2=
+NvdW50X2lkIjozODEwMywibWVzc2FnZV90eXBlIjoic3Vic2NyaXB0aW9uX2Fja25vd2xlZGd=
+lbWVudCIsInN1YnNjcmliZXJfaWQiOjEwOTY4MzQyMjQsIm1lc3NhZ2VfaWQiOjU0ODU2ODE5=
+OCwidXJpIjoiZXZvOnRyYW5zYWN0aW9uYWw6ZW1haWw6b3BlbiJ9.bV9xJW0rlroGJjVjJ9Ad=
+sqn-ArjLOaKhNZnZHXw9dWM'/></body>
+</html>
+
+----==_mimepart_5e286a6533993_1b45312851d08822b--

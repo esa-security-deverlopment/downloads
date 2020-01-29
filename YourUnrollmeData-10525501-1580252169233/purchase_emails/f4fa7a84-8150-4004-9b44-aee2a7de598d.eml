@@ -1,0 +1,203 @@
+Delivered-To: protection@firewicca.com
+Received: by 2002:a9d:17c5:0:0:0:0:0 with SMTP id j63csp5408721otj;
+        Wed, 22 Jan 2020 07:32:07 -0800 (PST)
+X-Google-Smtp-Source: APXvYqxQjSLfA0vVKUIS+wa3YbHhdv1CwM0ACI5++Qn/i8A2OgZRaUCbmWO4I1lN5uSsaSr08VSP
+X-Received: by 2002:a1c:541b:: with SMTP id i27mr3810604wmb.137.1579707126893;
+        Wed, 22 Jan 2020 07:32:06 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1579707126; cv=none;
+        d=google.com; s=arc-20160816;
+        b=dCO7T8n6kMF7e35C0ChBfJDbb1yDUqAgRWX+VQwHI865BYFu/NvntHDmfn2etHZQ0+
+         ymmf4vlz7NcW3kwoB4+IOiT+vauc/fm14xJ7p6KIWklcG1Pydc9eNPG1qXXuWAk7/nN6
+         G+7LioX63M4/D2unIprGvOWxDJLy0wJXdSWOBw+0CJoU0dL9ktjQgTizYoJTaEjxqagD
+         mUsibUBsukdMkPRghgk8WwvmNM+rT3y+iLNHxOTbO90FqpwtYnxfjsBbsen0zzAsjP1h
+         uz3xfosem7LlAfz/txVzXWYt0pmBHuJo4Fx2MDFQLQOYKV2P6L9PYf01Qv1CRbCgMDRm
+         osrA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:errors-to:message-type:content-transfer-encoding:mime-version
+         :subject:message-id:from:date:dkim-signature;
+        bh=6vuErUKAGmNxrId9H0fUWLrjmOxTOHtOmSct3cZMloA=;
+        b=iCWZSfey/L1Xi12OhAlb1IXLuf5/A+6fHyrUwXkCRvYlrICmfBXIiMuXTJPCFA++rO
+         MGLPRU5/bFMS2ydglYEQY68Yi1zpwB1eJqzkW1ebEHc3sqCQtEJ5Crv5EBkLvF+CiCB+
+         9u6xZrqX7GtnAfmxL5q3/IAtA6PwVXcypnosWFmNhXZn6tPsIx8rlnYoYszc5DpdmJ9t
+         A8pTmSv39T1CZ3/JOO1c1XUtKU6VDRPdBYSiuhUrI4HdF5J+cMW3OP4GvhXHuO92LMWm
+         1QR9gg9cIwelFnp4vOT8+dhCMHLxtDv70qQtcnmPOFCXGusHEzSfAGhFQbbMo9N3jxLP
+         EnQA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@public.govdelivery.com header.s=13q2 header.b=N8l+QJMi;
+       spf=pass (google.com: domain of messages@public.govdelivery.com designates 69.5.87.201 as permitted sender) smtp.mailfrom=messages@public.govdelivery.com
+Return-Path: <messages@public.govdelivery.com>
+Received: from mailer087201.service.govdelivery.com (mailer087201.service.govdelivery.com. [69.5.87.201])
+        by mx.google.com with ESMTP id u7si17895417wru.567.2020.01.22.07.32.06
+        for <protection@firewicca.com>;
+        Wed, 22 Jan 2020 07:32:06 -0800 (PST)
+Received-SPF: pass (google.com: domain of messages@public.govdelivery.com designates 69.5.87.201 as permitted sender) client-ip=69.5.87.201;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@public.govdelivery.com header.s=13q2 header.b=N8l+QJMi;
+       spf=pass (google.com: domain of messages@public.govdelivery.com designates 69.5.87.201 as permitted sender) smtp.mailfrom=messages@public.govdelivery.com
+Received: from prod-bulletinprocessor2.ep.gdi ([10.23.0.10])
+	by mailer087201.service.govdelivery.com (-); Wed, 22 Jan 2020 15:32:06 +0000
+X-VirtualServer: Default, mailer087201.service.govdelivery.com, 172.25.30.201
+X-Destination-ID: protection@firewicca.com
+X-SMFBL: cHJvdGVjdGlvbkBmaXJld2ljY2EuY29t
+X-VirtualServerGroup: Default
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=public.govdelivery.com; s=13q2; i=@public.govdelivery.com; h=Date:
+	From:Message-ID:Subject:Mime-Version:Content-Type:
+	Content-Transfer-Encoding:X-AccountCode:message-type:Errors-To:
+	X-MailingID:X-SMHeaderMap:To; bh=6vuErUKAGmNxrId9H0fUWLrjmOxTOHt
+	OmSct3cZMloA=; b=N8l+QJMie9DQ+Ilw0EtWbtAo7oStKwX/RQ4B8ssv5G/uMI8
+	kTtO+x7drbNX/3Tlwtxfw3eU2oWrfOJ2aldR9FAC7oyV42vzo3CU6FJ82zvDtOVL
+	KoZB9Qp+w7rJoknyh6QKTFVy87nHjUC5J5fa+26a0kPCtuOqODleafpRGaDCfxJD
+	+ZpKNtCTT4oVzIjzSFmCYyM744/nmYB7EZYIuV67PUR9UXwv81zIm36JsGke3tD6
+	a1doRTnAtwFM2rUe3RP3RvFKtQCXaD1MecuSdjaW/7jeAZeKXOZqxKdHZuPkCxjE
+	7VyxvjVBwID0W/nheRZbzwV/HMxtXghU6svKtxA==
+Date: Wed, 22 Jan 2020 09:32:04 -0600
+From: "CampusDrugPrevention.gov" <campusdrugprevention@public.govdelivery.com>
+Message-ID: <5e286af4c9bfb_1d09779d1dc659f9@prod-evo-bg7.ep.gdi.mail>
+Subject: Subscription Change Confirmation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e286af4c8914_1d09779d1dc65840";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-AccountCode: USDOJDEACDP
+message-type: subscription_acknowledgement
+Errors-To: messages@public.govdelivery.com
+X-MailingID: 121865353545818::1774651462::0::PRD-ZIPMAIL-1774651462::::1
+X-SMHeaderMap: mid="X-MailingID"
+To: protection@firewicca.com
+ReceivedDate: Wed, 22 Jan 2020 15:32:06 +0000 (UTC)
+
+
+----==_mimepart_5e286af4c8914_1d09779d1dc65840
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+You have made the following changes to your CampusDrugPrevention.gov subs=
+criptions:
+
+*You subscribed to topics:*
+
+
+  * Resources =
+
+
+For security reasons it is required that you confirm your request now by =
+following this link:
+
+Confirm Sign-up to CampusDrugPrevention.gov Updates Now. [ https://public=
+.govdelivery.com/accounts/USDOJDEACDP/destinations/825978526/confirm?veri=
+fy=3D4.60265ebb076b85ff987922f86c85657a ]
+
+You will begin to receive updates when new information is available.
+
+SUBSCRIBER SERVICES:
+Manage Subscriptions [ https://public.govdelivery.com/accounts/USDOJDEACD=
+P/subscriber/edit?preferences=3Dtrue#tab1 ] | Unsubscribe All [ https://p=
+ublic.govdelivery.com/accounts/USDOJDEACDP/subscriber/one_click_unsubscri=
+be?verification=3D4.60265ebb076b85ff987922f86c85657a&destination=3Dprotec=
+tion%40firewicca.com ] | Help [ https://subscriberhelp.govdelivery.com/ ]=
+  =
+
+________________________________________________________________________
+
+This email was sent to protection@firewicca.comon behalf of Campus Drug P=
+revention 600 Army Navy Drive  Arlington, VA 22202 202-307-7936
+
+----==_mimepart_5e286af4c8914_1d09779d1dc65840
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns=3D"http://www.w3.org/1=
+999/xhtml" xml:lang=3D"en" lang=3D"en" xml:lang=3D"en">
+<head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DU=
+TF-8" />
+<title></title>
+
+</head>
+<body style=3D"">
+
+
+  <a id=3D"gd_top" name=3D"gd_top"></a>
+
+<p style=3D"margin-bottom: 1em;">You have made the following changes to y=
+our CampusDrugPrevention.gov subscriptions:</p>
+<p style=3D"margin-bottom: 1em;"><strong>You subscribed to topics:</stron=
+g></p>
+<ul><li>Resources</li>
+</ul>
+<p style=3D"margin-bottom: 1em;">For security reasons it is required that=
+ you confirm your request now by following this link:</p><p style=3D"marg=
+in-bottom: 1em;"><a href=3D"https://lnks.gd/l/eyJ0eXAiOiJKV1QiLCJhbGciOiJ=
+IUzI1NiJ9.eyJhY2NvdW50X2lkIjozMzk0NCwibWVzc2FnZV90eXBlIjoic3Vic2NyaXB0aW9=
+uX2Fja25vd2xlZGdlbWVudCIsInN1YnNjcmliZXJfaWQiOjEwOTY4NDczMTYsIm1lc3NhZ2Vf=
+aWQiOjU0ODU2OTEyOSwidXJpIjoiZXZvOnRyYW5zYWN0aW9uYWw6ZW1haWw6Y2xpY2siLCJ1c=
+mwiOiJodHRwczovL3B1YmxpYy5nb3ZkZWxpdmVyeS5jb20vYWNjb3VudHMvVVNET0pERUFDRF=
+AvZGVzdGluYXRpb25zLzgyNTk3ODUyNi9jb25maXJtP3ZlcmlmeT00LjYwMjY1ZWJiMDc2Yjg=
+1ZmY5ODc5MjJmODZjODU2NTdhIn0.rH-J_jyGZKJuJpVx0SeIKXd-ldDsrUDwhrakI9Xv1F8"=
+>Confirm Sign-up to CampusDrugPrevention.gov Updates Now.</a></p><p style=
+=3D"margin-bottom: 1em;">You will begin to receive updates when new infor=
+mation is available.</p>
+
+<div id=3D"mail_footer">
+<table class=3D"mobile-footer" style=3D"width: 600px;" width=3D"600" cell=
+spacing=3D"0" cellpadding=3D"0" align=3D"center">
+<tbody>
+<tr>
+<td style=3D"text-align: center; font-family: arial, helvetica, sans-seri=
+f; font-size: 13px; padding: 10px 0 20px;" align=3D"center">
+<font face=3D"arial,helvetica,sans-serif">SUBSCRIBER SERVICES:</font><br =
+/><font face=3D"arial,helvetica,sans-serif"><a href=3D"https://lnks.gd/l/=
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50X2lkIjozMzk0NCwibWVzc2Fn=
+ZV90eXBlIjoic3Vic2NyaXB0aW9uX2Fja25vd2xlZGdlbWVudCIsInN1YnNjcmliZXJfaWQiO=
+jEwOTY4NDczMTYsIm1lc3NhZ2VfaWQiOjU0ODU2OTEyOSwidXJpIjoiZXZvOnRyYW5zYWN0aW=
+9uYWw6ZW1haWw6Y2xpY2siLCJ1cmwiOiJodHRwczovL3B1YmxpYy5nb3ZkZWxpdmVyeS5jb20=
+vYWNjb3VudHMvVVNET0pERUFDRFAvc3Vic2NyaWJlci9lZGl0P3ByZWZlcmVuY2VzPXRydWUj=
+dGFiMSJ9.Z1HDOpZk1VN8SaPyamusHt1ItPsgBOpVS6RrKCTvi2A" title=3D"Manage Sub=
+scriptions">Manage Subscriptions</a> =C2=A0|=C2=A0 <a href=3D"https://lnk=
+s.gd/l/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50X2lkIjozMzk0NCwib=
+WVzc2FnZV90eXBlIjoic3Vic2NyaXB0aW9uX2Fja25vd2xlZGdlbWVudCIsInN1YnNjcmliZX=
+JfaWQiOjEwOTY4NDczMTYsIm1lc3NhZ2VfaWQiOjU0ODU2OTEyOSwidXJpIjoiZXZvOnRyYW5=
+zYWN0aW9uYWw6ZW1haWw6Y2xpY2siLCJ1cmwiOiJodHRwczovL3B1YmxpYy5nb3ZkZWxpdmVy=
+eS5jb20vYWNjb3VudHMvVVNET0pERUFDRFAvc3Vic2NyaWJlci9vbmVfY2xpY2tfdW5zdWJzY=
+3JpYmU_dmVyaWZpY2F0aW9uPTQuNjAyNjVlYmIwNzZiODVmZjk4NzkyMmY4NmM4NTY1N2FcdT=
+AwMjZhbXA7ZGVzdGluYXRpb249cHJvdGVjdGlvbiU0MGZpcmV3aWNjYS5jb20ifQ.q3zu8Zju=
+LdKXI9Dbnx_imWQP39jRgxRD5-tXCL_PUHs" title=3D"Unsubscribe from All Topics=
+">Unsubscribe All</a> =C2=A0|=C2=A0 <a href=3D"https://lnks.gd/l/eyJ0eXAi=
+OiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50X2lkIjozMzk0NCwibWVzc2FnZV90eXBl=
+Ijoic3Vic2NyaXB0aW9uX2Fja25vd2xlZGdlbWVudCIsInN1YnNjcmliZXJfaWQiOjEwOTY4N=
+DczMTYsIm1lc3NhZ2VfaWQiOjU0ODU2OTEyOSwidXJpIjoiZXZvOnRyYW5zYWN0aW9uYWw6ZW=
+1haWw6Y2xpY2siLCJ1cmwiOiJodHRwczovL3N1YnNjcmliZXJoZWxwLmdvdmRlbGl2ZXJ5LmN=
+vbS8ifQ.Ugsa9FTzAPcAVPm5adlzPO7Evj4KYE_jbAm-Kc4RSUM">Help</a></font>
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<div id=3D"tagline">
+<hr />
+<table>
+<tbody>
+<tr>
+<td><font size=3D"1"><span>This email was sent to protection@firewicca.co=
+m=C2=A0on behalf of Campus Drug Prevention =E2=80=A2=C2=A0600 Army Navy D=
+rive =E2=80=A2 Arlington, VA 22202 202-307-7936</span></font></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<img src=3D'https://lnks.gd/o/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2=
+NvdW50X2lkIjozMzk0NCwibWVzc2FnZV90eXBlIjoic3Vic2NyaXB0aW9uX2Fja25vd2xlZGd=
+lbWVudCIsInN1YnNjcmliZXJfaWQiOjEwOTY4NDczMTYsIm1lc3NhZ2VfaWQiOjU0ODU2OTEy=
+OSwidXJpIjoiZXZvOnRyYW5zYWN0aW9uYWw6ZW1haWw6b3BlbiJ9.obN52DJyoRuE4MxRDje-=
+8wjRaMzX52s9dtltD5XwVA0'/></body>
+</html>
+
+----==_mimepart_5e286af4c8914_1d09779d1dc65840--

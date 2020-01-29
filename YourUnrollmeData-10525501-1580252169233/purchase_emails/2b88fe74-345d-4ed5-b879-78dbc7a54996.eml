@@ -1,0 +1,515 @@
+Delivered-To: protection@firewicca.com
+Received: by 2002:a9d:17c5:0:0:0:0:0 with SMTP id j63csp491728otj;
+        Tue, 28 Jan 2020 06:52:26 -0800 (PST)
+X-Google-Smtp-Source: APXvYqw8Aq65IYHKnJXuurwr05FHXSe5fPe24WvcDHxZU1NlNQhiMLWuENwiEkAp1av/qGPE/OFC
+X-Received: by 2002:a0c:b61c:: with SMTP id f28mr23002403qve.101.1580223146095;
+        Tue, 28 Jan 2020 06:52:26 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1580223146; cv=none;
+        d=google.com; s=arc-20160816;
+        b=FfFZFtHAeSphCcG+5chMzeXUKu7al/jSB9z0K554MxSg/tqhe9fZ7jn57+HWwKxTVV
+         qeP79sz2D741snEjMDUYpMmyjpYxHoMKGA1UeClUAgJNVM3xTZeUDQQg/JNibStWrT18
+         tWOQsg8i9t6c1DmLfjnZNDB4pkw1Viw4pmuIAOPX6V5aeML6AVMSxUj7q94W+UXgpqR5
+         7w6smt4XTlDjI900Vfk2d8AXKkqFnCs2KzgX+E7w7+wpKkqURJKEXC7Th/7UDGel5H1D
+         ihF/IQa5IFUM9fI2ftd+otyv0ruS2K8PjJTKcDkbW2kYn8YSp6pmMScpin9S47mWFzUr
+         Rl/A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:mime-version:subject:message-id:to:reply-to:from
+         :date:dkim-signature:dkim-signature;
+        bh=iNMZpMkcCxZpuabiEKg93QapYatg3JzU6JtosyPlGkU=;
+        b=hswoL3MEbloetNw9LEgsIDcjveUqt1G+3Yxm6wuBndkus4Ap7OiljbJtu3xuTLjc+x
+         R67zfaBgPtwIvJM2unML8zv8P4alPP5tXlUbir1+BiYN+z41I4fUC/CVq3L+OWmIwBK9
+         TUuxbOKQ2pZGAdKYberk6SODhFTply8CtTsVav16fwp7cBziCFq4F7L1RLZD74/IIRuv
+         KYs82u/l1tOsxmvcHlaLRVh/xvQZsnUXzn0B+18b4DYmnO47q8v0sIof/hnESm5TMvWL
+         AqfL1zmYCsM1iHyE8DcKkLms2o73NbrTvO55ZM+X8i/CAqZIrxjtIKDj8tUbEWDzMxW9
+         uJfg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@eml.atlassian.com header.s=m1 header.b=C+uoWy8d;
+       dkim=pass header.i=@mktdns.com header.s=m1 header.b="hfuMQD/r";
+       spf=pass (google.com: domain of 594-atc-127.0.12318.0.0.1074.9.15933224-1@bounce.eml.atlassian.com designates 192.28.154.51 as permitted sender) smtp.mailfrom=594-ATC-127.0.12318.0.0.1074.9.15933224-1@bounce.eml.atlassian.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=atlassian.com
+Return-Path: <594-ATC-127.0.12318.0.0.1074.9.15933224-1@bounce.eml.atlassian.com>
+Received: from bounce.eml.atlassian.com (bounce.eml.atlassian.com. [192.28.154.51])
+        by mx.google.com with ESMTPS id 3si12677403qta.62.2020.01.28.06.52.25
+        for <protection@firewicca.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 28 Jan 2020 06:52:26 -0800 (PST)
+Received-SPF: pass (google.com: domain of 594-atc-127.0.12318.0.0.1074.9.15933224-1@bounce.eml.atlassian.com designates 192.28.154.51 as permitted sender) client-ip=192.28.154.51;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@eml.atlassian.com header.s=m1 header.b=C+uoWy8d;
+       dkim=pass header.i=@mktdns.com header.s=m1 header.b="hfuMQD/r";
+       spf=pass (google.com: domain of 594-atc-127.0.12318.0.0.1074.9.15933224-1@bounce.eml.atlassian.com designates 192.28.154.51 as permitted sender) smtp.mailfrom=594-ATC-127.0.12318.0.0.1074.9.15933224-1@bounce.eml.atlassian.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=atlassian.com
+Return-Path: <team@eml.atlassian.com>
+X-MSFBL: /GxT5EGtOLsbGhw8ViNCcNCtyxJn/ZQnoOEi2jmE9Do=|eyJyIjoicHJvdGVjdGl
+	vbkBmaXJld2ljY2EuY29tIiwiYiI6ImR2cC0xOTItMjgtMTU0LTUxIiwidSI6IjU
+	5NC1BVEMtMTI3OjA6MTM2MjoxODYyOjA6MTA3NDo5OjEyMzE4OjE1OTMzMjI0LTE
+	iLCJnIjoiYmctYWJkLTc1NiJ9
+Received: from [10.1.87.249] ([10.1.87.249:48099] helo=abmktmail-trigger1b.marketo.org)
+	by abmta37.marketo.org (envelope-from <team@eml.atlassian.com>)
+	(ecelerity 4.2.38.62370 r(:)) with ESMTP
+	id 75/6F-31372-9AA403E5; Tue, 28 Jan 2020 08:52:25 -0600
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1580223145;
+	s=m1; d=eml.atlassian.com; i=@eml.atlassian.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=iNMZpMkcCxZpuabiEKg93QapYatg3JzU6JtosyPlGkU=;
+	b=C+uoWy8dk8n8cL/igZRZHc5w0KtnCsQO/e1q1xpMWtD1anItnvAZwPg1zQzH9vTp
+	kkSRs+orlgWzH1t7NcJ1WK7lQWgfV6Wl12f1YNWvJm1ypH1UuDtoqhCOHoRgnZYsepY
+	FtzFBJfnMpkhIp2CIQ5flZzR7rv3x5jqC3lwoaYs=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1580223145;
+	s=m1; d=mktdns.com; i=@mktdns.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=iNMZpMkcCxZpuabiEKg93QapYatg3JzU6JtosyPlGkU=;
+	b=hfuMQD/rwAFcjiHRtx3LN+5CcgvMWT4MsSLOsG3kHRTo539Qzn9Q6oSjkGqTqa24
+	Wfu+boJVg9XW2Mk3amxakHA6FXEADjPi01PsUWVc6ZHobGKsce8mQklmL53Yu07dEhC
+	krw4GgHr8Gklmwcti3jjM3dKfLZq/LKCrDGiuWPA=
+Date: Tue, 28 Jan 2020 08:52:25 -0600 (CST)
+From: Statuspage <team@eml.atlassian.com>
+Reply-To: hi@statuspage.com
+To: protection@firewicca.com
+Message-ID: <909138036.12447221.1580223145840.JavaMail.mktmail@abmktmail-trigger1b.marketo.org>
+Subject: Display the status of your upstream providers
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_12447220_1318349040.1580223145839"
+X-Binding: bg-abd-756
+X-MarketoID: 594-ATC-127:0:1362:1862:0:1074:9:12318:15933224-1
+X-Mailfrom: 594-ATC-127.0.12318.0.0.1074.9.15933224-1@bounce.eml.atlassian.com
+List-Unsubscribe: <mailto:PBWTAT2BJZKECZ2HJRPWOT2EJRRHG4LGIF3T2PI=.12318.1074.9@unsub-ab.mktomail.com>
+X-MktArchive: false
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+ReceivedDate: Tue, 28 Jan 2020 14:52:26 +0000 (UTC)
+
+------=_Part_12447220_1318349040.1580223145839
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Your product or service probably relies on other services. Show their syste=
+m status on your page!
+Third-party Components let you show the status of other products you use on=
+ your own status page, and they=E2=80=99re automatically updated based on t=
+he status those services are reporting.
+
+For example, maybe you rely on Sendgrid for sending transactional email =E2=
+=80=93 you can show the Sendgrid status directly on your page.
+Browse third-party components =C2=A0=C2=A0=C2=A0=C2=A0 <https://links.eml.a=
+tlassian.com/dc/mFmi2dXNcglIv7fn03tGnafrrs_G0WQ3xSGLrXa0Xr2_cK2RgMPk3zddfR3=
+nXinA1BISzgRFSPF7odODqgTbZPgFPg9wVNtuQEbqZkCAR7m9NYMU6WA_OyWWTTLPl92D/jQZT0=
+32HA104X0uyCux0d00>
+Privacy Policy <https://links.eml.atlassian.com/Y0u4d00yu00QX012HTA0yC3> =
+=E2=80=A2 Contact <https://links.eml.atlassian.com/r40z0C2d0T1HXyA3u01Q0u0>=
+ =E2=80=A2 Blog <https://links.eml.atlassian.com/s0Ad1H30XTy20A0Q4u20u0C> =
+=E2=80=A2 Twitter <https://links.eml.atlassian.com/o02By003d003uA04XCTuQH1>
+Copyright 2019 Atlassian Pty Ltd. All rights reserved. We are located at 34=
+1 George Street, Sydney, NSW, 2000, Australia
+<https://links.eml.atlassian.com/kA14H0y00du02TuQX30C40C>
+
+.
+
+------=_Part_12447220_1318349040.1580223145839
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+<head>=20
+<title>Atlassian</title> =20
+<!--spacing starts here-->      =20
+<!--colors starts here-->   =20
+<!--border starts here-->  =20
+<!--border starts here-->  =20
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1,=
+ minimum-scale=3D1, maximum-scale=3D1" />=20
+<meta name=3D"robots" content=3D"noindex,nofollow" />=20
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />=20
+<!--[if mso]>
+<style> body,table tr,table td,a, span,table.MsoNormalTable {  font-family:=
+Arial, Helvetica, sans-serif !important;  }</style>
+  <!--<![endif]-->=20
+<!--[if gte mso 9]>
+    <style type=3D"text/css">
+   .outlook{padding-top:0px !important;}
+    </style>
+<![endif]-->=20
+<style media=3D"all">
+#outlook a {
+  padding: 0;
+}
+ =20
+/* Force Outlook to provide a "view in browser" message */
+.ReadMsgBody {
+  width: 100%;
+}
+.ExternalClass {
+  width: 100%;
+}
+/* Force Hotmail to display emails at full width */
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div {
+  line-height: 100%;
+}
+/* Force Hotmail to display normal line spacing */
+/* iOS BLUE LINKS */
+@-ms-viewport {
+    width: device-width;
+}
+</style>=20
+<style media=3D"all">
+html { -webkit-text-size-adjust:none; }
+body{font-family:'Helvetica neue',Helvetica,Arial,Verdana,sans-serif}
+p, .undoreset div p, .undoreset p {
+    margin-top: 14px;
+    margin-bottom:14px;         =20
+}
+  img{border:0px !important;}
+a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+a{outline: none !important; text-decoration:none; }
+li {padding-top:10px;}
+ul, ol{margin-top: 0px; margin-bottom: 0px}
+
+@media only screen and (max-width: 640px){
+        .main {width:100% !important; min-width: 100% !important;}
+        .inner_table{width:96% !important;margin:0 auto !important;}
+=09  =09.devicewidth{width:100% !important;min-width: 100% !important;}
+  =09=09.res{width:100% !important;display:block;}
+=09=09.block{display:block;margin:0 auto;float:none !important;}
+=09  =09.center{text-align:center !important;margin:0 auto;}
+=09=09.full-width img{width:100% !important; height:auto !important;}      =
+=20
+        .hidden{display:none !important;}
+=09=09.padding_btm{padding-bottom:20px !important;}
+=09=09.iphoneHeight{height:25px !important;}
+=09  =09.iphoneHeight1{height:35px !important;}
+=09 =09.floatNone{float:none !important; margin:0 auto !important;}
+        }
+</style>=20
+<!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->=20
+</head>=20
+<body style=3D"margin-bottom: 0; -webkit-text-size-adjust: 100%; padding-bo=
+ttom: 0;  margin-top: 0; margin-right: 0; -ms-text-size-adjust: 100%; margi=
+n-left: 0; padding-top: 0; padding-right: 0; padding-left: 0; width: 100%;"=
+><style type=3D"text/css">div#emailPreHeader{ display: none !important; }</=
+style><div id=3D"emailPreHeader" style=3D"mso-hide:all; visibility:hidden; =
+opacity:0; color:transparent; mso-line-height-rule:exactly; line-height:0; =
+font-size:0px; overflow:hidden; border-width:0; display:none !important;">Y=
+our product or service probably relies on other services. </div>=20
+<!-- Outer table START -->=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-=
+lspace: 0pt; mso-table-rspace: 0pt;  border-spacing: 0; border-collapse: co=
+llapse;margin:0 auto;">=20
+<tbody>
+<tr>=20
+<td style=3D"background-color:#ffffff;" bgcolor=3D"#ffffff">=20
+<table class=3D"main" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" =
+border=3D"0" width=3D"580" style=3D"border-collapse: collapse; margin:0 aut=
+o;min-width:580;">=20
+<tbody>
+<tr>=20
+<td class=3D"mktoContainer" id=3D"template-wrapper" style=3D"background-col=
+or:#ffffff;" bgcolor=3D"#ffffff">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:10=
+0%;" class=3D"deviceWidth mktoModule" id=3D"HeaderSection1">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#ffffff" style=3D"background-color:#ffffff;">=20
+<table class=3D"inner_table" width=3D"580" align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"width:580px;margin:0 auto;">=20
+<tbody>=20
+<tr>=20
+<td height=3D"40" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"center" valign=3D"top" style=3D"vertical-align:top;text-align:=
+center;">=20
+<div class=3D"mktoImg" id=3D"logo11" mktolockimgsize=3D"true">=20
+<a href=3D
+"https://links.eml.atlassian.com/a0201H03QA0X00YCwTyd4uu" target=3D"_blank"
+> <img src=3D"https://pages.eml.atlassian.com/rs/594-ATC-127/images/statusp=
+age-logo-gradient-blue.png" width=3D"220" border=3D"0" style=3D"" /></a>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td height=3D"40" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td height=3D"1" style=3D"line-height:1px;font-size:1px;border-bottom:1px s=
+olid #cccccc">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:10=
+0%;" class=3D"deviceWidth mktoModule" id=3D"header-text">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#ffffff" style=3D"background-color:#ffffff;">=20
+<table class=3D"inner_table" width=3D"100%" align=3D"center" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" style=3D"width:100%;margin:0 auto;">=20
+<tbody>=20
+<tr>=20
+<td height=3D"20" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"res" valign=3D"top" style=3D"font-family:'Helvetica neue',Helv=
+etica,Arial,Verdana,sans-serif;font-weight:bold;font-size:24px;line-height:=
+35px;color:#253858;text-align:center;">=20
+<div class=3D"mktoText" id=3D"heading-text11">=20
+<p>Your product or service probably relies on other services. Show their sy=
+stem status on your page!</p>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td height=3D"0" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:10=
+0%;" class=3D"deviceWidth mktoModule" id=3D"simple-image111">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#ffffff" style=3D"background-color:#ffffff;">=20
+<table width=3D"100%" align=3D"center" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"width:100%;margin:0 auto;">=20
+<tbody>=20
+<tr>=20
+<td height=3D"20" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" class=3D"full-width" style=3D"vertical-align:top;">=20
+<div class=3D"mktoImg" id=3D"banner-image23" mktolockimgsize=3D"false">=20
+<a href=3D
+"https://links.eml.atlassian.com/dc/mFmi2dXNcglIv7fn03tGnafrrs_G0WQ3xSGLrXa=
+0Xr2_cK2RgMPk3zddfR3nXinA1BISzgRFSPF7odODqgTbZPgFPg9wVNtuQEbqZkCAR7m9NYMU6W=
+A_OyWWTTLPl92D/jQZT032HA104X0uyCux0d00" target=3D"_blank"
+><img src=3D"https://pages.eml.atlassian.com/rs/594-ATC-127/images/Image 20=
+19-09-16 at 3.56.52 PM.png" width=3D"580" height=3D"357" alt=3D"Display the=
+ status of your upstream providers" style=3D"" /></a>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td height=3D"0" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:10=
+0%;" class=3D"deviceWidth mktoModule" id=3D"body-text1">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#ffffff" style=3D"background-color:#ffffff;">=20
+<table class=3D"inner_table" width=3D"100%" align=3D"center" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" style=3D"width:100%;margin:0 auto;">=20
+<tbody>=20
+<tr>=20
+<td height=3D"20" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td class=3D"res" valign=3D"top" style=3D"font-family:'Helvetica neue',Helv=
+etica,Arial,Verdana,sans-serif;font-size:16px;line-height:22px;color:#42526=
+E;text-align:left;">=20
+<div class=3D"mktoText" id=3D"body-text-1">=20
+<p>Third-party Components let you show the status of other products you use=
+ on your own status page, and they=E2=80=99re automatically updated based o=
+n the status those services are reporting.</p>=20
+<p>For example, maybe you rely on Sendgrid for sending transactional email =
+=E2=80=93 you can show the Sendgrid status directly on your page.</p>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td height=3D"0" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:10=
+0%;" class=3D"deviceWidth mktoModule" id=3D"cta-text-1">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#ffffff" style=3D"background-color:#ffffff;">=20
+<table class=3D"inner_table" width=3D"580" align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"width:580px;margin:0 auto;">=20
+<tbody>=20
+<tr>=20
+<td height=3D"40" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" style=3D"vertical-align:top;">=20
+<div class=3D"mktoText" id=3D"cta-btn1">=20
+<table style=3D"margin: 0 auto;" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" align=3D"center">=20
+<tbody>=20
+<tr>=20
+<td style=3D"border-radius: 3px; background-color: #0052CC;" align=3D"cente=
+r"><a href=3D
+"https://links.eml.atlassian.com/dc/mFmi2dXNcglIv7fn03tGnafrrs_G0WQ3xSGLrXa=
+0Xr2_cK2RgMPk3zddfR3nXinA1BISzgRFSPF7odODqgTbZPgFPg9wVNtuQEbqZkCAR7m9NYMU6W=
+A_OyWWTTLPl92D/jQZT032HA104X0uyCux0d00" target=3D"_blank" style=3D"display:=
+ inline-block; border: 1px solid #0052CC; font-family: 'Helvetica neue',Hel=
+vetica,Arial,Verdana,sans-serif; font-size: 16px; color: #ffffff; text-deco=
+ration: none; border-radius: 3px; padding: 15px 40px;"
+>=20
+<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->Browse third-party compone=
+nts=20
+<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--></a></td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td height=3D"0" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:10=
+0%;" class=3D"deviceWidth mktoModule" id=3D"footer-1be35c02f-7988-4316-b0fc=
+-0998755469c7">=20
+<tbody>=20
+<tr>=20
+<td bgcolor=3D"#ffffff" style=3D"background-color:#ffffff;">=20
+<table width=3D"580" class=3D"inner_table" align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"width:580px;margin:0 auto;">=20
+<tbody>=20
+<tr>=20
+<td height=3D"40" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td height=3D"1" style=3D"line-height:1px;font-size:1px;border-bottom:1px s=
+olid #cccccc">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td height=3D"40" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" style=3D"font-family:'Helvetica neue',Helvetica,Arial,Ve=
+rdana,sans-serif;font-size:13px;line-height:19px;color:#707070;text-align:c=
+enter;">=20
+<div class=3D"mktoText" id=3D"social-icons1be35c02f-7988-4316-b0fc-09987554=
+69c7">=20
+<p><a href=3D
+"https://links.eml.atlassian.com/Y0u4d00yu00QX012HTA0yC3" target=3D"_blank"=
+ style=3D"font-family: 'Helvetica neue',Helvetica,Arial,Verdana,sans-serif;=
+ font-size: 13px; color: #707070; text-decoration: none;"
+>Privacy Policy</a> =E2=80=A2 <a href=3D
+"https://links.eml.atlassian.com/r40z0C2d0T1HXyA3u01Q0u0" target=3D"_blank"=
+ style=3D"font-family: 'Helvetica neue',Helvetica,Arial,Verdana,sans-serif;=
+ font-size: 13px; color: #707070; text-decoration: none;"
+>Contact</a> =E2=80=A2 <a href=3D
+"https://links.eml.atlassian.com/s0Ad1H30XTy20A0Q4u20u0C" target=3D"_blank"=
+ style=3D"font-family: 'Helvetica neue',Helvetica,Arial,Verdana,sans-serif;=
+ font-size: 13px; color: #707070; text-decoration: none;"
+>Blog</a> =E2=80=A2 <a href=3D
+"https://links.eml.atlassian.com/o02By003d003uA04XCTuQH1" target=3D"_blank"=
+ style=3D"font-family: 'Helvetica neue',Helvetica,Arial,Verdana,sans-serif;=
+ font-size: 13px; color: #707070; text-decoration: none;"
+>Twitter</a></p>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td height=3D"10" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" style=3D"vertical-align:top;font-family:'Helvetica neue'=
+,Helvetica,Arial,Verdana,sans-serif;font-size:13px;line-height:19px;color:#=
+707070;text-align:center;">=20
+<div class=3D"mktoText devicewidth" id=3D"copyright-textbe35c02f-7988-4316-=
+b0fc-0998755469c7" style=3D"width: 80%;margin: 0 auto;">=20
+<p>Copyright 2019 Atlassian Pty Ltd. All rights reserved. We are located at=
+ 341 George Street, Sydney, NSW, 2000, Australia</p>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td height=3D"20" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" style=3D"vertical-align:top;font-family:'Helvetica neue'=
+,Helvetica,Arial,Verdana,sans-serif;font-size:13px;line-height:19px;color:#=
+707070;text-align:center;">=20
+<div class=3D"mktoText" id=3D"copy-right-newbe35c02f-7988-4316-b0fc-0998755=
+469c7">=20
+<a href=3D
+"https://links.eml.atlassian.com/kA14H0y00du02TuQX30C40C" target=3D"_blank"
+> <img src=3D"http://na-ab35.marketo.com/rs/594-ATC-127/images/Atlassian-lo=
+go-rebrand-main.png" width=3D"116" border=3D"0" alt=3D"" /></a>=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td height=3D"30" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+<tr>=20
+<td valign=3D"top" style=3D"vertical-align:top;font-family:'Helvetica neue'=
+,Helvetica,Arial,Verdana,sans-serif;font-size:13px;line-height:19px;color:#=
+707070;text-align:center;">=20
+<div class=3D"devicewidth" id=3D"subscription-links">
+ If you no longer wish to receive these emails,=20
+<br />please=20
+<a href=3D
+"https://links.eml.atlassian.com/dc/9ikypgS6EsEi7BGeQXPQLEiROl-ThVYZZ9CBmpG=
+3GFAMcrt2WdAJ10Dw2vLdngIM0ImmxjMDm7rAR5ou03Aler-MysoYgZp2ODVOcAyAJu4=3D/jQZ=
+T032HA104X0uyCux0d00" target=3D"_blank" style=3D"font-family:'Helvetica neu=
+e',Helvetica,Arial,Verdana,sans-serif;font-size:13px;color:#707070;text-dec=
+oration:underline;"
+>update your preferences</a> or=20
+<a href=3D
+"https://links.eml.atlassian.com/dc/9ikypgS6EsEi7BGeQXPQLEiROl-ThVYZZ9CBmpG=
+3GFAMcrt2WdAJ10Dw2vLdngIM0ImmxjMDm7rAR5ou03Aleg7TVu-RgDflH0C_CfRj9Dzp3VhbOZ=
+Yd00aTFdZvM5NDdDpVu63KwA4FLwLTXWphlg=3D=3D/jQZT032HA104X0uyCux0d00" target=
+=3D"_blank" style=3D"font-family:'Helvetica neue',Helvetica,Arial,Verdana,s=
+ans-serif;font-size:13px;color:#707070;text-decoration:underline;"
+>unsubscribe here</a>.=20
+</div> </td>=20
+</tr>=20
+<tr>=20
+<td height=3D"40" style=3D"line-height:1px;font-size:1px;">&nbsp;</td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table>  =20
+
+<img src=3D"https://links.eml.atlassian.com/trk?t=3D1&mid=3DNTk0LUFUQy0xMjc=
+6MDoxMzYyOjE4NjI6MDoxMDc0Ojk6MTIzMTg6MTU5MzMyMjQtMTpudWxs" width=3D"1" heig=
+ht=3D"1" style=3D"display:none !important;" alt=3D"" />
+
+<!--This is a comment-->
+</body>
+</html>
+------=_Part_12447220_1318349040.1580223145839--

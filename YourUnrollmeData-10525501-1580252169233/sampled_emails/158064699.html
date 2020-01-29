@@ -1,0 +1,582 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html xmlns="http://www.w3.org/1999/xhtml"> <head> <meta http-equiv="content-type" content="text/html; charset=UTF-8"> <title>Open Source Is Growing, But Not How It Should</title> <style type="text/css">
+      /* /\/\/\/\/\/\/\/\/ CLIENT-SPECIFIC STYLES /\/\/\/\/\/\/\/\/ */
+      #outlook a {
+        padding:0;
+      }
+
+      /* Force Outlook to provide a "view in browser" message */
+      .ReadMsgBody {
+        width:100%;
+      }
+
+      .ExternalClass {
+        width:100%;
+      }
+
+      /* Force Hotmail to display emails at full width */
+      .ExternalClass,.ExternalClass p,.ExternalClass span,.ExternalClass font,.ExternalClass td,.ExternalClass div {
+        line-height:100%;
+      }
+
+      /* Force Hotmail to display normal line spacing */
+      body,table,td,p,a,li,blockquote {
+        -webkit-text-size-adjust:100%;
+        -ms-text-size-adjust:100%;
+      }
+
+      /* Prevent WebKit and Windows mobile changing default text sizes */
+      table,td {
+        mso-table-lspace:0;
+        mso-table-rspace:0;
+      }
+
+      /* Remove spacing between tables in Outlook 2007 and up */
+      img {
+        -ms-interpolation-mode:bicubic;
+      }
+
+      /* Allow smoother rendering of resized image in Internet Explorer */
+      /* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
+      body {
+        margin:0;
+        padding:0;
+      }
+
+      img {
+        border:0;
+        height:auto;
+        line-height:100%;
+        outline:none;
+        text-decoration:none;
+      }
+
+      table {
+        border-collapse:collapse !important;
+      }
+
+      body,#bodyTable,#bodyCell {
+        height:100% !important;
+        margin:0;
+        padding:0;
+        width:100% !important;
+      }
+
+      /* /\/\/\/\/\/\/\/\/ TEMPLATE STYLES /\/\/\/\/\/\/\/\/ */
+      /* ========== Page Styles ========== */
+      #bodyCell {
+        padding:20px;
+      }
+
+      #templateContainer {
+        width:600px;
+      }
+
+      /**
+            			* @tab Page
+            			* @section background style
+            			* @tip Set the background color and top border for your email. You may want to choose colors that match your company's branding.
+            			* @theme page
+            			*/
+      body,#bodyTable {
+        /*@editable*/
+        background-color:#ffffff;
+      }
+
+      /**
+            			* @tab Page
+            			* @section background style
+            			* @tip Set the background color and top border for your email. You may want to choose colors that match your company's branding.
+            			* @theme page
+            			*/
+      #bodyCell {
+        /*@editable*/
+        border-top:4px solid #ffffff;
+      }
+
+      /**
+            			* @tab Page
+            			* @section email border
+            			* @tip Set the border for your email.
+            			*/
+      #templateContainer {
+        /*@editable*/
+        border:1px solid #BBBBBB;
+      }
+
+      /**
+            			* @tab Page
+            			* @section heading 1
+            			* @tip Set the styling for all first-level headings in your emails. These should be the largest of your headings.
+            			* @style heading 0
+            			*/
+      h1 {
+        /*@editable*/
+        color:#202020 !important;
+        display:block;
+        /*@editable*/
+        font-family:Helvetica;
+        /*@editable*/
+        font-size:18px;
+        /*@editable*/
+        font-style:normal;
+        /*@editable*/
+        font-weight:bold;
+        /*@editable*/
+        line-height:100%;
+        /*@editable*/
+        letter-spacing:normal;
+        margin-top:12px;
+        margin-right:0;
+        margin-left:0;
+        /*@editable*/
+        text-align:left;
+      }
+
+      /**
+            			* @tab Page
+            			* @section heading 2
+            			* @tip Set the styling for all second-level headings in your emails.
+            			* @style heading 2
+            			*/
+      h2 {
+        /*@editable*/
+        color:#404040 !important;
+        display:block;
+        /*@editable*/
+        font-family:Helvetica;
+        /*@editable*/
+        font-size:18px;
+        /*@editable*/
+        font-style:normal;
+        /*@editable*/
+        font-weight:bold;
+        /*@editable*/
+        line-height:100%;
+        /*@editable*/
+        letter-spacing:normal;
+        margin-top:0;
+        margin-right:0;
+        margin-bottom:10px;
+        margin-left:0;
+        /*@editable*/
+        text-align:left;
+      }
+
+      /**
+            			* @tab Page
+            			* @section heading 3
+            			* @tip Set the styling for all third-level headings in your emails.
+            			* @style heading 3
+            			*/
+      h3 {
+        /*@editable*/
+        color:#606060 !important;
+        display:block;
+        /*@editable*/
+        font-family:Helvetica;
+        /*@editable*/
+        font-size:16px;
+        /*@editable*/
+        font-weight:normal;
+        /*@editable*/
+        line-height:100%;
+        /*@editable*/
+        letter-spacing:normal;
+        margin-top:0;
+        margin-right:0;
+        margin-bottom:10px;
+        margin-left:0;
+        /*@editable*/
+        text-align:left;
+      }
+
+      /**
+            			* @tab Page
+            			* @section heading 4
+            			* @tip Set the styling for all fourth-level headings in your emails. These should be the smallest of your headings.
+            			* @style heading 4
+            			*/
+      h4 {
+        /*@editable*/
+        color:#808080 !important;
+        display:block;
+        /*@editable*/
+        font-family:Helvetica;
+        /*@editable*/
+        font-size:14px;
+        /*@editable*/
+        font-weight:normal;
+        /*@editable*/
+        line-height:100%;
+        /*@editable*/
+        letter-spacing:normal;
+        margin-top:0;
+        margin-right:0;
+        margin-bottom:10px;
+        margin-left:0;
+        /*@editable*/
+        text-align:left;
+      }
+
+      /* ========== Header Styles ========== */
+      /**
+            			* @tab Header
+            			* @section preheader style
+            			* @tip Set the background color and bottom border for your email's preheader area.
+            			* @theme header
+            			*/
+      #templatePreheader {
+        /*@editable*/
+        background-color:#F4F4F4;
+        /*@editable*/
+        border-bottom:1px solid #CCCCCC;
+      }
+
+      /**
+            			* @tab Header
+            			* @section preheader text
+            			* @tip Set the styling for your email's preheader text. Choose a size and color that is easy to read.
+            			*/
+      .preheaderContent {
+        /*@editable*/
+        color:#808080;
+        /*@editable*/
+        font-family:Helvetica;
+        /*@editable*/
+        font-size:10px;
+        /*@editable*/
+        line-height:125%;
+        /*@editable*/
+        text-align:left;
+      }
+
+      /**
+            			* @tab Header
+            			* @section preheader link
+            			* @tip Set the styling for your email's preheader links. Choose a color that helps them stand out from your text.
+            			*/
+      .preheaderContent a:link,.preheaderContent a:visited,/* Yahoo! Mail Override */ .preheaderContent a .yshortcuts /* Yahoo! Mail Override */ {
+        /*@editable*/
+        color:#606060;
+        /*@editable*/
+        font-weight:normal;
+        /*@editable*/
+        text-decoration:underline;
+      }
+
+      /**
+            			* @tab Header
+            			* @section header style
+            			* @tip Set the background color and borders for your email's header area.
+            			* @theme header
+            			*/
+      #templateHeader {
+        /*@editable*/
+        background-color:#333333;
+        /*@editable*/
+        /*@editable*/
+      }
+
+      /**
+            			* @tab Header
+            			* @section header text
+            			* @tip Set the styling for your email's header text. Choose a size and color that is easy to read.
+            			*/
+      .headerContent {
+        /*@editable*/
+        color:#505050;
+        /*@editable*/
+        font-family:Helvetica;
+        /*@editable*/
+        font-size:20px;
+        /*@editable*/
+        font-weight:bold;
+        /*@editable*/
+        line-height:100%;
+        /*@editable*/
+        padding-top:0;
+        /*@editable*/
+        padding-right:0;
+        /*@editable*/
+        padding-bottom:0;
+        /*@editable*/
+        padding-left:0;
+        /*@editable*/
+        text-align:left;
+        /*@editable*/
+        vertical-align:middle;
+      }
+
+      /**
+            			* @tab Header
+            			* @section header link
+            			* @tip Set the styling for your email's header links. Choose a color that helps them stand out from your text.
+            			*/
+      .headerContent a:link,.headerContent a:visited,/* Yahoo! Mail Override */ .headerContent a .yshortcuts /* Yahoo! Mail Override */ {
+        /*@editable*/
+        color:#EB4102;
+        /*@editable*/
+        font-weight:normal;
+        /*@editable*/
+        text-decoration:underline;
+      }
+
+      #headerImage {
+        height:auto;
+        max-width:600px;
+      }
+
+      /* ========== Body Styles ========== */
+      /**
+            			* @tab Body
+            			* @section body style
+            			* @tip Set the background color and borders for your email's body area.
+            			*/
+      #templateBody {
+        /*@editable*/
+        background-color:#ffffff;
+        /*@editable*/
+        border-top:1px solid #FFFFFF;
+        /*@editable*/
+      }
+
+      /**
+            			* @tab Body
+            			* @section body text
+            			* @tip Set the styling for your email's main content text. Choose a size and color that is easy to read.
+            			* @theme main
+            			*/
+      .bodyContent {
+        /*@editable*/
+        color:#505050;
+        /*@editable*/
+        font-family:Helvetica;
+        /*@editable*/
+        font-size:14px;
+        /*@editable*/
+        line-height:150%;
+        padding-top:20px;
+        padding-right:20px;
+        padding-bottom:5px;
+        padding-left:20px;
+        /*@editable*/
+        text-align:left;
+      }
+
+      /**
+            			* @tab Body
+            			* @section body link
+            			* @tip Set the styling for your email's main content links. Choose a color that helps them stand out from your text.
+            			*/
+      .bodyContent a:link,.bodyContent a:visited,/* Yahoo! Mail Override */ .bodyContent a .yshortcuts /* Yahoo! Mail Override */ {
+        /*@editable*/
+        color:#0099CC;
+        /*@editable*/
+        font-weight:normal;
+        /*@editable*/
+        text-decoration:underline;
+      }
+
+      .bodyContent img {
+        display:inline;
+        height:auto;
+        max-width:560px;
+      }
+
+      tr.border_bottom td {
+        border-bottom:1pt solid #CCCCCC;
+      }
+
+      /* ========== Footer Styles ========== */
+      /**
+            			* @tab Footer
+            			* @section footer style
+            			* @tip Set the background color and borders for your email's footer area.
+            			* @theme footer
+            			*/
+      #templateFooter {
+        /*@editable*/
+        background-color:#666666;
+        /*@editable*/
+      }
+
+      /**
+            			* @tab Footer
+            			* @section footer text
+            			* @tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
+            			* @theme footer
+            			*/
+      .footerContent {
+        /*@editable*/
+        color:#ffffff;
+        /*@editable*/
+        font-family:Helvetica;
+        /*@editable*/
+        font-size:11px;
+        /*@editable*/
+        line-height:150%;
+        padding-top:20px;
+        padding-right:20px;
+        padding-bottom:20px;
+        padding-left:20px;
+        /*@editable*/
+        text-align:left;
+      }
+
+      /**
+            			* @tab Footer
+            			* @section footer link
+            			* @tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
+            			*/
+      .footerContent a:link,.footerContent a:visited,/* Yahoo! Mail Override */ .footerContent a .yshortcuts,.footerContent a span /* Yahoo! Mail Override */ {
+        /*@editable*/
+        color:#ffffff;
+        /*@editable*/
+        font-weight:normal;
+        /*@editable*/
+        text-decoration:underline;
+      }
+
+      /* /\/\/\/\/\/\/\/\/ MOBILE STYLES /\/\/\/\/\/\/\/\/ */
+      @media only screen and (max-width: 480px) {
+        /* /\/\/\/\/\/\/ CLIENT-SPECIFIC MOBILE STYLES /\/\/\/\/\/\/ */
+        body,table,td,p,a,li,blockquote {
+          !important;
+        }
+
+        /* Prevent Webkit platforms from changing default text sizes */
+        body {
+          width:100% !important;
+          min-width:100% !important;
+        }
+
+        /* Prevent iOS Mail from adding padding to the body */
+        /* /\/\/\/\/\/\/ MOBILE RESET STYLES /\/\/\/\/\/\/ */
+        #bodyCell {
+          padding:10px !important;
+        }
+
+        /* /\/\/\/\/\/\/ MOBILE TEMPLATE STYLES /\/\/\/\/\/\/ */
+        /* ======== Page Styles ======== */
+        /**
+                				* @tab Mobile Styles
+                				* @section template width
+                				* @tip Make the template fluid for portrait or landscape view adaptability. If a fluid layout doesn't work for you, set the width to 300px instead.
+                				*/
+        #templateContainer {
+          max-width:600px !important;
+          /*@editable*/
+          width:100% !important;
+        }
+
+        /**
+                				* @tab Mobile Styles
+                				* @section heading 1
+                				* @tip Make the first-level headings larger in size for better readability on small screens.
+                				*/
+        h1 {
+          /*@editable*/
+          font-size:24px !important;
+          /*@editable*/
+          line-height:100% !important;
+        }
+
+        /**
+                				* @tab Mobile Styles
+                				* @section heading 2
+                				* @tip Make the second-level headings larger in size for better readability on small screens.
+                				*/
+        h2 {
+          /*@editable*/
+          font-size:20px !important;
+          /*@editable*/
+          line-height:100% !important;
+        }
+
+        /**
+                				* @tab Mobile Styles
+                				* @section heading 3
+                				* @tip Make the third-level headings larger in size for better readability on small screens.
+                				*/
+        h3 {
+          /*@editable*/
+          font-size:18px !important;
+          /*@editable*/
+          line-height:100% !important;
+        }
+
+        /**
+                				* @tab Mobile Styles
+                				* @section heading 4
+                				* @tip Make the fourth-level headings larger in size for better readability on small screens.
+                				*/
+        h4 {
+          /*@editable*/
+          font-size:16px !important;
+          /*@editable*/
+          line-height:100% !important;
+        }
+
+        /* ======== Header Styles ======== */
+        #templatePreheader {
+          display:none !important;
+        }
+
+        /* Hide the template preheader to save space */
+        /**
+                				* @tab Mobile Styles
+                				* @section header image
+                				* @tip Make the main header image fluid for portrait or landscape view adaptability, and set the image's original width as the max-width. If a fluid setting doesn't work, set the image width to half its original size instead.
+                				*/
+        #headerImage {
+          height:auto !important;
+          /*@editable*/
+          max-width:600px !important;
+          /*@editable*/
+          width:100% !important;
+        }
+
+        /**
+                				* @tab Mobile Styles
+                				* @section header text
+                				* @tip Make the header content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+                				*/
+        .headerContent {
+          /*@editable*/
+          font-size:20px !important;
+          /*@editable*/
+          line-height:125% !important;
+        }
+
+        /* ======== Body Styles ======== */
+        /**
+                				* @tab Mobile Styles
+                				* @section body text
+                				* @tip Make the body content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+                				*/
+        .bodyContent {
+          /*@editable*/
+          font-size:18px !important;
+          /*@editable*/
+          line-height:125% !important;
+        }
+
+        /* ======== Footer Styles ======== */
+        /**
+                				* @tab Mobile Styles
+                				* @section footer text
+                				* @tip Make the body content text larger in size for better readability on small screens.
+                				*/
+        .footerContent {
+          /*@editable*/
+          font-size:14px !important;
+          /*@editable*/
+          line-height:115% !important;
+        }
+
+        .footerContent a {
+          display:block !important;
+        }/* Place footer social and utility links on their own lines, for easier access */
+
+      }
+    </style> </head> <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0"> <center> <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" id="bodyTable" style="height:100%;"> <tr> <td align="center" valign="top" id="bodyCell"> <center></center> <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateContainer"> <tr> <td align="center" valign="top"> <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templatePreheader"> <tr> <td valign="top" class="preheaderContent" style="padding-top:10px;padding-right:20px;padding-bottom:10px;padding-left:20px;" mc:edit="preheader_content00"> For our January “Staff Pick” Project of the Month, we selected Superior OS, an AOSP based ROM that works on Android OS 9 (Pie) -- </td> <td valign="top" width="180" class="preheaderContent" style="padding-top:10px;padding-right:20px;padding-bottom:10px;padding-left:0;" mc:edit="preheader_content01"> Email not displaying correctly?<br><a href="https://mailchi.mp/newsletters/open-source-is-growing-but-not-how-it-should?e=3fee37c6f7" target="_blank">View it in your browser</a>. </td> </tr> </table> </td> </tr> <tr> <td align="center" valign="top" style="width:100%;"> <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader" bgcolor="#333333"> <tr> <td valign="top" align="center"> <center> <img src="https://library.slashdotmedia.com/wp-content/uploads/2017/04/sf-logo-orange-white-nl-1-e1495036445664.png" width="188" alt="SourceForge" style="display:block;border:0px;text-align:center;margin:12px;0;12px;0"> </center> </td> </tr> <tr> <td valign="top" align="center" style="background-color:#FF6600;height:6px;"> <table cellpadding="0" cellspacing="0" width="100%"> <tr> <td width="10" style="width:10px;">  </td> <td> <h4 style="margin-top:9px;"> <span style="color: #000000;padding-left:0px;padding-right:0px;">Issue #70 - January 22, 2020</span> </h4> </td> <td align="right"> <table cellpadding="0" cellspacing="0" style="margin-right:8px;"> <tr> <td align="right" style="font-family:Roboto, Helvetica, Arial, sans-serif;"> <h4 style="font-weight:normal;display:inline-block;vertical-align:top;padding-top:10px;padding-right:3px;"> </h4> <h4 style="display:inline-block;"> <span style="color: #ffffff"> <div style="text-align:left;font-family:Roboto, Helvetica, Arial, sans-serif;font-size:15px;margin-bottom:0;margin-top:8px;color:#f8f9fc;line-height:90%;"> <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=767d72ea89&e=3fee37c6f7" target="_blank"><img alt="Facebook" src="https://library.slashdotmedia.com/wp-content/uploads/2017/03/sf_social_facebook_default.png" border="0" width="20" style="display:inline-block;padding-right:2px;"></a> <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=92c5ecd654&e=3fee37c6f7" class="twitter" target="_blank"><img alt="Twitter" src="https://library.slashdotmedia.com/wp-content/uploads/2017/03/sf_social_twitter_default.png" border="0" width="20" style="display:inline-block;padding-right:2px"></a> <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=7ca9abd68a&e=3fee37c6f7" target="_blank"><img alt="LinkedIn" src="https://library.slashdotmedia.com/wp-content/uploads/2017/03/sf_social_linkedin_default.png" border="0" width="20" style="display:inline-block;padding-right:2px"></a> </div> </span> </h4> </td> </tr> </table> </td> </tr> </table> </td> </tr> </table> </td> </tr> <tr> <td align="center" valign="top"> <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody"> <tr> <td valign="top" class="bodyContent" style="color:#505050;font-family:Helvetica;font-size:14px;line-height:150%;padding-top:20px;padding-right:20px;padding-bottom:5px;padding-left:20px;text-align:left;"> <h5 style="color:#00CC00 !important;display:block;font-family:Helvetica;font-size:14px;font-weight:normal;line-height:100%;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:5px;margin-left:0;text-align:left;">Sponsor</h5> <hr style="border-style:none;margin-top:0px;margin-bottom:8px;margin-right:0;margin-left:0;border-top-width:1px;border-top-style:solid;border-top-color:#9b9b9b;"> <h1 style="line-height:108%;">Instantly detect suspicious activity on your PC with GlassWire.com FREE!</h1> <table border="0" cellpadding="0" cellspacing="0" width="100%"> <tr> <td align="center"> <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=cb371d5055&e=3fee37c6f7" target="_blank"><img src="https://emailsd.s3.amazonaws.com/email_images/gw_slashdot.gif" alt="Here" align="left" width="80" height="80" hspace="20" border="0" style="Margin:0 20px 10px 0px;"></a> </td> <td> Use the same tool information security and IT Pros use to find data wasters, privacy violators, bandwidth hogs, and malware.<br><a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=ffff13a0ac&e=3fee37c6f7" target="_blank">Try it now for free at GlassWire.com</a> </td> </tr> </table> <br> <h5 style="color:#00CC00 !important;display:block;font-family:Helvetica;font-size:14px;font-weight:normal;line-height:100%;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:5px;margin-left:0;text-align:left;">January 2020, “Staff Choice” Project of the Month</h5> <hr style="border-style:none;margin-top:0px;margin-bottom:8px;margin-right:0;margin-left:0;border-top-width:1px;border-top-style:solid;border-top-color:#9b9b9b;"> For our January “Staff Pick” Project of the Month, we selected <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=eaa629d0a6&e=3fee37c6f7" target="_blank">Superior OS</a>, an AOSP based ROM that works on Android OS 9 (Pie) <p></p> Superior OS offers several great features, including: <ul> <li>Traffic indicators</li> <li>Double-tap to sleep</li> <li>H/W keys customisation</li> <li>Enable/Disable Navbar</li> <li>Three Finger Screenshot</li> <li>Accent Color Manager, among many others.</li> </ul> </td> </tr> <tr> <td valign="top" class="bodyContent" style="color:#505050;font-family:Helvetica;font-size:14px;line-height:150%;padding-top:20px;padding-right:20px;padding-bottom:5px;padding-left:20px;text-align:left;"> <table style="border:1px solid #CCCCCC;border-width:1px 1px 1px 1px;padding-left:0px;padding-right:0px;padding-bottom:10px;width:100%;"> <tr class="border_bottom" style="background-color:#999999;"> <td colspan="2"> <h2 style="font-family:Roboto, Arial, sans-serif;padding-bottom:8px;padding-right:0;padding-left:10px;font-size:14px;font-weight:normal;margin-top:8px;margin-bottom:0;margin-right:0;margin-left:0;background-color:#999999;"> <span style="color:#FFFFFF">Projects of the Month:</span> </h2> <hr style="border-style:none;margin-top:0px;margin-bottom:0;margin-right:0;margin-left:0;border-top-width:1px;border-top-style:solid;border-top-color:#9b9b9b;"> </td> </tr> <tr class="border_bottom"> <td> <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=b1717d8b50&e=3fee37c6f7" target="_blank"><img src="https://a.fsdn.com/allura/p/gns-3/icon?1579151977?&amp;w=90" alt="Chameleons are cool" style="width:25px;height:25px;padding-top:10px;padding-bottom:10px;padding-right:15x;padding-left:15px;display: block;" height="25" width="25"></a> </td> <td> <h3 style="margin:0;padding:0;font-weight:normal;"> <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=78dea87b00&e=3fee37c6f7" target="_blank">GNS3</a> </h3> <h6 style="margin:0;padding:0;">An advanced network simulator to design and configure virtual networks</h6> </td> </tr> <tr class="border_bottom"> <td> <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=4c2dbb21e7&e=3fee37c6f7" target="_blank"><img src="https://a.fsdn.com/allura/mirror/etcher/icon?1579018751?&amp;w=90" alt="Etcher" style="width:25px;height:25px;padding-top:10px;padding-bottom:10px;padding-right:15px;padding-left:15px;display: block;" height="25" width="25"></a> </td> <td style="padding-top:7px;padding-bottom:0px;padding-right:0px;padding-left:0px;"> <h3 style="text-align:left;margin:0;padding:0;font-weight:normal;"> <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=a5bbbc2740&e=3fee37c6f7" target="_blank">Etcher</a> </h3> <h6 style="margin:0;padding:0;text-align:left;">A safe way to flash OS images to SD cards &amp; USB drives </h6> </td> </tr> <tr class="border_bottom"> <td> <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=8e8e13a4dc&e=3fee37c6f7" target="_blank"><img src="https://a.fsdn.com/allura/p/squirrel-sql/icon?1515631095?&amp;w=90" alt="It's a squirrel btw" style="width:25px;height:25px;padding-top:10px;padding-bottom:10px;padding-right:15x;padding-left:15px;display: block;" height="25" width="25"></a> </td> <td> <h3 style="text-align:left;margin:0;padding:0;font-weight:normal;"> <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=28bce3b7cb&e=3fee37c6f7" target="_blank">SQuirreL SQL Client</a> </h3> <h6 style="margin:0;padding:0;text-align:left;">A Java SQL client for any JDBC compliant database</h6> </td> </tr> <tr class="border_bottom"> <td> <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=b3126f9834&e=3fee37c6f7" target="_blank"><img src="https://a.fsdn.com/allura/p/opencvlibrary/icon?1576882940?&amp;w=90" alt="opencv" style="width:25px;height:25px;padding-top:10px;padding-bottom:10px;padding-right:15x;padding-left:15px;display: block;" height="25" width="25"></a> </td> <td> <h3 style="text-align:left;margin:0;padding:0;font-weight:normal;"> <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=33d7ee6309&e=3fee37c6f7" target="_blank">OpenCV</a> </h3> <h6 style="margin:0;padding:0;text-align:left;"> Open Source Computer Vision Library</h6> </td> </tr> <tr class="border_bottom"> <td> <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=6254793f08&e=3fee37c6f7" target="_blank"><img src="https://a.fsdn.com/allura/p/jmol/icon?1520184400?&amp;w=90" alt="Jmol" style="width:25px;height:25px;padding-top:10px;padding-bottom:10px;padding-right:15x;padding-left:15px;display: block;" height="25" width="25"></a> </td> <td> <h3 style="text-align:left;margin:0;padding:0;font-weight:normal;"> <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=c48a253bff&e=3fee37c6f7" target="_blank">Jmol</a> </h3> <h6 style="margin:0;padding:0;text-align:left;"> An interactive viewer for three-dimensional chemical structures.</h6> </td> </tr> </table> </td> </tr> <tr> <td valign="top" class="bodyContent" style="color:#505050;font-family:Helvetica;font-size:14px;line-height:150%;padding-top:20px;padding-right:20px;padding-bottom:5px;padding-left:20px;text-align:left;"> <h5 style="color:#00CC00 !important;display:block;font-family:Helvetica;font-size:14px;font-weight:normal;line-height:100%;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:5px;margin-left:0;text-align:left;">Sponsor</h5> <hr style="border-style:none;margin-top:0px;margin-bottom:8px;margin-right:0;margin-left:0;border-top-width:1px;border-top-style:solid;border-top-color:#9b9b9b;"> <h1 style="line-height:108%;">Take control of your digital files with a Digital Asset Management solution</h1> <table border="0" cellpadding="0" cellspacing="0" width="100%"> <tr> <td align="center"> <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=8d8d655044&e=3fee37c6f7" target="_blank"><img src="https://a.fsdn.com/allura/s/asset-bank/icon?1578509815?&amp;w=90" alt="Indeni" align="left" width="80" height="80" border="0" style="Margin:0 20px 10px 0px;;"></a> </td> <td> Asset Bank is an award winning DAM that helps you find what you need, fast. Used by 800+ companies worldwide. <br><a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=fd42cb779e&e=3fee37c6f7" target="_blank">Book your free demo today!</a> </td> </tr> </table> <br> <h5 style="color:#00CC00 !important;display:block;font-family:Helvetica;font-size:14px;font-weight:normal;line-height:100%;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:5px;margin-left:0;text-align:left;">Open Source Is Growing, But Not How It Should</h5> <hr style="border-style:none;margin-top:0px;margin-bottom:8px;margin-right:0;margin-left:0;border-top-width:1px;border-top-style:solid;border-top-color:#9b9b9b;"> Something untoward has been happening to open source, and it’s become quite apparent in recent years. <p></p>Powering everything from AI to the Cloud, open source has certainly been growing rapidly for some time now. But while all seems to be progressing well on the surface, underneath only a small number of developers are actually doing all the work.<br><a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=447caeaef6&e=3fee37c6f7" target="_blank">Read More on SourceForge.net</a> <br> <br> <h5 style="color:#00CC00 !important;display:block;font-family:Helvetica;font-size:14px;font-weight:normal;line-height:100%;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:5px;margin-left:0;text-align:left;">Featured SourceForge Deals</h5> <hr style="border-style:none;margin-top:0px;margin-bottom:8px;margin-right:0;margin-left:0;border-top-width:1px;border-top-style:solid;border-top-color:#9b9b9b;"> <h2> <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=6242c710bc&e=3fee37c6f7" target="_blank">The 2020 Premium Learn To Code Certification Bundle</a> </h2> Kickstart Your Lucrative Coding Career with 10 Courses and 120+ Hours of Training in HTML, Java, Ruby &amp; More. <p></p> If you're looking for a truly comprehensive web development course that will take you from learning the basics to mastering the most advanced development techniques, this project-based course is the one for you. <br> <br> <h5 style="color:#00CC00 !important;display:block;font-family:Helvetica;font-size:14px;font-weight:normal;line-height:100%;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:5px;margin-left:0;text-align:left;">Conferences and Events</h5> <hr style="border-style:none;margin-top:0px;margin-bottom:8px;margin-right:0;margin-left:0;border-top-width:1px;border-top-style:solid;border-top-color:#9b9b9b;"> <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:5px;"> <tr> <td> <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=3800cd6c5d&e=3fee37c6f7" target="_blank">FOSDEM 2020</a> </td> <td align="right" style="text-align:right;"> <strong>February 1-2, 2020</strong> </td> </tr> </table> FOSDEM is a free event for software developers to meet, share ideas and collaborate. <br> Every year, thousands of developers of free and open source software from all over the world gather at the event in Brussels. <br> <br> <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:5px;"> <tr> <td> <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=64ad7cc0e5&e=3fee37c6f7" target="_blank"> Southern California Linux Expo(SCALE)</a> </td> <td align="right" style="text-align:right;"> <strong>March 5-8, 2020</strong> </td> </tr> </table> The Southern California Linux Expo (SCALE) is an annual Linux, open source and free software conference held in Los Angeles, California <br> <br> <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom:5px;"> <tr> <td> <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=415e8947fc&e=3fee37c6f7" target="_blank">Open Source Summit North America</a> </td> <td align="right" style="text-align:right;"> <strong>June 22-24, 2020</strong> </td> </tr> </table> Open Source Summit North America (OSS NA) is the leading conference for developers, architects, and other technologists – as well as open source community and industry leaders – to collaborate, share information, learn about the latest technologies and gain a competitive advantage by using innovative open solutions. <br> <br> <h5 style="color:#00CC00 !important;display:block;font-family:Helvetica;font-size:14px;font-weight:normal;line-height:100%;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:5px;margin-left:0;text-align:left;">Help Wanted</h5> <hr style="border-style:none;margin-top:0px;margin-bottom:8px;margin-right:0;margin-left:0;border-top-width:1px;border-top-style:solid;border-top-color:#9b9b9b;"> Developers wanted to develop a universal invoice system where invoices can be paid. <br><a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=a958cf5fc9&e=3fee37c6f7" target="_blank">Looking for HTML, CSS, JavaScript (also jQuery), PHP, and MySQL developers. </a> <br> <br> If you are looking for an Open Source project to contribute your time to, or if you are someone who wants to advertise your skills, check out the <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=956ace23fb&e=3fee37c6f7" target="_blank">Help Wanted page</a> <br> <br> <h5 style="color:#00CC00 !important;display:block;font-family:Helvetica;font-size:14px;font-weight:normal;line-height:100%;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:5px;margin-left:0;text-align:left;">Final Thoughts</h5> <hr style="border-style:none;margin-top:0px;margin-bottom:8px;margin-right:0;margin-left:0;border-top-width:1px;border-top-style:solid;border-top-color:#9b9b9b;"> If you know someone who is not getting this mailing, encourage them to <a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=516186a93f&e=3fee37c6f7" target="_blank">sign up</a>. <br> If you want to change your newsletter frequency to monthly, <a href="https://sourceforge.us15.list-manage.com/profile?u=aab6529d3675bd877963a652d&id=268c4f594a&e=3fee37c6f7" target="_blank">go here</a>. <br> Thanks for being part of the SourceForge community! And, if you need to get in touch directly, feel free to send us an email at <a href="mailto:CommunityTeam@sourceforge.net" target="_blank">CommunityTeam@sourceforge.net</a>. <br> <br> </td> </tr> </table> </td> </tr> <tr> <td align="center" valign="top"> <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter"> <tr> <td height="20" style="height:20px;"> </td> </tr> <tr> <td valign="top" class="footerContent" style="padding-top:0;" mc:edit="footer_content01"> <table bgcolor="#666666" border="0" cellpadding="0" cellspacing="0" width="100%"> <tr> <td class="pattern" align="center"> <table cellpadding="0" cellspacing="0"> <tr> <td class="col col-left" width="60%" align="left"> <table cellpadding="0" cellspacing="0"> <tr> <td align="left"> <table cellpadding="0" cellspacing="0"> <tr> <td align="left" style="font-family:Roboto, Helvetica, Arial, sans-serif;font-size:12px;"> <h5 style="font-size:12px;"> <span style="color: #ffffff"><a href="https://sourceforge.us15.list-manage.com/track/click?u=aab6529d3675bd877963a652d&id=00c5d4fae3&e=3fee37c6f7" target="_blank" style="color:#FFFFFF;text-decoration:none;">Privacy Policy</a></span>    <span style="color: #ffffff"><a href="https://sourceforge.us15.list-manage.com/unsubscribe?u=aab6529d3675bd877963a652d&id=268c4f594a&e=3fee37c6f7&c=3d387ddac9" target="_blank" style="color:#FFFFFF;text-decoration:none;">Unsubscribe</a></span>    <span style="color: #ffffff"><a href="https://sourceforge.us15.list-manage.com/profile?u=aab6529d3675bd877963a652d&id=268c4f594a&e=3fee37c6f7" target="_blank" style="color:#FFFFFF;text-decoration:none;">Update Preferences</a></span> </h5> </td> </tr> </table> </td> </tr> </table> </td> <td class="col" width="30%" align="center"> <table cellpadding="0" cellspacing="0"> <tr> <td align="left"> <table cellpadding="0" cellspacing="0"> <tr> <td align="center" style="font-family:Roboto, Helvetica, Arial, sans-serif;"> </td> </tr> </table> </td> </tr> </table> </td> </tr> </table> </td> </tr> </table> </td> </tr> </table> </td> </tr> <tr> <td align="center" valign="top"> <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#333333;" bgcolor="#333333"> <tr> <td height="10" style="height:20px;"> </td> </tr> <tr> <td valign="top" class="footerContent" style="padding-top:0;padding-bottom:20px;"> © 2020 Slashdot Media. All Rights Reserved. PO Box 2452 | La Jolla, CA 92038 </td> </tr> </table> </td> </tr> </table> </td> </tr> </table> </center> <img src="https://sourceforge.us15.list-manage.com/track/open.php?u=aab6529d3675bd877963a652d&id=3d387ddac9&e=3fee37c6f7" height="1" width="1"></body> </html>

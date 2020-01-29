@@ -1,0 +1,176 @@
+Delivered-To: protection@firewicca.com
+Received: by 2002:a9d:17c5:0:0:0:0:0 with SMTP id j63csp3584411otj;
+        Mon, 20 Jan 2020 22:23:18 -0800 (PST)
+X-Google-Smtp-Source: APXvYqzoQpJ6FCRxz9vs90dIiLCzd25sfdUXwbZ3LoN/nJsesqzdyM1gWEBFJgCSyhqbgQwKZQxY
+X-Received: by 2002:a63:ff5c:: with SMTP id s28mr3752651pgk.196.1579587798115;
+        Mon, 20 Jan 2020 22:23:18 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1579587798; cv=none;
+        d=google.com; s=arc-20160816;
+        b=CgX6scPZhC4fj34225R4l+4QaJC8KBJto3ELX3uqbsueIWv0tOSEwLEnz1c28Pyf8a
+         5YYZSKKWU6fV3NU7kjNConDQq9diE+nLuvsDdw1oiHhVUN8UOyruYTv35JYYa5zlB7PL
+         wpWc042P6/3q1EXCGh/B5yQNrwCgFWcx8G5XGGok4e/c4mgXLoDlO1AoODNaXBHCEw4D
+         dh9ToXtFmZWGxfaFdqvvSioUmJs/7as86rxIEUc+vPiFd4ka+wtP8qUHjD+KyzDLA/jN
+         nGC69aomlaRmR/+YLuydRWP0K1Bwr7xId2fD8DT/orLik1wuelZ2JprVnDYHY7XmiZLE
+         BbDQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:atlassianmail-meta-obsolete-id
+         :atlassianmail-meta-transaction-id:message-id:subject:reply-to:to
+         :from:date:dkim-signature;
+        bh=Z20W5tJFioLE+y5F2WyJ9jUVeflp085T20I9x2wn92E=;
+        b=bkExe2Yyy8a/dhm+A75sWYCNu05c0YRS5TxQadVnn9KPDE6ZmY/Utx6ST2ieKfjang
+         zqyJvFy4ePsACmLGnG2F5y4SxPaw4ni78zQtE4EOYIf2YQjzpmDRWLITWR7xvI5Zb4aD
+         ST0FGuuOA/0LVli2OjXv4bO5BNQcijCx2ISpXT5+h5TiqgGiZs6S+tViIY/Yx6UoRHX2
+         NXIpx466sCe68Vi+fHG94yMVfzN6YBcvxWlG+T8n7XZlZf48UT8f1Nz8GvQbzR+CQe7S
+         bRpB31Cg5scFfxWd2CaRIsfYmnZEeBV9y0XPnZxOv4XA32rowDNX0/V/JN4x8Vcl7iAz
+         6xoA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@am.atlassian.com header.s=atl201804 header.b=DdM0ZtR7;
+       spf=pass (google.com: domain of no_reply@am.atlassian.com designates 192.174.81.121 as permitted sender) smtp.mailfrom=no_reply@am.atlassian.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=atlassian.com
+Return-Path: <no_reply@am.atlassian.com>
+Received: from mta-81-121.sparkpostmail.com (mta-81-121.sparkpostmail.com. [192.174.81.121])
+        by mx.google.com with ESMTPS id x18si34153110pfn.254.2020.01.20.22.23.17
+        for <protection@firewicca.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 20 Jan 2020 22:23:18 -0800 (PST)
+Received-SPF: pass (google.com: domain of no_reply@am.atlassian.com designates 192.174.81.121 as permitted sender) client-ip=192.174.81.121;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@am.atlassian.com header.s=atl201804 header.b=DdM0ZtR7;
+       spf=pass (google.com: domain of no_reply@am.atlassian.com designates 192.174.81.121 as permitted sender) smtp.mailfrom=no_reply@am.atlassian.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=atlassian.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=am.atlassian.com;
+	s=atl201804; t=1579587796; i=@am.atlassian.com;
+	bh=Z20W5tJFioLE+y5F2WyJ9jUVeflp085T20I9x2wn92E=;
+	h=Date:From:To:Subject:Message-ID:Content-Type;
+	b=DdM0ZtR7SJK34rM0N0HJ0dW7iceKI7drYM/JylWbXln3x0psiAhosRSlyuNMlIu/n
+	 eJMCeVtbL3oGr9AHw5XUIIWyZZWRXr3EY8H5Psutf8/mjkd3IjXhC45DqQz7/1S337
+	 Oi77uw76c3WeiVimrrc9YaghxxDzygJG7Cxqpw/8=
+X-MSFBL: yxQaZXc+R81ivpUym6mnshOki87izO5CKyN9EJsyUS0=|eyJyIjoicHJvdGVjdGl
+	vbkBmaXJld2ljY2EuY29tIiwiY3VzdG9tZXJfaWQiOiIxIiwibWVzc2FnZV9pZCI
+	6IjAwMmJkNDk4MjY1ZTIxNWU3Mjk2Iiwic3ViYWNjb3VudF9pZCI6IjciLCJ0ZW5
+	hbnRfaWQiOiJhdGxhc3NpYW51cyJ9
+Date: Tue, 21 Jan 2020 06:23:16 +0000
+From: "Atlassian" <no_reply@am.atlassian.com>
+To: <protection@firewicca.com>
+Bcc: <sales-archive@atlassian.com>
+Reply-To: "Atlassian" <no_reply@am.atlassian.com>
+Subject: Confirmation of your Atlassian order E.S.A Security Group Shield, AT-92158434
+Message-ID: <01DZ3C9Z3CFECJR4ESR6R21BKS@am.atlassian.com>
+AtlassianMail-Meta-Transaction-ID: 01DZ3C9Z3CFECJR4ESR6R21BKS
+AtlassianMail-Meta-Obsolete-ID: 01DZ3C9Z3CFECJR4ESR6R21BKS
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary=enmime-d73e0c03-1523-4999-a843-cdbaf8717257
+ReceivedDate: Tue, 21 Jan 2020 06:23:18 +0000 (UTC)
+
+--enmime-d73e0c03-1523-4999-a843-cdbaf8717257
+Content-Type: multipart/related;
+ boundary=enmime-ae9946a5-6e24-4dd0-9cf2-a32408998e24
+
+--enmime-ae9946a5-6e24-4dd0-9cf2-a32408998e24
+Content-Type: multipart/alternative;
+ boundary=enmime-22bdc9b7-1e53-4f67-8b12-b1bb1425f63f
+
+--enmime-22bdc9b7-1e53-4f67-8b12-b1bb1425f63f
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+Confirmation of your Atlassian order E.S.A Security Group Shield, AT-921584=
+34=0D=0A=0D=0AAtlassian ( http://www.atlassian.com )=0D=0A=0D=0A***********=
+******************=0D=0AYour order has been processed=0D=0A****************=
+*************=0D=0A=0D=0A*Hi Ambjorn,*=0D=0A=0D=0AThis email is to confirm =
+that we have processed your Atlassian order from E.S.A Security Group Shiel=
+d.=0D=0A=0D=0AUsage of Atlassian products and services are subject to the A=
+tlassian Cloud Terms of Service ( https://www.atlassian.com/legal/cloud-ter=
+ms-of-service=3Futm_source=3Deval-email&utm_medium=3Demail&utm_campaign=3Dc=
+opcee ) ,=C2=A0and Privacy Policy ( https://www.atlassian.com/legal/privacy=
+-policy=3Futm_source=3Deval-email&utm_medium=3Demail&utm_campaign=3Dcopcee =
+).=0D=0A=0D=0APlease contact us ( https://www.atlassian.com/contact=3Futm_s=
+ource=3Deval-email&utm_medium=3Demail&utm_campaign=3Dcopcee ) with any ques=
+tions, we're always happy to help.=0D=0A=0D=0ACheers,=0D=0AThe Atlassians=
+=0D=0A=0D=0APrivacy Policy ( https://www.atlassian.com/legal/privacy-policy=
+=3Futm_source=3D-email&utm_medium=3Demail&utm_campaign=3D ) =E2=80=A2 Conta=
+ct us ( https://www.atlassian.com/company/contact=3Futm_source=3D-email&utm=
+_medium=3Demail&utm_campaign=3D ) =E2=80=A2 Read our Blog ( https://blogs.a=
+tlassian.com/=3Futm_source=3D-email&utm_medium=3Demail&utm_campaign=3D )=0D=
+=0A=0D=0AFacebook ( https://www.facebook.com/Atlassian ) LinkedIn ( https:/=
+/www.linkedin.com/company/atlassian ) Twitter ( https://twitter.com/Atlassi=
+an )=0D=0A=0D=0ACopyright 2020 Atlassian Pty Ltd. All rights reserved. We a=
+re located at=0D=0A341 George Street, Sydney, NSW, 2000, Australia=0D=0A=0D=
+=0AAtlassian ( http://www.atlassian.com=3Futm_source=3D-email&utm_medium=3D=
+email&utm_campaign=3D )=0D=0A
+--enmime-22bdc9b7-1e53-4f67-8b12-b1bb1425f63f
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html><style>body{padding:0;margin:0;}</style><div style=3D"displa=
+y:none" hidden=3D"">Confirmation of your Atlassian order E.S.A Security Gro=
+up Shield, AT-92158434</div><div style=3D"background-color:#fff;color:#172b=
+4d;font-family:-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sa=
+ns, Oxygen, Ubuntu, Droid Sans, Helvetica Neue, sans-serif;font-size:14px;f=
+ont-style:normal;font-weight:400;line-height:1.42857142857143;letter-spacin=
+g:-.005em;text-decoration-skip:ink"><table cellPadding=3D"0" cellSpacing=3D=
+"0" style=3D"width:100%;align:center" class=3D"main table_shrink"><tbody><t=
+r><td><table style=3D"width:520px;margin:auto;text-align:center" cellPaddin=
+g=3D"0" cellSpacing=3D"0" class=3D"table_shrink"><tbody><tr><td style=3D"ve=
+rtical-align:top;text-align:left" class=3D"message-body"><div><table style=
+=3D"width:100%;border:0;border-collapse:collapse" cellPadding=3D"0" cellSpa=
+cing=3D"0" class=3D"table_shrink"><tbody><tr><td style=3D"padding-top:30px;=
+padding-bottom:10px;vertical-align:top;text-align:center"><a href=3D"http:/=
+/www.atlassian.com"><img src=3D"http://cpfs-cdn.atlassian.com/assets/shared=
+/id-summit/id-summit-email_logo_360x80_NEW.png" height=3D"24" alt=3D"Atlass=
+ian" style=3D"align:center;border:0"/></a></td></tr></tbody></table></div><=
+p style=3D"margin-top:16px"><h1 style=3D"font-size:2.07142857em;font-style:=
+normal;font-weight:bolder;letter-spacing:-.01em;line-height:1.10344828;marg=
+in:auto;text-align:center">Your order has been processed</h1></p><p style=
+=3D"margin-top:16px"><b>Hi Ambjorn,</b></p><p style=3D"margin-top:16px">Thi=
+s email is to confirm that we have processed your Atlassian order from E.S.=
+A Security Group Shield.</p><p style=3D"margin-top:16px"> Usage of Atlassia=
+n products and services are subject to the Atlassian=C2=A0<a href=3D"https:=
+//www.atlassian.com/legal/cloud-terms-of-service=3Futm_source=3Deval-email&=
+utm_medium=3Demail&utm_campaign=3Dcopcee" style=3D"border:none;background:t=
+ransparent;color:#0052cc;text-decoration:none">Cloud Terms of Service</a>,=
+=C2=A0and=C2=A0<a href=3D"https://www.atlassian.com/legal/privacy-policy=3F=
+utm_source=3Deval-email&utm_medium=3Demail&utm_campaign=3Dcopcee" style=3D"=
+border:none;background:transparent;color:#0052cc;text-decoration:none">Priv=
+acy Policy</a>. </p><hr style=3D"border:none;border-bottom:1px solid #444"/=
+><p style=3D"margin-top:16px">Please <a href=3D"https://www.atlassian.com/c=
+ontact=3Futm_source=3Deval-email&utm_medium=3Demail&utm_campaign=3Dcopcee" =
+style=3D"border:none;background:transparent;color:#0052cc;text-decoration:n=
+one">contact us</a> with any questions, we&#x27;re always happy to help.</p=
+><p style=3D"margin-top:16px">Cheers,<br/>The Atlassians</p><div style=3D"c=
+olor:#707070;font-size:13px;line-height:19px;text-align:center;margin-top:3=
+2px"><p style=3D"margin-top:16px"><a style=3D"text-decoration:none;color:#7=
+07070" href=3D"https://www.atlassian.com/legal/privacy-policy=3Futm_source=
+=3D-email&utm_medium=3Demail&utm_campaign=3D">Privacy Policy</a>=C2=A0=E2=
+=80=A2=C2=A0<a style=3D"text-decoration:none;color:#707070" href=3D"https:/=
+/www.atlassian.com/company/contact=3Futm_source=3D-email&utm_medium=3Demail=
+&utm_campaign=3D">Contact us</a>=C2=A0=E2=80=A2=C2=A0<a style=3D"text-decor=
+ation:none;color:#707070" href=3D"https://blogs.atlassian.com/=3Futm_source=
+=3D-email&utm_medium=3Demail&utm_campaign=3D">Read our Blog</a></p><p style=
+=3D"margin-top:16px"><a style=3D"text-decoration:none;color:#707070" href=
+=3D"https://www.facebook.com/Atlassian"><img src=3D"http://cpfs-cdn.atlassi=
+an.com/assets/shared/social-media/Facebookx2.png" alt=3D"Facebook" align=3D=
+"center" title=3D"Facebook" style=3D"line-height:0px;outline:0;padding:0;bo=
+rder:0;height:25px;width:auto"/></a>=C2=A0=C2=A0=C2=A0<a style=3D"text-deco=
+ration:none;color:#707070" href=3D"https://www.linkedin.com/company/atlassi=
+an"><img src=3D"http://cpfs-cdn.atlassian.com/assets/shared/social-media/Li=
+nkedInx2.png" alt=3D"LinkedIn" align=3D"center" title=3D"LinkedIn" style=3D=
+"line-height:0px;outline:0;padding:0;border:0;height:25px;width:auto"/></a>=
+=C2=A0=C2=A0=C2=A0<a style=3D"text-decoration:none;color:#707070" href=3D"h=
+ttps://twitter.com/Atlassian"><img src=3D"http://cpfs-cdn.atlassian.com/ass=
+ets/shared/social-media/Twitterx2.png" alt=3D"Twitter" align=3D"center" tit=
+le=3D"Twitter" style=3D"line-height:0px;outline:0;padding:0;border:0;height=
+:25px;width:auto"/></a></p><p style=3D"margin-top:16px">Copyright 2020 Atla=
+ssian Pty Ltd. All rights reserved. We are located at <br/>341 George Stree=
+t, Sydney, NSW, 2000, Australia</p><p style=3D"margin-top:16px"><a style=3D=
+"text-decoration:none;color:#707070" href=3D"http://www.atlassian.com=3Futm=
+_source=3D-email&utm_medium=3Demail&utm_campaign=3D"><img src=3D"http://cpf=
+s-cdn.atlassian.com/assets/shared/id-summit/id-summit-email_logo_360x80_NEW=
+=2Epng" height=3D"15px" alt=3D"Atlassian"/></a></p></div></td></tr></tbody>=
+</table></td></tr></tbody></table></div>=0D=0A
+--enmime-22bdc9b7-1e53-4f67-8b12-b1bb1425f63f--
+
+--enmime-ae9946a5-6e24-4dd0-9cf2-a32408998e24--
+
+--enmime-d73e0c03-1523-4999-a843-cdbaf8717257--

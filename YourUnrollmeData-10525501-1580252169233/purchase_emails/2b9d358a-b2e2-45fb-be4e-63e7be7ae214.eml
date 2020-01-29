@@ -1,0 +1,254 @@
+Delivered-To: protection@firewicca.com
+Received: by 2002:a9d:17c5:0:0:0:0:0 with SMTP id j63csp5408718otj;
+        Wed, 22 Jan 2020 07:32:06 -0800 (PST)
+X-Google-Smtp-Source: APXvYqzCr3Dk/t+4FRhSQ65GINCj244erv5Pchp/bPIEqxOywmKFNGQJhWyg4l40sC1gvgeCwJlr
+X-Received: by 2002:a7b:cbcc:: with SMTP id n12mr3582537wmi.186.1579707126796;
+        Wed, 22 Jan 2020 07:32:06 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1579707126; cv=none;
+        d=google.com; s=arc-20160816;
+        b=v+/irkcI3uCeW+z6qdP7xo03+Sx2MWJEPREa9/TzpJJZ3txmOv3nuK3Sgne9990y4Z
+         f8b8YaDLooplAxJ7oP/hDzu32fWp3qmQ1pr+Nn/AfFsGqIM7dnDXWF+ZYcLdExYely2S
+         llr7sumDrjprwpeEJO8pv4zRvVrCbGuuCpVQHo8fuyeziFFpo09HIhVI8ADCK7iK759c
+         7MOqqBHgBqH4ro4j+DplJy09nLqBb1ZfaduSDX9FHSUSY9/LrclKsIoOosSni26+4Efg
+         EXCZqGYwiJsaPjcEamHukwyu75iLgEmwAvJJuZdngkF7AG9ualhlEc/lW1819G//HarS
+         BnYA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:errors-to:message-type:content-transfer-encoding:mime-version
+         :subject:message-id:from:date:dkim-signature;
+        bh=9sQvMlCwCn/QLhH+xZzNKR5e+dn8KWkiK0vqWtaWDLA=;
+        b=ivEnEIMJnLI8BxnMYL4wViXAhkMTMXN9eBqhAyxsJ2fUOSsp3YZ8jZSknclR6ECmiA
+         SSDYkACfreW1dKYnf1U33B3gXAQeC9WbzTxrqnq2XUsmwC/bqyq/Ge7uQ3qvW/kGHSP5
+         YvyQRUSBoeK/TZC59mFKouee2OP7zskIbf1zO21WGuwnxZ7yafAB+RSPRLsw9zR+Aghb
+         a8dTQh5FaRx9X/MVw6pbpe4NX9EzJCPhbHi9FpzSgX1gouMjtYd5BZlQ/3vqEnwpA6TR
+         R2qA0/Y5337eE4emySlo9vvVeuPzvhJtls5aUdm5HfugCCIdFT/qXzmUY7mW6tP6aYJZ
+         fwww==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@public.govdelivery.com header.s=13q2 header.b=g6E5Cbea;
+       spf=pass (google.com: domain of messages@public.govdelivery.com designates 69.5.86.140 as permitted sender) smtp.mailfrom=messages@public.govdelivery.com
+Return-Path: <messages@public.govdelivery.com>
+Received: from mailer086140.service.govdelivery.com (mailer086140.service.govdelivery.com. [69.5.86.140])
+        by mx.google.com with ESMTP id s21si2664883wmh.64.2020.01.22.07.32.06
+        for <protection@firewicca.com>;
+        Wed, 22 Jan 2020 07:32:06 -0800 (PST)
+Received-SPF: pass (google.com: domain of messages@public.govdelivery.com designates 69.5.86.140 as permitted sender) client-ip=69.5.86.140;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@public.govdelivery.com header.s=13q2 header.b=g6E5Cbea;
+       spf=pass (google.com: domain of messages@public.govdelivery.com designates 69.5.86.140 as permitted sender) smtp.mailfrom=messages@public.govdelivery.com
+Received: from prod-bulletinprocessor2.ep.gdi ([10.23.1.10])
+	by mailer086140.service.govdelivery.com (-); Wed, 22 Jan 2020 15:32:06 +0000
+X-VirtualServer: Default, mailer086140.service.govdelivery.com, 172.24.30.140
+X-Destination-ID: protection@firewicca.com
+X-SMFBL: cHJvdGVjdGlvbkBmaXJld2ljY2EuY29t
+X-VirtualServerGroup: Default
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=public.govdelivery.com; s=13q2; i=@public.govdelivery.com; h=Date:
+	From:Message-ID:Subject:Mime-Version:Content-Type:
+	Content-Transfer-Encoding:X-AccountCode:message-type:Errors-To:
+	X-MailingID:X-SMHeaderMap:To; bh=9sQvMlCwCn/QLhH+xZzNKR5e+dn8KWk
+	iK0vqWtaWDLA=; b=g6E5CbeahehNsDj5nXlmj2/8iI3JwgXAKFik9XwbyHie+Ki
+	k+in6uErWielBdjmF9RBUgo+Q1Rr0ttzhdj++oSGYmhcDJWsnqzjyQ63b+YyIaOi
+	c3DMPn2rOMfBfBE8FVxr81bbCSdeQCzdlDeaGhqecjHjVwWc5MpaU90xjTLwnt8p
+	WqPOFgEM6xvL+l4UsEZPbK7vSp1tQJlegllWS4F/SujTN/+b6yw3eN7AfUq/BW63
+	eUOwW5yBsce0VeZz6XqCyDoXZhf5Pg4i+lnYfgoOuNvJXAJew+m5S/gnTMU6X1hz
+	cxPGnyfFoDi4bZQnHvOrG8xolvflEk72GMJq+qQ==
+Date: Wed, 22 Jan 2020 09:32:03 -0600
+From: USFWS Mountain-Prairie Region <USFWSMtnPrairie@public.govdelivery.com>
+Message-ID: <5e286af3f1c25_1d09779d1dc65526@prod-evo-bg7.ep.gdi.mail>
+Subject: Subscription Change Confirmation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e286af3f0785_1d09779d1dc65462";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-AccountCode: USDOIFWS6
+message-type: subscription_acknowledgement
+Errors-To: messages@public.govdelivery.com
+X-MailingID: 121865353545787::1774651457::0::PRD-ZIPMAIL-1774651457::::1
+X-SMHeaderMap: mid="X-MailingID"
+To: protection@firewicca.com
+ReceivedDate: Wed, 22 Jan 2020 15:32:06 +0000 (UTC)
+
+
+----==_mimepart_5e286af3f0785_1d09779d1dc65462
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+You have made the following changes to your USFWS Mountain-Prairie Region=
+ subscriptions:
+
+*You subscribed to topics:*
+
+
+  * Newsletter =
+
+
+You will receive an email update when new information becomes available.
+
+Facebook [ http://www.facebook.com/USFWSMountainPrairie ] Twitter [ http:=
+//twitter.com/#!/USFWSmtnprairie ] Flickr [ http://www.flickr.com/photos/=
+usfwsmtnprairie/ ] YouTube [ http://www.youtube.com/usfws ] GovDelivery [=
+ https://public.govdelivery.com/accounts/USDOIFWS6/subscriber/new ] =
+
+
+
+
+manage preferences [ https://public.govdelivery.com/accounts/USDOIFWS6/su=
+bscriber/edit?preferences=3Dtrue#tab1 ] | unsubscribe [ https://public.go=
+vdelivery.com/accounts/USDOIFWS6/subscriber/one_click_unsubscribe?verific=
+ation=3D4.d9a88daf059140e6cedce78cf8100ded&destination=3Dprotection%40fir=
+ewicca.com ] | help [ https://subscriberhelp.govdelivery.com/hc/en-us ] |=
+ contact us [ http://www.fws.gov/mountain-prairie/contactus.htm ]
+
+________________________________________________________________________
+
+This email was sent to protection@firewicca.com using GovDelivery Communi=
+cations Cloud on behalf of: USFWS Mountain-Prairie Region  134 Union Blvd=
+.Lakewood, Colorado 80228  GovDelivery logo [ https://subscriberhelp.gran=
+icus.com/ ]
+
+----==_mimepart_5e286af3f0785_1d09779d1dc65462
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns=3D"http://www.w3.org/1=
+999/xhtml" xml:lang=3D"en" lang=3D"en" xml:lang=3D"en">
+<head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DU=
+TF-8" />
+<title></title>
+
+</head>
+<body style=3D"">
+
+
+  <a id=3D"gd_top" name=3D"gd_top"></a>
+
+<p style=3D"margin-bottom: 1em;">You have made the following changes to y=
+our USFWS Mountain-Prairie Region subscriptions:</p>
+<p style=3D"margin-bottom: 1em;"><strong>You subscribed to topics:</stron=
+g></p>
+<ul><li>Newsletter</li>
+</ul>
+<p style=3D"margin-bottom: 1em;">You will receive an email update when ne=
+w information becomes available.</p>
+
+<div id=3D"mail_footer">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"5" align=3D"center">=
+
+<tbody>
+<tr>
+<td><a href=3D"https://lnks.gd/l/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ=
+hY2NvdW50X2lkIjoyMjY4NCwibWVzc2FnZV90eXBlIjoic3Vic2NyaXB0aW9uX2Fja25vd2xl=
+ZGdlbWVudCIsInN1YnNjcmliZXJfaWQiOjEwODY0NTc1MTMsIm1lc3NhZ2VfaWQiOjU0ODU2O=
+TExNSwidXJpIjoiZXZvOnRyYW5zYWN0aW9uYWw6ZW1haWw6Y2xpY2siLCJ1cmwiOiJodHRwOi=
+8vd3d3LmZhY2Vib29rLmNvbS9VU0ZXU01vdW50YWluUHJhaXJpZSJ9.XkaRPfD8scVZNFc3Is=
+cs2T2c19IKeRT-9Yc8Vsdi9rk" target=3D"_blank" title=3D"Facebook"><img src=3D=
+"https://service.govdelivery.com/banners/GOVDELIVERY/facebook.gif" alt=3D=
+"Facebook" width=3D"25" height=3D"25" /></a></td>
+<td><a href=3D"https://lnks.gd/l/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ=
+hY2NvdW50X2lkIjoyMjY4NCwibWVzc2FnZV90eXBlIjoic3Vic2NyaXB0aW9uX2Fja25vd2xl=
+ZGdlbWVudCIsInN1YnNjcmliZXJfaWQiOjEwODY0NTc1MTMsIm1lc3NhZ2VfaWQiOjU0ODU2O=
+TExNSwidXJpIjoiZXZvOnRyYW5zYWN0aW9uYWw6ZW1haWw6Y2xpY2siLCJ1cmwiOiJodHRwOi=
+8vdHdpdHRlci5jb20vIyEvVVNGV1NtdG5wcmFpcmllIn0.NBmx3-loeejkqlQkEJNLbHDHk2r=
+osP63qCLx6oJOiws" target=3D"_blank" title=3D"Twitter"><img src=3D"https:/=
+/service.govdelivery.com/banners/GOVDELIVERY/twitter.gif" alt=3D"Twitter"=
+ width=3D"25" height=3D"25" /></a></td>
+<td><a href=3D"https://lnks.gd/l/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ=
+hY2NvdW50X2lkIjoyMjY4NCwibWVzc2FnZV90eXBlIjoic3Vic2NyaXB0aW9uX2Fja25vd2xl=
+ZGdlbWVudCIsInN1YnNjcmliZXJfaWQiOjEwODY0NTc1MTMsIm1lc3NhZ2VfaWQiOjU0ODU2O=
+TExNSwidXJpIjoiZXZvOnRyYW5zYWN0aW9uYWw6ZW1haWw6Y2xpY2siLCJ1cmwiOiJodHRwOi=
+8vd3d3LmZsaWNrci5jb20vcGhvdG9zL3VzZndzbXRucHJhaXJpZS8ifQ.u54KZNgmcbwMw5K8=
+DmyLPHXGzhNh3vK-nS-3gTAIZzo" target=3D"_blank" title=3D"Flickr"><img src=3D=
+"https://service.govdelivery.com/banners/GOVDELIVERY/flickr.gif" alt=3D"F=
+lickr" width=3D"25" height=3D"25" /></a></td>
+<td><a href=3D"https://lnks.gd/l/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ=
+hY2NvdW50X2lkIjoyMjY4NCwibWVzc2FnZV90eXBlIjoic3Vic2NyaXB0aW9uX2Fja25vd2xl=
+ZGdlbWVudCIsInN1YnNjcmliZXJfaWQiOjEwODY0NTc1MTMsIm1lc3NhZ2VfaWQiOjU0ODU2O=
+TExNSwidXJpIjoiZXZvOnRyYW5zYWN0aW9uYWw6ZW1haWw6Y2xpY2siLCJ1cmwiOiJodHRwOi=
+8vd3d3LnlvdXR1YmUuY29tL3VzZndzIn0.OpeLgWnij7PsuJAb0O2gb_1f2zgwilALYpSPA1O=
+s0Ws" target=3D"_blank" title=3D"YouTube"><img src=3D"https://service.gov=
+delivery.com/banners/GOVDELIVERY/youtube.gif" alt=3D"YouTube" width=3D"25=
+" height=3D"25" /></a></td>
+<td><a href=3D"https://lnks.gd/l/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ=
+hY2NvdW50X2lkIjoyMjY4NCwibWVzc2FnZV90eXBlIjoic3Vic2NyaXB0aW9uX2Fja25vd2xl=
+ZGdlbWVudCIsInN1YnNjcmliZXJfaWQiOjEwODY0NTc1MTMsIm1lc3NhZ2VfaWQiOjU0ODU2O=
+TExNSwidXJpIjoiZXZvOnRyYW5zYWN0aW9uYWw6ZW1haWw6Y2xpY2siLCJ1cmwiOiJodHRwcz=
+ovL3B1YmxpYy5nb3ZkZWxpdmVyeS5jb20vYWNjb3VudHMvVVNET0lGV1M2L3N1YnNjcmliZXI=
+vbmV3In0.kwYuk_ISWnjD6qVk6Ig_2xIA4xBnMRdivlLrtlpuEDs" target=3D"_blank" t=
+itle=3D"Subscribe to Emails"><img src=3D"https://service.govdelivery.com/=
+banners/GOVDELIVERY/envelope.gif" alt=3D"GovDelivery" width=3D"25" height=
+=3D"25" /></a></td>
+</tr>
+</tbody>
+</table>
+<p style=3D"text-align: center;" align=3D"center">=C2=A0</p>
+<p style=3D"text-align: center;" align=3D"center"><span style=3D"font-fam=
+ily: 'trebuchet ms', geneva; font-size: x-small;"><a href=3D"https://lnks=
+.gd/l/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50X2lkIjoyMjY4NCwibW=
+Vzc2FnZV90eXBlIjoic3Vic2NyaXB0aW9uX2Fja25vd2xlZGdlbWVudCIsInN1YnNjcmliZXJ=
+faWQiOjEwODY0NTc1MTMsIm1lc3NhZ2VfaWQiOjU0ODU2OTExNSwidXJpIjoiZXZvOnRyYW5z=
+YWN0aW9uYWw6ZW1haWw6Y2xpY2siLCJ1cmwiOiJodHRwczovL3B1YmxpYy5nb3ZkZWxpdmVye=
+S5jb20vYWNjb3VudHMvVVNET0lGV1M2L3N1YnNjcmliZXIvZWRpdD9wcmVmZXJlbmNlcz10cn=
+VlI3RhYjEifQ.GkB_ruHoFDGoDwqkd6Xwi8tJ-xa2G9cLJpSgEWd4mEA" target=3D"_blan=
+k" title=3D"Manage Preferences">manage preferences</a> =C2=A0| =C2=A0<a h=
+ref=3D"https://lnks.gd/l/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW5=
+0X2lkIjoyMjY4NCwibWVzc2FnZV90eXBlIjoic3Vic2NyaXB0aW9uX2Fja25vd2xlZGdlbWVu=
+dCIsInN1YnNjcmliZXJfaWQiOjEwODY0NTc1MTMsIm1lc3NhZ2VfaWQiOjU0ODU2OTExNSwid=
+XJpIjoiZXZvOnRyYW5zYWN0aW9uYWw6ZW1haWw6Y2xpY2siLCJ1cmwiOiJodHRwczovL3B1Ym=
+xpYy5nb3ZkZWxpdmVyeS5jb20vYWNjb3VudHMvVVNET0lGV1M2L3N1YnNjcmliZXIvb25lX2N=
+saWNrX3Vuc3Vic2NyaWJlP3ZlcmlmaWNhdGlvbj00LmQ5YTg4ZGFmMDU5MTQwZTZjZWRjZTc4=
+Y2Y4MTAwZGVkXHUwMDI2YW1wO2Rlc3RpbmF0aW9uPXByb3RlY3Rpb24lNDBmaXJld2ljY2EuY=
+29tIn0.2XPgfRt0M19qXi5KxAjMdOmji1idF7grvSQS7a0gX7M" target=3D"_blank" tit=
+le=3D"Unsubscribe">unsubscribe</a> =C2=A0| =C2=A0<a href=3D"https://lnks.=
+gd/l/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50X2lkIjoyMjY4NCwibWV=
+zc2FnZV90eXBlIjoic3Vic2NyaXB0aW9uX2Fja25vd2xlZGdlbWVudCIsInN1YnNjcmliZXJf=
+aWQiOjEwODY0NTc1MTMsIm1lc3NhZ2VfaWQiOjU0ODU2OTExNSwidXJpIjoiZXZvOnRyYW5zY=
+WN0aW9uYWw6ZW1haWw6Y2xpY2siLCJ1cmwiOiJodHRwczovL3N1YnNjcmliZXJoZWxwLmdvdm=
+RlbGl2ZXJ5LmNvbS9oYy9lbi11cyJ9.V7k3H3XqjlqQhkiEcs0EM80HsWyjmc1qyfKe-Fhbqz=
+Y" target=3D"_blank" title=3D"Help">help</a> =C2=A0| =C2=A0<a href=3D"htt=
+ps://lnks.gd/l/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50X2lkIjoyM=
+jY4NCwibWVzc2FnZV90eXBlIjoic3Vic2NyaXB0aW9uX2Fja25vd2xlZGdlbWVudCIsInN1Yn=
+NjcmliZXJfaWQiOjEwODY0NTc1MTMsIm1lc3NhZ2VfaWQiOjU0ODU2OTExNSwidXJpIjoiZXZ=
+vOnRyYW5zYWN0aW9uYWw6ZW1haWw6Y2xpY2siLCJ1cmwiOiJodHRwOi8vd3d3LmZ3cy5nb3Yv=
+bW91bnRhaW4tcHJhaXJpZS9jb250YWN0dXMuaHRtIn0.W-zKku_x7HH0U-9BmhRqRnvSqLXOf=
+kdmsBCiEIx2GVM" target=3D"_blank" title=3D"Contact Us">contact us</a></sp=
+an></p>
+
+</div>
+<div id=3D"tagline">
+<hr />
+<table style=3D"width: 100%;" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0">
+<tbody>
+<tr>
+<td style=3D"color: #757575; font-size: 10px; font-family: Arial;" width=3D=
+"89%">This email was sent to protection@firewicca.com using GovDelivery C=
+ommunications Cloud on behalf of: USFWS Mountain-Prairie Region =C2=B7 <s=
+pan>134 Union Blvd.</span>=C2=A0=C2=B7=C2=A0<span>Lakewood, Colorado 8022=
+8</span>
+</td>
+<td align=3D"right" width=3D"11%"><a href=3D"https://lnks.gd/l/eyJ0eXAiOi=
+JKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50X2lkIjoyMjY4NCwibWVzc2FnZV90eXBlIj=
+oic3Vic2NyaXB0aW9uX2Fja25vd2xlZGdlbWVudCIsInN1YnNjcmliZXJfaWQiOjEwODY0NTc=
+1MTMsIm1lc3NhZ2VfaWQiOjU0ODU2OTExNSwidXJpIjoiZXZvOnRyYW5zYWN0aW9uYWw6ZW1h=
+aWw6Y2xpY2siLCJ1cmwiOiJodHRwczovL3N1YnNjcmliZXJoZWxwLmdyYW5pY3VzLmNvbS8if=
+Q.mDnzIEUEncLhEgmPBWMWgweFoFSU19S3DThB66LaRDI" target=3D"_blank"><img src=
+=3D"https://content.govdelivery.com/images/govd-logo-dark.png" border=3D"=
+0" alt=3D"GovDelivery logo" width=3D"115" /></a></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<img src=3D'https://lnks.gd/o/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2=
+NvdW50X2lkIjoyMjY4NCwibWVzc2FnZV90eXBlIjoic3Vic2NyaXB0aW9uX2Fja25vd2xlZGd=
+lbWVudCIsInN1YnNjcmliZXJfaWQiOjEwODY0NTc1MTMsIm1lc3NhZ2VfaWQiOjU0ODU2OTEx=
+NSwidXJpIjoiZXZvOnRyYW5zYWN0aW9uYWw6ZW1haWw6b3BlbiJ9.Fu0mU-AiYj1Tn9XXJeoL=
+jTRlRkoZcY32Izufwmomsug'/></body>
+</html>
+
+----==_mimepart_5e286af3f0785_1d09779d1dc65462--

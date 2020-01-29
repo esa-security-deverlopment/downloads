@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"6727f55db8",applicationID:"471954491"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="title" content="Documentations | Legrand Export" />
+<link rel="canonical" href="https://www.export.legrand.com/en/documentations" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/pit_theme/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Documentations | Legrand Export</title>
+      
+        <link rel="apple-touch-icon" sizes="180x180" href="themes/pit-theme/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="themes/pit-theme/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="themes/pit-theme/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="themes/pit-theme/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="themes/pit-theme/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_IKwbEU0QiKFKYQtLFZ607y3skObR16wuyFtUlQYPLUc.css?q2ngep" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_uM0RyIBwgvtGn3fqaam44-ObY2YFywwvVW3CmrJ4V2w.css?q2ngep" />
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,500,700" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-documentations">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div class="wrapper">
+
+    <div class="logo-for-print">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <a href="https://www.export.legrand.com/en" title="Legrand Export">
+	<img src="/themes/pit_theme/logo.svg" alt="Legrand Export" class="header-simple__logo img-responsive">
+</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<header role="banner" id="top" class="header header-simple">
+	<div class="header-simple__sticky">
+    <div class="topheader ">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="flex-v flex-v--left">
+              <div class="flex-item flex-v flex-v--right">
+              	    							
+<div id="block-blockentete" class="block block-block-content block-block-contentc177fa8e-0e9c-42f3-9a51-2a260f77687a">
+  
+  
+    
+        <a href="https://www.legrandgroup.com/en" title="lien vers Legrandgroup.com" class="btn-second btn-second--medium">	
+		Legrandgroup.com
+	</a>
+  <a href="https://www.legrandgroup.com/en/contact" title="lien vers Contact" class="btn-second btn-second--medium">	
+		Contact
+	</a>
+  <a href="https://egesco.fr.grpleg.com" title="lien vers E-GESCO" class="btn-second btn-second--medium">	
+		E-GESCO
+	</a>
+
+    
+</div>
+
+  							                    							
+<div class="language-switcher-language-url block block-language block-language-blocklanguage-interface" id="block-selecteurdelangue" role="navigation">
+  
+  
+    
+      
+<ul class="links nav navbar-right">
+  
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">EN <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+                <li><a href="/documentations" class="language-link" hreflang="fr" data-drupal-link-system-path="documentations">Français</a></li>
+                <li><a href="/en/documentations" class="language-link is-active" hreflang="en" data-drupal-link-system-path="documentations">English</a></li>
+              </ul>
+    </li>
+  
+</ul>
+
+
+
+    
+</div>
+
+  							              </div>
+          	</div>
+          </div>
+				</div>
+		  </div>
+		</div>
+
+		<nav class="topmenu text-right">
+      <div class="container">
+        <div class="row valignRow">
+          <div class="col-md-2 col-sm-12 col-xs-8">
+            <div class="header-burger__head-left flex-v flex-v--left">
+              								<a href="https://www.export.legrand.com/en" title="Legrand Export">
+	<img src="/themes/pit_theme/logo.svg" alt="Legrand Export" class="header-simple__logo img-responsive">
+</a>
+							
+              <a href="#" class="header-simple__trigger visible-xs visible-sm">
+                 <span></span>
+                 <span></span>
+                 <span></span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-10 col-sm-12 col-xs-12 header-simple__navigation">
+            <nav role="navigation" aria-labelledby="block-navigationprincipale-menu" id="block-navigationprincipale" class="header-burger__dropdown header-burger block block-menu navigation menu--main">
+            
+  <h2 class="visually-hidden" id="block-navigationprincipale-menu">Navigation principale</h2>
+  
+
+        	<ul class="header-burger__content">
+		                                            <li class="burger-has-children">
+                    <a href="/en" title="Products &amp; Systems" target="_self">Products &amp; Systems</a>
+                                            <ul class="burger-dropdown burger-dropdown--hidden">
+                        <li class="burger-back visible-sm visible-xs">
+                            <a href="#">Products &amp; Systems</a>
+                        </li>
+                                                                                <li>
+                                <a href="/en/protection-power" title="Protection &amp; Power" target="_self">Protection &amp; Power</a>
+                            </li>
+                                                                                <li>
+                                <a href="https://ups.legrand.com/fr" title="UPS" target="_blank">UPS</a>
+                            </li>
+                                                                                <li>
+                                <a href="/en/greenup-access-premium-charging-solutions-electric-vehicles" title="Green’up Access &amp; Premium charging solutions for electric vehicles" target="_self">Green’up Access &amp; Premium charging solutions for electric vehicles</a>
+                            </li>
+                                                                                <li>
+                                <a href="/en/structured-cabling-and-solutions-lans-datacenters" title="Structured cabling and solutions for LANs &amp; Datacenters" target="_self">Structured cabling and solutions for LANs &amp; Datacenters</a>
+                            </li>
+                                                                                <li>
+                                <a href="/en/cable-management-and-power-and-data-distribution" title="Cable management and power and data distribution" target="_self">Cable management and power and data distribution</a>
+                            </li>
+                                                                                <li>
+                                <a href="/en/lighting-control-and-emergency-lighting" title="Lighting control and emergency lighting" target="_self">Lighting control and emergency lighting</a>
+                            </li>
+                                                                                <li>
+                                <a href="/en/wiring-accessory-ranges" title="Wiring accessory ranges" target="_self">Wiring accessory ranges</a>
+                            </li>
+                                                                                <li>
+                                <a href="/en/residential-connected-offer" title="Residential connected offer" target="_self">Residential connected offer</a>
+                            </li>
+                                                                                <li>
+                                <a href="/en/controlling-installation" title="Controlling the installation" target="_self">Controlling the installation</a>
+                            </li>
+                                                                                <li>
+                                <a href="/en/audio-and-video-door-entry-kits" title="Audio and video door entry kits" target="_self">Audio and video door entry kits</a>
+                            </li>
+                                                                                <li>
+                                <a href="/en/equipment-healthcare-establishments" title="Equipment for healthcare establishments" target="_self">Equipment for healthcare establishments</a>
+                            </li>
+                                                                                <li>
+                                <a href="/en/equipment-hotels" title="Equipment for hotels" target="_self">Equipment for hotels</a>
+                            </li>
+                                                </ul>
+                                    </li>
+            		                                            <li class="burger-has-children">
+                    <a href="" title="Presence outside France" target="_self">Presence outside France</a>
+                                            <ul class="burger-dropdown burger-dropdown--hidden">
+                        <li class="burger-back visible-sm visible-xs">
+                            <a href="#">Presence outside France</a>
+                        </li>
+                                                                                <li>
+                                <a href="https://www.legrandgroup.com/en/world-presence" title="Where we operate" target="_blank">Where we operate</a>
+                            </li>
+                                                                                <li>
+                                <a href="http://www.legrand-copytracer.com/" title="Action against counterfeiting" target="_blank">Action against counterfeiting</a>
+                            </li>
+                                                </ul>
+                                    </li>
+            		                                            <li class="burger-has-children">
+                    <a href="" title="Examples" target="_self">Examples</a>
+                                            <ul class="burger-dropdown burger-dropdown--hidden">
+                        <li class="burger-back visible-sm visible-xs">
+                            <a href="#">Examples</a>
+                        </li>
+                                                                                <li>
+                                <a href="https://www.legrandgroup.com/en/our-solutions" title=" Solutions by building" target="_blank"> Solutions by building</a>
+                            </li>
+                                                                                <li>
+                                <a href="https://www.legrandgroup.com/en/our-solutions/references" title="Our references" target="_blank">Our references</a>
+                            </li>
+                                                </ul>
+                                    </li>
+            		                                            <li class="burger-has-children">
+                    <a href="" title="E-catalogues" target="_self">E-catalogues</a>
+                                            <ul class="burger-dropdown burger-dropdown--hidden">
+                        <li class="burger-back visible-sm visible-xs">
+                            <a href="#">E-catalogues</a>
+                        </li>
+                                                                                <li>
+                                <a href="https://www.legrand.fr/pro/catalogue" title="France e-catalogue" target="_blank">France e-catalogue</a>
+                            </li>
+                                                                                <li>
+                                <a href="https://www.legrand.com/ecatalogue/" title="International e-catalogue" target="_blank">International e-catalogue</a>
+                            </li>
+                                                                                <li>
+                                <a href="https://it2v7.interactiv-doc.fr/html/catalogue_cablofil_2019_2020_pdf_660" title="Cablofil e-book" target="_blank">Cablofil e-book</a>
+                            </li>
+                                                                                <li>
+                                <a href="http://fr.zone-secure.net/17902/255626/?token=696AFEF293356073369DF9F29907A2A2" title="Alpes Technologies e-book" target="_blank">Alpes Technologies e-book</a>
+                            </li>
+                                                </ul>
+                                    </li>
+            		                                            <li class="burger-has-children">
+                    <a href="" title="Documentation and software" target="_self">Documentation and software</a>
+                                            <ul class="burger-dropdown burger-dropdown--hidden">
+                        <li class="burger-back visible-sm visible-xs">
+                            <a href="#">Documentation and software</a>
+                        </li>
+                                                                                <li>
+                                <a href="/en/documentations" title="Documentation" target="_self">Documentation</a>
+                            </li>
+                                                                                <li>
+                                <a href="/en/software" title="Software" target="_self">Software</a>
+                            </li>
+                                                </ul>
+                                    </li>
+            		            			</ul>
+
+  </nav>
+
+          </div>
+        </div>
+       </div>
+    </nav>
+	</div>
+
+	<div class="hover-header">
+    <div class="container hover-header__bg">
+      <div class="col-sm-7 header-search">
+                        
+<div class="views-exposed-form block block-search block-elastic-search-head-form" data-drupal-selector="views-exposed-form-elastic-search-en-page" id="block-elastic-search-head-form-en">
+  
+          <form action="/en/search/en" method="get" id="views-exposed-form-elastic-search-en-page" accept-charset="UTF-8">
+  <div class="form--inline clearfix">
+  <div class="row"><div class="col-xs-10 elastic-search-head-form__words">
+	<input placeholder="What are you looking for?" data-drupal-selector="edit-words" type="text" id="edit-words" name="words" value="" size="30" maxlength="128" class="form-text" />
+</div><div class="col-xs-2 elastic-search-head-form__submit">
+	<input data-drupal-selector="edit-submit-elastic-search-en" type="submit" id="edit-submit-elastic-search-en" value="Ok" class="button js-form-submit form-submit" />
+</div></div>
+</div>
+
+</form>
+
+      
+</div>
+
+      </div>
+      <div class="col-sm-5 header-customiz">
+      </div>
+    </div>
+  </div>
+</header>
+
+  <div role="main" class="main">
+
+          
+  <div class="region region-message">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+        
+
+                  
+  <div class="region region-content">
+    
+
+<div id="block-pit-theme-page-title" class="banner banner--page" style="background-image:url('/themes/pit_theme/assets/img/bg-newsletter.jpg')">
+    <div class="container">
+          <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+        <ul class="breadcrumb-list">
+          <li class="breadcrumb-item">
+                  <a href="/en" class="breadcrumb-link">Home</a>
+              </li>
+          <li class="breadcrumb-item">
+                  Documentations
+              </li>
+        </ul>
+  </nav>
+
+        <div class="row">
+            <div class="col-md-6 banner__side banner__side--texts">
+                
+                    <h1 class="banner__title">Documentation</h1>
+                                    
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="block-mainpagecontent" class="block block-system block-system-main-block">
+  
+  
+    
+      <div class="views-element-container"><div>
+    
+    
+    
+    <section class="section section--grey">
+        <div class="container">
+            <div class="row">
+                <div class="text-center col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+                    <div class="row"><div class="col-xs-12 form-documentations-page"><form class="views-exposed-form" data-drupal-selector="views-exposed-form-documentations-page-1" action="/en/documentations" method="get" id="views-exposed-form-documentations-page-1" accept-charset="UTF-8">
+  <div class="form--inline clearfix">
+  <div class="js-form-item form-item js-form-type-select form-type-select js-form-item-gammes form-item-gammes">
+      <label for="edit-gammes" class="form-label">field_documentation_gammes</label>
+        
+<select data-drupal-selector="edit-gammes" multiple="multiple" name="gammes[]" id="edit-gammes" size="8" class="form-select js-select-documentation-gammes--root--select hide">
+        <option value="203" >-- Protection &amp; Puissance</option>
+        <option value="204" >---- Disjoncteurs modulaires &amp; de puissance</option>
+        <option value="205" >---- Contrôles &amp; commandes modulaires</option>
+        <option value="206" >---- Mesure d&#039;énergie électrique</option>
+        <option value="207" >---- Protection &amp; commande des moteurs</option>
+        <option value="208" >---- Compensation d&#039;énergie réactive</option>
+        <option value="209" >---- Coffrets et armoires</option>
+        <option value="210" >---- Transformateurs de puissance ou d’installation</option>
+        <option value="211" >---- Prises industrielles</option>
+        <option value="259" >-- UPS</option>
+        <option value="190" >-- Solutions de recharge pour véhicules électriques Green’up Access &amp; Premium</option>
+        <option value="213" >-- Câblage structuré et solutions pour LAN &amp; Datacenter</option>
+        <option value="214" >---- Data center : services et solutions</option>
+        <option value="215" >---- Câblage structuré et solutions pour LAN</option>
+        <option value="272" >---- Solutions Audio / Vidéo</option>
+        <option value="217" >-- Cheminement de câbles et mise à disposition des courants</option>
+        <option value="218" >---- Distribution des courants par le plafond</option>
+        <option value="219" >---- Distribution des courants par le sol</option>
+        <option value="220" >---- Distribution des courants sur le mur</option>
+        <option value="221" >---- Mise à disposition des courants</option>
+        <option value="222" >-- Gestion de l’éclairage et éclairage de sécurité</option>
+        <option value="223" >---- Gestion éclairage</option>
+        <option value="224" >---- Éclairage de sécurité &amp; incendie</option>
+        <option value="225" >---- Luminaires LED : une gamme alliant qualité et style</option>
+        <option value="226" >-- Gammes d&#039;appareillage</option>
+        <option value="227" >---- Appareillage connectée</option>
+        <option value="228" >---- Multistandard</option>
+        <option value="229" >---- Standard
+franco-belge</option>
+        <option value="230" >---- Standard allemand</option>
+        <option value="231" >---- Standard britannique</option>
+        <option value="232" >---- Standard
+italien</option>
+        <option value="298" >-- Offre connectée résidentielle</option>
+        <option value="283" >---- Appareillage connecté with Netatmo</option>
+        <option value="274" >---- Portier connecté Bticino Classe 300</option>
+        <option value="264" >---- Thermostat connecté Smarther</option>
+        <option value="276" >---- Prise &amp; multiprise connectées</option>
+        <option value="277" >---- Stop &amp; Go connecté</option>
+        <option value="242" >-- Pilotage de l’installation</option>
+        <option value="194" >---- Le réseau multimédia</option>
+        <option value="192" >---- Diffusion sonore Nuvo</option>
+        <option value="196" >---- Les commandes de pilotage MyHome Play radio</option>
+        <option value="263" >---- Les commandes de pilotage MyHome filaire</option>
+        <option value="193" >---- Carillons</option>
+        <option value="244" >-- Les portiers audio et vidéo</option>
+        <option value="266" >---- Kits résidentiels 2 fils BUS audio &amp; vidéo</option>
+        <option value="268" >---- Portiers Bticino pour logements collectifs</option>
+        <option value="270" >---- Full IP solutions for residential complexes </option>
+        <option value="249" >-- Équipements pour les hôtels</option>
+        <option value="202" >---- Système de gestion de la chambre d’hôtel</option>
+        <option value="201" >---- Fonctions dédiées à la chambre d’hôtel</option>
+        <option value="254" >-- Équipements pour établissements de santé</option>
+        <option value="200" >---- Les fonctions Mosaic™ pour les établissements de santé</option>
+        <option value="199" >---- Transformateurs &amp; CPI pour locaux hospitaliers</option>
+  </select>
+<div class="select-wrapper js-select-documentation-gammes--first--wrapper">
+  <select class="js-select-documentation-gammes--first--select">
+    <option value="" selected="selected" class="is-all">- Any -</option>
+                <option value="203"   data-children="204,205,206,207,208,209,210,211">Protection &amp; Power</option>
+                <option value="259"   data-children="">UPS</option>
+                <option value="190"   data-children="">Green’up Access &amp; Premium charging solutions for electric vehicles</option>
+                <option value="213"   data-children="214,215,272">Structured cabling and solutions for LANs &amp; Datacenters</option>
+                <option value="217"   data-children="218,219,220,221">Cable management and power and data distribution</option>
+                <option value="222"   data-children="223,224,225">Lighting control and emergency lighting</option>
+                <option value="226"   data-children="227,228,229,231,232">Wiring accessory ranges</option>
+                <option value="298"   data-children="283,274,264,276,277">Residential connected offer</option>
+                <option value="242"   data-children="194,192,196,263,193">Controlling the installation</option>
+                <option value="244"   data-children="266,268,270">Audio and video door entry kits</option>
+                <option value="249"   data-children="202,201">Equipment for hotels</option>
+                <option value="254"   data-children="200,199">Equipment for healthcare establishments</option>
+      </select>
+</div>
+
+  <div class="select-wrapper js-select-documentation-gammes--second--wrapper hide">
+    <select class="js-select-documentation-gammes--second--select">
+      <option value=""  class="is-all">- Any -</option>
+                      <option value="204"  data-parent="203"  class="hide">MCBs, ACBs &amp; MCCBs</option>
+                      <option value="205"  data-parent="203"  class="hide">DIN rail mounting SPDs &amp; control devices</option>
+                      <option value="206"  data-parent="203"  class="hide">Electrical energy metering</option>
+                      <option value="207"  data-parent="203"  class="hide">Motor protection &amp; control</option>
+                      <option value="208"  data-parent="203"  class="hide">Reactive energy compensation</option>
+                      <option value="209"  data-parent="203"  class="hide">Cabinets and enclosures</option>
+                      <option value="210"  data-parent="203"  class="hide">Power or installation transformers</option>
+                      <option value="211"  data-parent="203"  class="hide">Industrial sockets</option>
+                      <option value="214"  data-parent="213"  class="hide">Data center: services and solutions</option>
+                      <option value="215"  data-parent="213"  class="hide">Structured cabling and solutions for LANs</option>
+                      <option value="272"  data-parent="213"  class="hide">Audio/Video solutions</option>
+                      <option value="218"  data-parent="217"  class="hide">Power and data distribution via the ceiling</option>
+                      <option value="219"  data-parent="217"  class="hide">Power and data distribution through the floor</option>
+                      <option value="220"  data-parent="217"  class="hide">Power and data distribution on the wall</option>
+                      <option value="221"  data-parent="217"  class="hide">Delivering power and data to the workstation</option>
+                      <option value="223"  data-parent="222"  class="hide">Lighting management</option>
+                      <option value="224"  data-parent="222"  class="hide">Emergency lighting &amp; fire</option>
+                      <option value="225"  data-parent="222"  class="hide">LED luminaires: a range combining quality and style</option>
+                      <option value="227"  data-parent="226"  class="hide">Connected wiring accessories</option>
+                      <option value="228"  data-parent="226"  class="hide">Multistandard</option>
+                      <option value="229"  data-parent="226"  class="hide">French, Belgian &amp; German standards</option>
+                      <option value="231"  data-parent="226"  class="hide">British standard</option>
+                      <option value="232"  data-parent="226"  class="hide">Italian standard</option>
+                      <option value="283"  data-parent="298"  class="hide">Connected with Netatmo wiring accessories</option>
+                      <option value="274"  data-parent="298"  class="hide">Classe 300 Bticino connected door entry kit</option>
+                      <option value="264"  data-parent="298"  class="hide">Smarther connected thermostat</option>
+                      <option value="276"  data-parent="298"  class="hide">Connected socket &amp; multi-outlet extension</option>
+                      <option value="277"  data-parent="298"  class="hide">Connected Stop &amp; Go</option>
+                      <option value="194"  data-parent="242"  class="hide">Multimedia network</option>
+                      <option value="192"  data-parent="242"  class="hide">Nuvo sound diffusion system</option>
+                      <option value="196"  data-parent="242"  class="hide">MyHome Play Radio control units</option>
+                      <option value="263"  data-parent="242"  class="hide">MyHome control units</option>
+                      <option value="193"  data-parent="242"  class="hide">Chimes</option>
+                      <option value="266"  data-parent="244"  class="hide">Audio &amp; video BUS 2-wire residential kits</option>
+                      <option value="268"  data-parent="244"  class="hide">Bticino door entry kits for apartment blocks</option>
+                      <option value="270"  data-parent="244"  class="hide">Full IP solutions for residential complexes </option>
+                      <option value="202"  data-parent="249"  class="hide">Hotel room management system</option>
+                      <option value="201"  data-parent="249"  class="hide">Hotel room dedicated functions</option>
+                      <option value="200"  data-parent="254"  class="hide">Mosaic™ functions for healthcare establishments</option>
+                      <option value="199"  data-parent="254"  class="hide">Transformers &amp; insulation monitoring devices for medical locations</option>
+          </select>
+  </div>
+
+        </div>
+<div class="form-documentations-page__select-container"></div><div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
+	<input class="btn btn--no-icon button js-form-submit form-submit" data-drupal-selector="edit-submit-documentations" type="submit" id="edit-submit-documentations" value="Ok" />
+</div>
+
+</div>
+
+</form>
+</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+                        <section class="section ">
+                <div class="section__header">
+                    <h2 class="title">
+                         MCB<span class="text-lowercase">s</span>, ACB<span class="text-lowercase">s</span> & MCCB<span class="text-lowercase">s</span>
+                    </h2>
+                </div>
+                <div class="container">
+                    <div class="row row--view-documentations mb--30">
+                        		
+
+
+		
+	<article role="article" about="/en/rx3-brochure-essential-protection-prong-type-supply-busbar-mcbs-and-rccbs" class="col-md-4 col-sm-6">
+		<div class="card ">
+      <a href="/en/rx3-brochure-essential-protection-prong-type-supply-busbar-mcbs-and-rccbs" download class="card__image-wrapper card__image-wrapper--documentation bg--lightgrey">
+                                 <img src="/sites/default/files/documentationpictureslists/rx3-brochure-essential-protection-prong-type-supply-busbar-mcbs-and-rccbs-rx3brochuremono.jpg" alt="RX³ brochure: essential protection: prong-type supply busbar MCBs and RCCBs" style="width:auto" typeof="foaf:Image">
+      </a>
+			
+			<div class="card__text card__text--condensed card__text--big no-eq-xs bg--white" data-eq="cards-product">RX³ brochure: essential protection: prong-type supply busbar MCB<span class="text-lowercase">s</span> and RCCB<span class="text-lowercase">s</span></div>
+			
+			<div class="flex-v flex-v--left card__link">
+				<a href="/en/rx3-brochure-essential-protection-prong-type-supply-busbar-mcbs-and-rccbs" download class="social social--inline social--neg bg--white">
+					<i class="lgpicto lgicon-btn-download" aria-hidden="true"></i>
+				</a>
+				<a href="#" class="social social-modal-trigger social--inline social--neg bg--white" data-toggle="modal" data-target="#forward-45">
+					<i class="fa fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="modal fade" id="forward-45" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-forward text-center"><form class="forward-form-node-45 forward-form" data-drupal-selector="forward-form-node-45" action="/en/documentations" method="post" id="forward-form-node-45" accept-charset="UTF-8">
+  <div class="modal-dialog__title mb--40">Forward this documentation to a friend</div><p class="mb--45">Thank you for your interest in spreading the word about <em>RX³ brochure: essential protection: prong-type supply busbar MCB&#115; and RCCB&#115;</em> on Legrand Export.</p><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-email form-item-email">
+      <label for="edit-email" class="form-label js-form-required form-required">Your email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-email" type="email" id="edit-email" name="email" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name">
+      <label for="edit-name" class="form-label js-form-required form-required">Your name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-name" type="text" id="edit-name" name="name" value="" size="60" maxlength="128" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-recipient form-item-recipient">
+      <label for="edit-recipient" class="form-label js-form-required form-required">Recipient's email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-recipient" type="email" id="edit-recipient" name="recipient" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-recipient-name form-item-recipient-name">
+      <label for="edit-recipient-name" class="form-label js-form-required form-required">Recipient's name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-recipient-name" type="text" id="edit-recipient-name" name="recipient_name" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textarea form-type-textarea js-form-item-message form-item-message">
+      <label for="edit-message--2" class="form-label">Your personal message</label>
+        <div class="form-textarea-wrapper">
+  <textarea class="lg-input lg-input--primary lg-input--no-round form-textarea resize-vertical" data-drupal-selector="edit-message" id="edit-message--2" name="message" rows="5" cols="50"></textarea>
+</div>
+
+        </div>
+</div><div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
+	<input class="btn btn--no-icon button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Send Message" />
+</div>
+
+	<input autocomplete="off" data-drupal-selector="form-fk9p3p4a0xigxik-o6cauzc9hgdhptx4me-nlw07tcg" type="hidden" name="form_build_id" value="form-Fk9P3p4A0xigxiK-o6cAuzc9hGDhPtX4me-Nlw07tCg" />
+
+	<input data-drupal-selector="edit-forward-form-node-45" type="hidden" name="form_id" value="forward_form_node_45" />
+
+</form>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+
+
+
+		
+	<article role="article" about="/en/rx3-brochure-essential-protection-prong-and-fork-type-supply-busbar-mcbs-and-rccbs" class="col-md-4 col-sm-6">
+		<div class="card ">
+      <a href="/en/rx3-brochure-essential-protection-prong-and-fork-type-supply-busbar-mcbs-and-rccbs" download class="card__image-wrapper card__image-wrapper--documentation bg--lightgrey">
+                                 <img src="/sites/default/files/documentationpictureslists/rx3-brochure-essential-protection-prong-and-fork-type-supply-busbar-mcbs-and-rccbs-rx3brochurebi.jpg" alt="RX³ brochure: essential protection: prong and fork-type supply busbar MCBs and RCCBs" style="width:auto" typeof="foaf:Image">
+      </a>
+			
+			<div class="card__text card__text--condensed card__text--big no-eq-xs bg--white" data-eq="cards-product">RX³ brochure: essential protection: prong and fork-type supply busbar MCB<span class="text-lowercase">s</span> and RCCB<span class="text-lowercase">s</span></div>
+			
+			<div class="flex-v flex-v--left card__link">
+				<a href="/en/rx3-brochure-essential-protection-prong-and-fork-type-supply-busbar-mcbs-and-rccbs" download class="social social--inline social--neg bg--white">
+					<i class="lgpicto lgicon-btn-download" aria-hidden="true"></i>
+				</a>
+				<a href="#" class="social social-modal-trigger social--inline social--neg bg--white" data-toggle="modal" data-target="#forward-46">
+					<i class="fa fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="modal fade" id="forward-46" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-forward text-center"><form class="forward-form-node-46 forward-form" data-drupal-selector="forward-form-node-46" action="/en/documentations" method="post" id="forward-form-node-46" accept-charset="UTF-8">
+  <div class="modal-dialog__title mb--40">Forward this documentation to a friend</div><p class="mb--45">Thank you for your interest in spreading the word about <em>RX³ brochure: essential protection: prong and fork-type supply busbar MCB&#115; and RCCB&#115;</em> on Legrand Export.</p><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-email form-item-email">
+      <label for="edit-email--2" class="form-label js-form-required form-required">Your email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-email" type="email" id="edit-email--2" name="email" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name">
+      <label for="edit-name--2" class="form-label js-form-required form-required">Your name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-name" type="text" id="edit-name--2" name="name" value="" size="60" maxlength="128" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-recipient form-item-recipient">
+      <label for="edit-recipient--2" class="form-label js-form-required form-required">Recipient's email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-recipient" type="email" id="edit-recipient--2" name="recipient" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-recipient-name form-item-recipient-name">
+      <label for="edit-recipient-name--2" class="form-label js-form-required form-required">Recipient's name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-recipient-name" type="text" id="edit-recipient-name--2" name="recipient_name" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textarea form-type-textarea js-form-item-message form-item-message">
+      <label for="edit-message--4" class="form-label">Your personal message</label>
+        <div class="form-textarea-wrapper">
+  <textarea class="lg-input lg-input--primary lg-input--no-round form-textarea resize-vertical" data-drupal-selector="edit-message" id="edit-message--4" name="message" rows="5" cols="50"></textarea>
+</div>
+
+        </div>
+</div><div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions--2">
+	<input class="btn btn--no-icon button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit--2" name="op" value="Send Message" />
+</div>
+
+	<input autocomplete="off" data-drupal-selector="form-qfxr8xyyeovzw4o58-b3zrrge3v8adzlzdqsjfqi2zw" type="hidden" name="form_build_id" value="form-qfXR8XYyEoVZW4o58-b3zrRGe3v8aDZLzdqSJFqi2zw" />
+
+	<input data-drupal-selector="edit-forward-form-node-46" type="hidden" name="form_id" value="forward_form_node_46" />
+
+</form>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+
+
+
+		
+	<article role="article" about="/en/tx3-brochure-protection-you-can-rely-prong-type-supply-busbar-mcbs-and-rccbs" class="col-md-4 col-sm-6">
+		<div class="card ">
+      <a href="/en/tx3-brochure-protection-you-can-rely-prong-type-supply-busbar-mcbs-and-rccbs" download class="card__image-wrapper card__image-wrapper--documentation bg--lightgrey">
+                                 <img src="/sites/default/files/documentationpictureslists/tx3-brochure-protection-you-can-rely-prong-type-supply-busbar-mcbs-and-rccbs-exb13002tx3mono.jpg" alt="TX³ brochure: protection you can rely on: prong-type supply busbar MCBs and RCCBs" style="width:auto" typeof="foaf:Image">
+      </a>
+			
+			<div class="card__text card__text--condensed card__text--big no-eq-xs bg--white" data-eq="cards-product">TX³ brochure: protection you can rely on: prong-type supply busbar MCB<span class="text-lowercase">s</span> and RCCB<span class="text-lowercase">s</span></div>
+			
+			<div class="flex-v flex-v--left card__link">
+				<a href="/en/tx3-brochure-protection-you-can-rely-prong-type-supply-busbar-mcbs-and-rccbs" download class="social social--inline social--neg bg--white">
+					<i class="lgpicto lgicon-btn-download" aria-hidden="true"></i>
+				</a>
+				<a href="#" class="social social-modal-trigger social--inline social--neg bg--white" data-toggle="modal" data-target="#forward-47">
+					<i class="fa fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="modal fade" id="forward-47" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-forward text-center"><form class="forward-form-node-47 forward-form" data-drupal-selector="forward-form-node-47" action="/en/documentations" method="post" id="forward-form-node-47" accept-charset="UTF-8">
+  <div class="modal-dialog__title mb--40">Forward this documentation to a friend</div><p class="mb--45">Thank you for your interest in spreading the word about <em>TX³ brochure: protection you can rely on: prong-type supply busbar MCB&#115; and RCCB&#115;</em> on Legrand Export.</p><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-email form-item-email">
+      <label for="edit-email--3" class="form-label js-form-required form-required">Your email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-email" type="email" id="edit-email--3" name="email" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name">
+      <label for="edit-name--3" class="form-label js-form-required form-required">Your name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-name" type="text" id="edit-name--3" name="name" value="" size="60" maxlength="128" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-recipient form-item-recipient">
+      <label for="edit-recipient--3" class="form-label js-form-required form-required">Recipient's email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-recipient" type="email" id="edit-recipient--3" name="recipient" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-recipient-name form-item-recipient-name">
+      <label for="edit-recipient-name--3" class="form-label js-form-required form-required">Recipient's name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-recipient-name" type="text" id="edit-recipient-name--3" name="recipient_name" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textarea form-type-textarea js-form-item-message form-item-message">
+      <label for="edit-message--6" class="form-label">Your personal message</label>
+        <div class="form-textarea-wrapper">
+  <textarea class="lg-input lg-input--primary lg-input--no-round form-textarea resize-vertical" data-drupal-selector="edit-message" id="edit-message--6" name="message" rows="5" cols="50"></textarea>
+</div>
+
+        </div>
+</div><div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions--3">
+	<input class="btn btn--no-icon button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit--3" name="op" value="Send Message" />
+</div>
+
+	<input autocomplete="off" data-drupal-selector="form-wpae5jjhfrba6fj9l9q0ezcoof8j50hodhe2bknurpa" type="hidden" name="form_build_id" value="form-wPaE5jjhFRbA6fj9l9Q0EzCOof8j50HodHE2BKnuRPA" />
+
+	<input data-drupal-selector="edit-forward-form-node-47" type="hidden" name="form_id" value="forward_form_node_47" />
+
+</form>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+
+
+
+		
+	<article role="article" about="/en/tx3-brochure-protection-you-can-rely-prong-and-fork-type-supply-busbar-mcbs-and-rccbs" class="col-md-4 col-sm-6">
+		<div class="card ">
+      <a href="/en/tx3-brochure-protection-you-can-rely-prong-and-fork-type-supply-busbar-mcbs-and-rccbs" download class="card__image-wrapper card__image-wrapper--documentation bg--lightgrey">
+                                 <img src="/sites/default/files/documentationpictureslists/tx3-brochure-protection-you-can-rely-prong-and-fork-type-supply-busbar-mcbs-and-rccbs-exb14038-tx3bi.jpg" alt="TX³ brochure: protection you can rely on: prong and fork-type supply busbar MCBs and RCCBs" style="width:auto" typeof="foaf:Image">
+      </a>
+			
+			<div class="card__text card__text--condensed card__text--big no-eq-xs bg--white" data-eq="cards-product">TX³ brochure: protection you can rely on: prong and fork-type supply busbar MCB<span class="text-lowercase">s</span> and RCCB<span class="text-lowercase">s</span></div>
+			
+			<div class="flex-v flex-v--left card__link">
+				<a href="/en/tx3-brochure-protection-you-can-rely-prong-and-fork-type-supply-busbar-mcbs-and-rccbs" download class="social social--inline social--neg bg--white">
+					<i class="lgpicto lgicon-btn-download" aria-hidden="true"></i>
+				</a>
+				<a href="#" class="social social-modal-trigger social--inline social--neg bg--white" data-toggle="modal" data-target="#forward-48">
+					<i class="fa fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="modal fade" id="forward-48" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-forward text-center"><form class="forward-form-node-48 forward-form" data-drupal-selector="forward-form-node-48" action="/en/documentations" method="post" id="forward-form-node-48" accept-charset="UTF-8">
+  <div class="modal-dialog__title mb--40">Forward this documentation to a friend</div><p class="mb--45">Thank you for your interest in spreading the word about <em>TX³ brochure: protection you can rely on: prong and fork-type supply busbar MCB&#115; and RCCB&#115;</em> on Legrand Export.</p><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-email form-item-email">
+      <label for="edit-email--4" class="form-label js-form-required form-required">Your email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-email" type="email" id="edit-email--4" name="email" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name">
+      <label for="edit-name--4" class="form-label js-form-required form-required">Your name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-name" type="text" id="edit-name--4" name="name" value="" size="60" maxlength="128" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-recipient form-item-recipient">
+      <label for="edit-recipient--4" class="form-label js-form-required form-required">Recipient's email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-recipient" type="email" id="edit-recipient--4" name="recipient" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-recipient-name form-item-recipient-name">
+      <label for="edit-recipient-name--4" class="form-label js-form-required form-required">Recipient's name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-recipient-name" type="text" id="edit-recipient-name--4" name="recipient_name" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textarea form-type-textarea js-form-item-message form-item-message">
+      <label for="edit-message--8" class="form-label">Your personal message</label>
+        <div class="form-textarea-wrapper">
+  <textarea class="lg-input lg-input--primary lg-input--no-round form-textarea resize-vertical" data-drupal-selector="edit-message" id="edit-message--8" name="message" rows="5" cols="50"></textarea>
+</div>
+
+        </div>
+</div><div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions--4">
+	<input class="btn btn--no-icon button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit--4" name="op" value="Send Message" />
+</div>
+
+	<input autocomplete="off" data-drupal-selector="form-khatyo7l7jfh5j4nd6adrw2rwpmle8wh-axut-kd6e4" type="hidden" name="form_build_id" value="form-KhatYo7l7JFh5j4nd6AdRw2RwpmlE8WH-AXuT-Kd6E4" />
+
+	<input data-drupal-selector="edit-forward-form-node-48" type="hidden" name="form_id" value="forward_form_node_48" />
+
+</form>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+
+
+
+		
+	<article role="article" about="/en/drx-125-hp-drx-250-hp-drx-630-brochure" class="col-md-4 col-sm-6">
+		<div class="card ">
+      <a href="/en/drx-125-hp-drx-250-hp-drx-630-brochure" download class="card__image-wrapper card__image-wrapper--documentation bg--lightgrey">
+                                 <img src="/sites/default/files/documentationpictureslists/drx-125-hp-drx-250-hp-drx-630-brochure-exb18040drx125250hp630.jpg" alt="DRX 125 HP, DRX 250 HP &amp; DRX 630 brochure" style="width:auto" typeof="foaf:Image">
+      </a>
+			
+			<div class="card__text card__text--condensed card__text--big no-eq-xs bg--white" data-eq="cards-product">DRX 125 HP, DRX 250 HP & DRX 630 brochure</div>
+			
+			<div class="flex-v flex-v--left card__link">
+				<a href="/en/drx-125-hp-drx-250-hp-drx-630-brochure" download class="social social--inline social--neg bg--white">
+					<i class="lgpicto lgicon-btn-download" aria-hidden="true"></i>
+				</a>
+				<a href="#" class="social social-modal-trigger social--inline social--neg bg--white" data-toggle="modal" data-target="#forward-302">
+					<i class="fa fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="modal fade" id="forward-302" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-forward text-center"><form class="forward-form-node-302 forward-form" data-drupal-selector="forward-form-node-302" action="/en/documentations" method="post" id="forward-form-node-302" accept-charset="UTF-8">
+  <div class="modal-dialog__title mb--40">Forward this documentation to a friend</div><p class="mb--45">Thank you for your interest in spreading the word about <em>DRX 125 HP, DRX 250 HP &amp; DRX 630 brochure</em> on Legrand Export.</p><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-email form-item-email">
+      <label for="edit-email--5" class="form-label js-form-required form-required">Your email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-email" type="email" id="edit-email--5" name="email" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name">
+      <label for="edit-name--5" class="form-label js-form-required form-required">Your name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-name" type="text" id="edit-name--5" name="name" value="" size="60" maxlength="128" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-recipient form-item-recipient">
+      <label for="edit-recipient--5" class="form-label js-form-required form-required">Recipient's email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-recipient" type="email" id="edit-recipient--5" name="recipient" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-recipient-name form-item-recipient-name">
+      <label for="edit-recipient-name--5" class="form-label js-form-required form-required">Recipient's name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-recipient-name" type="text" id="edit-recipient-name--5" name="recipient_name" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textarea form-type-textarea js-form-item-message form-item-message">
+      <label for="edit-message--10" class="form-label">Your personal message</label>
+        <div class="form-textarea-wrapper">
+  <textarea class="lg-input lg-input--primary lg-input--no-round form-textarea resize-vertical" data-drupal-selector="edit-message" id="edit-message--10" name="message" rows="5" cols="50"></textarea>
+</div>
+
+        </div>
+</div><div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions--5">
+	<input class="btn btn--no-icon button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit--5" name="op" value="Send Message" />
+</div>
+
+	<input autocomplete="off" data-drupal-selector="form-ota7l-58igvvuse0tnofvh1-8j-jdnfhtg6sgn48jte" type="hidden" name="form_build_id" value="form-ota7l_58IGVvUSE0TnOfVh1_8J-JdnfHtG6SgN48jTE" />
+
+	<input data-drupal-selector="edit-forward-form-node-302" type="hidden" name="form_id" value="forward_form_node_302" />
+
+</form>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+
+
+
+		
+	<article role="article" about="/en/dx3-brochure-high-performance-solutions" class="col-md-4 col-sm-6">
+		<div class="card ">
+      <a href="/en/dx3-brochure-high-performance-solutions" download class="card__image-wrapper card__image-wrapper--documentation bg--lightgrey">
+                                 <img src="/sites/default/files/documentationpictureslists/dx3-brochure-high-performance-solutions-exb12061brochure-dx3.jpg" alt="DX³ brochure: high-performance solutions" style="width:auto" typeof="foaf:Image">
+      </a>
+			
+			<div class="card__text card__text--condensed card__text--big no-eq-xs bg--white" data-eq="cards-product">DX³ brochure: high-performance solutions</div>
+			
+			<div class="flex-v flex-v--left card__link">
+				<a href="/en/dx3-brochure-high-performance-solutions" download class="social social--inline social--neg bg--white">
+					<i class="lgpicto lgicon-btn-download" aria-hidden="true"></i>
+				</a>
+				<a href="#" class="social social-modal-trigger social--inline social--neg bg--white" data-toggle="modal" data-target="#forward-49">
+					<i class="fa fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="modal fade" id="forward-49" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-forward text-center"><form class="forward-form-node-49 forward-form" data-drupal-selector="forward-form-node-49" action="/en/documentations" method="post" id="forward-form-node-49" accept-charset="UTF-8">
+  <div class="modal-dialog__title mb--40">Forward this documentation to a friend</div><p class="mb--45">Thank you for your interest in spreading the word about <em>DX³ brochure: high-performance solutions</em> on Legrand Export.</p><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-email form-item-email">
+      <label for="edit-email--6" class="form-label js-form-required form-required">Your email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-email" type="email" id="edit-email--6" name="email" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name">
+      <label for="edit-name--6" class="form-label js-form-required form-required">Your name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-name" type="text" id="edit-name--6" name="name" value="" size="60" maxlength="128" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-recipient form-item-recipient">
+      <label for="edit-recipient--6" class="form-label js-form-required form-required">Recipient's email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-recipient" type="email" id="edit-recipient--6" name="recipient" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-recipient-name form-item-recipient-name">
+      <label for="edit-recipient-name--6" class="form-label js-form-required form-required">Recipient's name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-recipient-name" type="text" id="edit-recipient-name--6" name="recipient_name" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textarea form-type-textarea js-form-item-message form-item-message">
+      <label for="edit-message--12" class="form-label">Your personal message</label>
+        <div class="form-textarea-wrapper">
+  <textarea class="lg-input lg-input--primary lg-input--no-round form-textarea resize-vertical" data-drupal-selector="edit-message" id="edit-message--12" name="message" rows="5" cols="50"></textarea>
+</div>
+
+        </div>
+</div><div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions--6">
+	<input class="btn btn--no-icon button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit--6" name="op" value="Send Message" />
+</div>
+
+	<input autocomplete="off" data-drupal-selector="form-fc1enxo37o3vkgcx9vjz8seebsp-g8p-gmjokbgfksq" type="hidden" name="form_build_id" value="form-FC1ENXO37o3Vkgcx9VJz8SeEbSp_g8p_gmJOkBGfKSQ" />
+
+	<input data-drupal-selector="edit-forward-form-node-49" type="hidden" name="form_id" value="forward_form_node_49" />
+
+</form>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+
+
+
+		
+	<article role="article" about="/en/drx-125-250-brochure" class="col-md-4 col-sm-6">
+		<div class="card ">
+      <a href="/en/drx-125-250-brochure" download class="card__image-wrapper card__image-wrapper--documentation bg--lightgrey">
+                                 <img src="/sites/default/files/documentationpictureslists/drx-125-250-brochure-exb17007drx1252500.jpg" alt="DRX 125 &amp; 250 brochure" style="width:auto" typeof="foaf:Image">
+      </a>
+			
+			<div class="card__text card__text--condensed card__text--big no-eq-xs bg--white" data-eq="cards-product">DRX 125 & 250 brochure</div>
+			
+			<div class="flex-v flex-v--left card__link">
+				<a href="/en/drx-125-250-brochure" download class="social social--inline social--neg bg--white">
+					<i class="lgpicto lgicon-btn-download" aria-hidden="true"></i>
+				</a>
+				<a href="#" class="social social-modal-trigger social--inline social--neg bg--white" data-toggle="modal" data-target="#forward-303">
+					<i class="fa fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="modal fade" id="forward-303" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-forward text-center"><form class="forward-form-node-303 forward-form" data-drupal-selector="forward-form-node-303" action="/en/documentations" method="post" id="forward-form-node-303" accept-charset="UTF-8">
+  <div class="modal-dialog__title mb--40">Forward this documentation to a friend</div><p class="mb--45">Thank you for your interest in spreading the word about <em>DRX 125 &amp; 250 brochure</em> on Legrand Export.</p><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-email form-item-email">
+      <label for="edit-email--7" class="form-label js-form-required form-required">Your email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-email" type="email" id="edit-email--7" name="email" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name">
+      <label for="edit-name--7" class="form-label js-form-required form-required">Your name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-name" type="text" id="edit-name--7" name="name" value="" size="60" maxlength="128" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-recipient form-item-recipient">
+      <label for="edit-recipient--7" class="form-label js-form-required form-required">Recipient's email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-recipient" type="email" id="edit-recipient--7" name="recipient" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-recipient-name form-item-recipient-name">
+      <label for="edit-recipient-name--7" class="form-label js-form-required form-required">Recipient's name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-recipient-name" type="text" id="edit-recipient-name--7" name="recipient_name" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textarea form-type-textarea js-form-item-message form-item-message">
+      <label for="edit-message--14" class="form-label">Your personal message</label>
+        <div class="form-textarea-wrapper">
+  <textarea class="lg-input lg-input--primary lg-input--no-round form-textarea resize-vertical" data-drupal-selector="edit-message" id="edit-message--14" name="message" rows="5" cols="50"></textarea>
+</div>
+
+        </div>
+</div><div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions--7">
+	<input class="btn btn--no-icon button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit--7" name="op" value="Send Message" />
+</div>
+
+	<input autocomplete="off" data-drupal-selector="form-9vs76zezggcnqboefbaaaessu1-ilmnrbzo8rkmd2vi" type="hidden" name="form_build_id" value="form-9VS76ZezGgCNqBoEFbAAaesSu1-ilmnRBZo8RKMD2vI" />
+
+	<input data-drupal-selector="edit-forward-form-node-303" type="hidden" name="form_id" value="forward_form_node_303" />
+
+</form>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+
+
+
+		
+	<article role="article" about="/en/dx3-stop-arc-brochure-increased-protection-people-and-property" class="col-md-4 col-sm-6">
+		<div class="card ">
+      <a href="/en/dx3-stop-arc-brochure-increased-protection-people-and-property" download class="card__image-wrapper card__image-wrapper--documentation bg--lightgrey">
+                                 <img src="/sites/default/files/documentationpictureslists/dx3-stop-arc-brochure-increased-protection-people-and-property-exb17044-en.jpg" alt="DX³ Stop Arc brochure: increased protection for people and property" style="width:auto" typeof="foaf:Image">
+      </a>
+			
+			<div class="card__text card__text--condensed card__text--big no-eq-xs bg--white" data-eq="cards-product">DX³ Stop Arc brochure: increased protection for people and property</div>
+			
+			<div class="flex-v flex-v--left card__link">
+				<a href="/en/dx3-stop-arc-brochure-increased-protection-people-and-property" download class="social social--inline social--neg bg--white">
+					<i class="lgpicto lgicon-btn-download" aria-hidden="true"></i>
+				</a>
+				<a href="#" class="social social-modal-trigger social--inline social--neg bg--white" data-toggle="modal" data-target="#forward-50">
+					<i class="fa fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="modal fade" id="forward-50" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-forward text-center"><form class="forward-form-node-50 forward-form" data-drupal-selector="forward-form-node-50" action="/en/documentations" method="post" id="forward-form-node-50" accept-charset="UTF-8">
+  <div class="modal-dialog__title mb--40">Forward this documentation to a friend</div><p class="mb--45">Thank you for your interest in spreading the word about <em>DX³ Stop Arc brochure: increased protection for people and property</em> on Legrand Export.</p><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-email form-item-email">
+      <label for="edit-email--8" class="form-label js-form-required form-required">Your email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-email" type="email" id="edit-email--8" name="email" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name">
+      <label for="edit-name--8" class="form-label js-form-required form-required">Your name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-name" type="text" id="edit-name--8" name="name" value="" size="60" maxlength="128" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-recipient form-item-recipient">
+      <label for="edit-recipient--8" class="form-label js-form-required form-required">Recipient's email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-recipient" type="email" id="edit-recipient--8" name="recipient" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-recipient-name form-item-recipient-name">
+      <label for="edit-recipient-name--8" class="form-label js-form-required form-required">Recipient's name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-recipient-name" type="text" id="edit-recipient-name--8" name="recipient_name" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textarea form-type-textarea js-form-item-message form-item-message">
+      <label for="edit-message--16" class="form-label">Your personal message</label>
+        <div class="form-textarea-wrapper">
+  <textarea class="lg-input lg-input--primary lg-input--no-round form-textarea resize-vertical" data-drupal-selector="edit-message" id="edit-message--16" name="message" rows="5" cols="50"></textarea>
+</div>
+
+        </div>
+</div><div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions--8">
+	<input class="btn btn--no-icon button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit--8" name="op" value="Send Message" />
+</div>
+
+	<input autocomplete="off" data-drupal-selector="form-eki6nxf9cjpagq5chcuenwpj7tljjuo0y4hkkbsykye" type="hidden" name="form_build_id" value="form-eKI6Nxf9cjPAGq5CHCuENWPJ7TlJJUo0Y4hkkbSYkYE" />
+
+	<input data-drupal-selector="edit-forward-form-node-50" type="hidden" name="form_id" value="forward_form_node_50" />
+
+</form>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+
+
+
+		
+	<article role="article" about="/en/dmx3-acbs-brochure" class="col-md-4 col-sm-6">
+		<div class="card ">
+      <a href="/en/dmx3-acbs-brochure" download class="card__image-wrapper card__image-wrapper--documentation bg--lightgrey">
+                                 <img src="/sites/default/files/documentationpictureslists/dmx3-acbs-brochure-ex218043air-circuit.jpg" alt="DMX³ ACBs brochure" style="width:auto" typeof="foaf:Image">
+      </a>
+			
+			<div class="card__text card__text--condensed card__text--big no-eq-xs bg--white" data-eq="cards-product">DMX³ ACBs brochure</div>
+			
+			<div class="flex-v flex-v--left card__link">
+				<a href="/en/dmx3-acbs-brochure" download class="social social--inline social--neg bg--white">
+					<i class="lgpicto lgicon-btn-download" aria-hidden="true"></i>
+				</a>
+				<a href="#" class="social social-modal-trigger social--inline social--neg bg--white" data-toggle="modal" data-target="#forward-51">
+					<i class="fa fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="modal fade" id="forward-51" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-forward text-center"><form class="forward-form-node-51 forward-form" data-drupal-selector="forward-form-node-51" action="/en/documentations" method="post" id="forward-form-node-51" accept-charset="UTF-8">
+  <div class="modal-dialog__title mb--40">Forward this documentation to a friend</div><p class="mb--45">Thank you for your interest in spreading the word about <em>DMX³ ACBs brochure</em> on Legrand Export.</p><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-email form-item-email">
+      <label for="edit-email--9" class="form-label js-form-required form-required">Your email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-email" type="email" id="edit-email--9" name="email" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name">
+      <label for="edit-name--9" class="form-label js-form-required form-required">Your name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-name" type="text" id="edit-name--9" name="name" value="" size="60" maxlength="128" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-recipient form-item-recipient">
+      <label for="edit-recipient--9" class="form-label js-form-required form-required">Recipient's email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-recipient" type="email" id="edit-recipient--9" name="recipient" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-recipient-name form-item-recipient-name">
+      <label for="edit-recipient-name--9" class="form-label js-form-required form-required">Recipient's name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-recipient-name" type="text" id="edit-recipient-name--9" name="recipient_name" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textarea form-type-textarea js-form-item-message form-item-message">
+      <label for="edit-message--18" class="form-label">Your personal message</label>
+        <div class="form-textarea-wrapper">
+  <textarea class="lg-input lg-input--primary lg-input--no-round form-textarea resize-vertical" data-drupal-selector="edit-message" id="edit-message--18" name="message" rows="5" cols="50"></textarea>
+</div>
+
+        </div>
+</div><div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions--9">
+	<input class="btn btn--no-icon button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit--9" name="op" value="Send Message" />
+</div>
+
+	<input autocomplete="off" data-drupal-selector="form-pwo6uvi0arummc-lfeljfa0xid-whwvgpneuwutofk0" type="hidden" name="form_build_id" value="form-pWo6uvi0aRUMmC_LfelJfa0xID_whWvGpneUWUTofk0" />
+
+	<input data-drupal-selector="edit-forward-form-node-51" type="hidden" name="form_id" value="forward_form_node_51" />
+
+</form>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+
+
+
+		
+	<article role="article" about="/en/dpx3-mccbs-brochure-reliable-protection-and-accurate-measurement-1600" class="col-md-4 col-sm-6">
+		<div class="card ">
+      <a href="/en/dpx3-mccbs-brochure-reliable-protection-and-accurate-measurement-1600" download class="card__image-wrapper card__image-wrapper--documentation bg--lightgrey">
+                                 <img src="/sites/default/files/documentationpictureslists/dpx3-mccbs-brochure-reliable-protection-and-accurate-measurement-1600-ex218023dpx3enbd150dpi.jpg" alt="DPX³ MCCBs brochure: reliable protection and accurate measurement up to 1600 A" style="width:auto" typeof="foaf:Image">
+      </a>
+			
+			<div class="card__text card__text--condensed card__text--big no-eq-xs bg--white" data-eq="cards-product">DPX³ MCCBs brochure: reliable protection and accurate measurement up to 1600 A</div>
+			
+			<div class="flex-v flex-v--left card__link">
+				<a href="/en/dpx3-mccbs-brochure-reliable-protection-and-accurate-measurement-1600" download class="social social--inline social--neg bg--white">
+					<i class="lgpicto lgicon-btn-download" aria-hidden="true"></i>
+				</a>
+				<a href="#" class="social social-modal-trigger social--inline social--neg bg--white" data-toggle="modal" data-target="#forward-52">
+					<i class="fa fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="modal fade" id="forward-52" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-forward text-center"><form class="forward-form-node-52 forward-form" data-drupal-selector="forward-form-node-52" action="/en/documentations" method="post" id="forward-form-node-52" accept-charset="UTF-8">
+  <div class="modal-dialog__title mb--40">Forward this documentation to a friend</div><p class="mb--45">Thank you for your interest in spreading the word about <em>DPX³ MCCBs brochure: reliable protection and accurate measurement up to 1600 A</em> on Legrand Export.</p><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-email form-item-email">
+      <label for="edit-email--10" class="form-label js-form-required form-required">Your email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-email" type="email" id="edit-email--10" name="email" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name">
+      <label for="edit-name--10" class="form-label js-form-required form-required">Your name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-name" type="text" id="edit-name--10" name="name" value="" size="60" maxlength="128" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-recipient form-item-recipient">
+      <label for="edit-recipient--10" class="form-label js-form-required form-required">Recipient's email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-recipient" type="email" id="edit-recipient--10" name="recipient" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-recipient-name form-item-recipient-name">
+      <label for="edit-recipient-name--10" class="form-label js-form-required form-required">Recipient's name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-recipient-name" type="text" id="edit-recipient-name--10" name="recipient_name" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textarea form-type-textarea js-form-item-message form-item-message">
+      <label for="edit-message--20" class="form-label">Your personal message</label>
+        <div class="form-textarea-wrapper">
+  <textarea class="lg-input lg-input--primary lg-input--no-round form-textarea resize-vertical" data-drupal-selector="edit-message" id="edit-message--20" name="message" rows="5" cols="50"></textarea>
+</div>
+
+        </div>
+</div><div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions--10">
+	<input class="btn btn--no-icon button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit--10" name="op" value="Send Message" />
+</div>
+
+	<input autocomplete="off" data-drupal-selector="form-xgnbidktntzbykwn3bslrtxmzqqtn1kjd52v3vvbjtu" type="hidden" name="form_build_id" value="form-xgnbidKtNTZByKWN3bslRTXmZQqtN1kjD52v3VVBJtU" />
+
+	<input data-drupal-selector="edit-forward-form-node-52" type="hidden" name="form_id" value="forward_form_node_52" />
+
+</form>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+
+
+
+		
+	<article role="article" about="/en/automatic-transfer-switching-units-brochure" class="col-md-4 col-sm-6">
+		<div class="card ">
+      <a href="/en/automatic-transfer-switching-units-brochure" download class="card__image-wrapper card__image-wrapper--documentation bg--lightgrey">
+                                 <img src="/sites/default/files/documentationpictureslists/automatic-transfer-switching-units-brochure-exb16007automatismeen.jpg" alt="Automatic transfer switching units brochure" style="width:auto" typeof="foaf:Image">
+      </a>
+			
+			<div class="card__text card__text--condensed card__text--big no-eq-xs bg--white" data-eq="cards-product">Automatic transfer switching units brochure</div>
+			
+			<div class="flex-v flex-v--left card__link">
+				<a href="/en/automatic-transfer-switching-units-brochure" download class="social social--inline social--neg bg--white">
+					<i class="lgpicto lgicon-btn-download" aria-hidden="true"></i>
+				</a>
+				<a href="#" class="social social-modal-trigger social--inline social--neg bg--white" data-toggle="modal" data-target="#forward-53">
+					<i class="fa fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="modal fade" id="forward-53" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-forward text-center"><form class="forward-form-node-53 forward-form" data-drupal-selector="forward-form-node-53" action="/en/documentations" method="post" id="forward-form-node-53" accept-charset="UTF-8">
+  <div class="modal-dialog__title mb--40">Forward this documentation to a friend</div><p class="mb--45">Thank you for your interest in spreading the word about <em>Automatic transfer switching units brochure</em> on Legrand Export.</p><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-email form-item-email">
+      <label for="edit-email--11" class="form-label js-form-required form-required">Your email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-email" type="email" id="edit-email--11" name="email" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name">
+      <label for="edit-name--11" class="form-label js-form-required form-required">Your name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-name" type="text" id="edit-name--11" name="name" value="" size="60" maxlength="128" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-recipient form-item-recipient">
+      <label for="edit-recipient--11" class="form-label js-form-required form-required">Recipient's email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-recipient" type="email" id="edit-recipient--11" name="recipient" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-recipient-name form-item-recipient-name">
+      <label for="edit-recipient-name--11" class="form-label js-form-required form-required">Recipient's name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-recipient-name" type="text" id="edit-recipient-name--11" name="recipient_name" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textarea form-type-textarea js-form-item-message form-item-message">
+      <label for="edit-message--22" class="form-label">Your personal message</label>
+        <div class="form-textarea-wrapper">
+  <textarea class="lg-input lg-input--primary lg-input--no-round form-textarea resize-vertical" data-drupal-selector="edit-message" id="edit-message--22" name="message" rows="5" cols="50"></textarea>
+</div>
+
+        </div>
+</div><div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions--11">
+	<input class="btn btn--no-icon button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit--11" name="op" value="Send Message" />
+</div>
+
+	<input autocomplete="off" data-drupal-selector="form-mc2mstw5dizmq2nnynr7hahfmmedn6pysxjru7ndaec" type="hidden" name="form_build_id" value="form-MC2MStW5DiZmQ2nnyNr7hAhFmmEDn6PYSxJRu7nDAEc" />
+
+	<input data-drupal-selector="edit-forward-form-node-53" type="hidden" name="form_id" value="forward_form_node_53" />
+
+</form>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+
+
+
+		
+	<article role="article" about="/en/workshop-specifications-dpx3-160-and-250" class="col-md-4 col-sm-6">
+		<div class="card ">
+      <a href="/en/workshop-specifications-dpx3-160-and-250" download class="card__image-wrapper card__image-wrapper--documentation bg--lightgrey">
+                                 <img src="/sites/default/files/documentationpictureslists/workshop-specifications-dpx3-160-and-250-exb16053-dpx3-160-250bd.jpg" alt="Workshop specifications DPX³ 160 and 250" style="width:auto" typeof="foaf:Image">
+      </a>
+			
+			<div class="card__text card__text--condensed card__text--big no-eq-xs bg--white" data-eq="cards-product">Workshop specifications DPX³ 160 and 250</div>
+			
+			<div class="flex-v flex-v--left card__link">
+				<a href="/en/workshop-specifications-dpx3-160-and-250" download class="social social--inline social--neg bg--white">
+					<i class="lgpicto lgicon-btn-download" aria-hidden="true"></i>
+				</a>
+				<a href="#" class="social social-modal-trigger social--inline social--neg bg--white" data-toggle="modal" data-target="#forward-315">
+					<i class="fa fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="modal fade" id="forward-315" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-forward text-center"><form class="forward-form-node-315 forward-form" data-drupal-selector="forward-form-node-315" action="/en/documentations" method="post" id="forward-form-node-315" accept-charset="UTF-8">
+  <div class="modal-dialog__title mb--40">Forward this documentation to a friend</div><p class="mb--45">Thank you for your interest in spreading the word about <em>Workshop specifications DPX³ 160 and 250</em> on Legrand Export.</p><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-email form-item-email">
+      <label for="edit-email--12" class="form-label js-form-required form-required">Your email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-email" type="email" id="edit-email--12" name="email" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name">
+      <label for="edit-name--12" class="form-label js-form-required form-required">Your name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-name" type="text" id="edit-name--12" name="name" value="" size="60" maxlength="128" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-email form-type-email js-form-item-recipient form-item-recipient">
+      <label for="edit-recipient--12" class="form-label js-form-required form-required">Recipient's email address</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-email required" data-drupal-selector="edit-recipient" type="email" id="edit-recipient--12" name="recipient" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-recipient-name form-item-recipient-name">
+      <label for="edit-recipient-name--12" class="form-label js-form-required form-required">Recipient's name</label>
+        
+	<input class="lg-input lg-input--primary lg-input--no-round form-text required" data-drupal-selector="edit-recipient-name" type="text" id="edit-recipient-name--12" name="recipient_name" value="" size="60" maxlength="254" required="required" aria-required="true" />
+
+        </div>
+</div><div class="form-forward__input"><div class="js-form-item form-item js-form-type-textarea form-type-textarea js-form-item-message form-item-message">
+      <label for="edit-message--24" class="form-label">Your personal message</label>
+        <div class="form-textarea-wrapper">
+  <textarea class="lg-input lg-input--primary lg-input--no-round form-textarea resize-vertical" data-drupal-selector="edit-message" id="edit-message--24" name="message" rows="5" cols="50"></textarea>
+</div>
+
+        </div>
+</div><div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions--12">
+	<input class="btn btn--no-icon button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit--12" name="op" value="Send Message" />
+</div>
+
+	<input autocomplete="off" data-drupal-selector="form-pflgpunz4ff3iomzeaqm49bmkiuaaiifrqxnaefvo7c" type="hidden" name="form_build_id" value="form-PfLGPUnz4FF3iOMzeaqM49bMKiUaaIifrQxNaEfVO7c" />
+
+	<input data-drupal-selector="edit-forward-form-node-315" type="hidden" name="form_id" value="forward_form_node_315" />
+
+</form>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+            
+
+                    </div>
+                                            <div class="row">
+                                <div class="pagered text-center" role="navigation" aria-labelledby="pagination-heading">
+        <p class="pagered__label"> Page 1 of 8</p>
+        <ul class="pagered__items js-pagered__items pagered ">
+
+                        
+                        
+                                        <li class="pagered__item pagered-item active">
+                                                                                    <a href="?page=0" title="Current page">
+                        <span class="visually-hidden">
+                        Current page
+                        </span>1</a>
+                </li>
+                            <li class="pagered__item pagered-item">
+                                                                                    <a href="?page=1" title="Go to page 2">
+                        <span class="visually-hidden">
+                        Page
+                        </span>2</a>
+                </li>
+                            <li class="pagered__item pagered-item">
+                                                                                    <a href="?page=2" title="Go to page 3">
+                        <span class="visually-hidden">
+                        Page
+                        </span>3</a>
+                </li>
+                            <li class="pagered__item pagered-item">
+                                                                                    <a href="?page=3" title="Go to page 4">
+                        <span class="visually-hidden">
+                        Page
+                        </span>4</a>
+                </li>
+                            <li class="pagered__item pagered-item">
+                                                                                    <a href="?page=4" title="Go to page 5">
+                        <span class="visually-hidden">
+                        Page
+                        </span>5</a>
+                </li>
+                            <li class="pagered__item pagered-item">
+                                                                                    <a href="?page=5" title="Go to page 6">
+                        <span class="visually-hidden">
+                        Page
+                        </span>6</a>
+                </li>
+                            <li class="pagered__item pagered-item">
+                                                                                    <a href="?page=6" title="Go to page 7">
+                        <span class="visually-hidden">
+                        Page
+                        </span>7</a>
+                </li>
+                            <li class="pagered__item pagered-item">
+                                                                                    <a href="?page=7" title="Go to page 8">
+                        <span class="visually-hidden">
+                        Page
+                        </span>8</a>
+                </li>
+            
+                                        <li class="pagered__item pagered__item--next pagered-next ">
+                    <a href="?page=1" title="Go to next page" rel="next">
+                        <span class="visually-hidden">Next page</span>
+                        <span aria-hidden="true"><i class="fa fa-angle-right"></i></span>
+                    </a>
+                </li>
+            
+                                        <li class="pagered__item pagered__item--last pagered-item">
+                    <a href="?page=7" title="Go to last page">
+                        <span class="visually-hidden">Last page</span>
+                        <span aria-hidden="true"><i class="fa fa-angle-double-right"></i></span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+                        </div>
+                                    </div>
+            </section>
+                
+</div>
+</div>
+
+    
+</div>
+
+  </div>
+
+              
+  </div>
+
+  	<footer role="contentinfo" class="footer">
+    			<div class="f-links">
+				<div class="container">
+					<div class="row">
+													<div class="col-md-2">
+								<div class="f-links__image no-eq-sm no-eq-xs footer__logo" data-eq="f-links__nav">
+									<a href="https://www.export.legrand.com/en" title="Legrand Export">
+	<img src="/themes/pit_theme/logo.svg" alt="Legrand Export" class=" img-responsive">
+</a>
+								</div>
+							</div>
+												<div class="col-md-10">
+							<nav role="navigation" aria-labelledby="block-footer-nav-menu" id="block-footer-nav" class="block block-menu navigation menu--footer-nav">
+            
+  <h2 class="visually-hidden" id="block-footer-nav-menu">Navigation Pied de page</h2>
+  
+
+        <div class="row">
+        <div class="col-md-4 col-sm-5 col-xs-12">
+      <nav>
+        <ul class="no-eq-xs" data-eq="f-links__nav">
+                                                <li>
+                <a href="/en" title="Products &amp; Systems" target="_self" class="f-link__link d-block">Products &amp; Systems</a>
+              </li>
+                                                            <li>
+                <a href="https://www.legrandgroup.com/en/world-presence" title="Presence outside France" target="_blank" class="f-link__link d-block">Presence outside France</a>
+              </li>
+                                                            <li>
+                <a href="https://www.legrandgroup.com/en/our-solutions/references" title="Examples" target="_blank" class="f-link__link d-block">Examples</a>
+              </li>
+                              </ul>
+      </nav>
+    </div>
+      <div class="col-md-4 col-sm-5 col-xs-12">
+      <nav>
+        <ul class="no-eq-xs" data-eq="f-links__nav">
+                                                <li>
+                <a href="https://www.legrand.fr/pro/catalogue" title="France e-catalogue" target="_blank" class="f-link__link d-block">France e-catalogue</a>
+              </li>
+                                                            <li>
+                <a href="/en/documentations" title="Documentation" target="_self" class="f-link__link d-block">Documentation</a>
+              </li>
+                                                            <li>
+                <a href="/en/software" title="Software" target="_self" class="f-link__link d-block">Software</a>
+              </li>
+                              </ul>
+      </nav>
+    </div>
+      <div class="col-md-4 col-sm-5 col-xs-12">
+      <nav>
+        <ul class="no-eq-xs" data-eq="f-links__nav">
+                                                <li>
+                <a href="https://www.legrandgroup.com/en/contact" title="Contact" target="_blank" class="f-link__link f-link__link--big d-block">Contact</a>
+              </li>
+                                                            <li>
+                <a href="https://legrand.signalement.net/entreprises" title="Ethical rules" target="_blank" class="f-link__link d-block">Ethical rules</a>
+              </li>
+                              </ul>
+      </nav>
+    </div>
+  </div>
+  </nav>
+
+						</div>
+					</div>
+				</div>
+			</div>
+				<div class="f-social">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 f-social__container flex-v  no-flex-md no-flex-sm no-flex-xs">
+						<div class="f-social__social-medias flex-v">
+							<span class="f-social__label">Follow us</span>
+																								<a href="https://twitter.com/legrand" class="social social--inline social--big" title="Follow us on Twitter"><i class="fa fa-twitter"></i></a>
+																	<a href="https://www.youtube.com/user/legrand" class="social social--inline social--big" title="Follow us on Youtube"><i class="fa fa-youtube-play"></i></a>
+																	<a href="https://fr.linkedin.com/company/legrand" class="social social--inline social--big" title="Follow us on LinkedIn"><i class="fa fa-linkedin"></i></a>
+																	<a href="https://www.pinterest.fr/legrandgroup/" class="social social--inline social--big" title="Follow us on Pinterest"><i class="fa fa-pinterest-p"></i></a>
+																	<a href="https://www.instagram.com/legrandnews/" class="social social--inline social--big" title="Follow us on Instagram"><i class="fa fa-instagram"></i></a>
+																					</div>
+													<nav role="navigation" aria-labelledby="block-pieddepage-menu" id="block-pieddepage" class="block block-menu navigation menu--footer">
+            
+  <h2 class="visually-hidden" id="block-pieddepage-menu">Pied de page</h2>
+  
+
+        <div class="f-social__social-links">
+        
+    <a class="f-social__link f-social__link--first" href="/en/terms-and-conditions-use" title="Terms and Conditions of Use" >Terms and Conditions of Use</a>
+
+          
+    <a class="f-social__link" href="/en/privacy-policy" title="Privacy policy" >Privacy policy</a>
+
+          
+    <a class="f-social__link f-social__link--big" href="https://www.legrandgroup.com" title="Legrand.com" target="_blank">Legrand.com</a>
+
+      </div>
+
+  </nav>
+
+											</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</div>
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"en\/","currentPath":"documentations","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true,"\/en\/documentations":true,"\/en\/search\/en":true},"pit_rgpd":{"page_privacy_nid":"2","page_privacy_title":"Privacy policy","page_privacy_url":"\/en\/privacy-policy","banner_text":"The export.legrand.com website uses cookies provided by third parties in order to get you access to videos and optimize its functionality by producing statistical data.","banner_background_color":"bg--orange","banner_text_color":"text-color-white","banner_button_accept":"OK (Accept All)","banner_button_color_accept":"btn-second btn-second--medium bg--transparent","banner_button_custom":"Manage settings","banner_button_color_custom":"btn-second btn-second--medium bg--transparent","reveal_button_reset":"Cancel","reveal_button_color_reset":"","reveal_button_apply":"Apply","reveal_button_color_apply":"","reveal_title":"Managing cookies settings","reveal_text":"","reveal_before_link":"For more information, visit:","is_privacy_page":false,"ga_code":"UA-42086851-1","ga_tag":"GTM-52NPDF9","ga_domain":".legrand.com","xiti_xtsd":"http:\/\/logc279","xiti_xtsite":"538953","xiti_domain":".legrand.com","xiti_core":"\/\/-- Copyright 2013 AT Internet, All Rights Reserved.\r\n\/\/-- AT Internet Tag 4.4.004\r\nvar xt1=\u0027.export.legrand.com\u0027,xtLogDom=\u0027.xiti.com\/hit.xiti\u0027,xtpreview=false,xtfirst=false,xtnocookies=false,xtcode=\u0027\u0027,xt46=\u00271\u0027,xt50=\u00271\u0027,xt48=\u0027\u0027,xt54=false,xt58=false,xtdocl=false,xtud=\u0027undefined\u0027,xt2=\u00270\u0027,xt3=365,xttredir=500,xtkwv=\u0027xtmc\u0027,xtkwp=\u0027xtnp\u0027,xtadch=new Array,xt4=new Array;xt4[\u0027sec\u0027]=\u002720\u0027;xt4[\u0027rss\u0027]=\u002720\u0027;xt4[\u0027epr\u0027]=\u002720\u0027;xt4[\u0027erec\u0027]=\u002720\u0027;xt4[\u0027adi\u0027]=\u002720\u0027;xt4[\u0027adc\u0027]=\u002720\u0027;xt4[\u0027al\u0027]=\u002720\u0027;xt4[\u0027es\u0027]=\u002720\u0027;xt4[\u0027ad\u0027]=\u002720\u0027;\r\n\/\/do not modify below\r\nvar xtoid=new Array,xtnop=true,xtkey=false,xt49=null,xt5=30,xw=window,xd=document,xtg=navigator,xtv=(xw.xtczv!=null)?\u002744004-\u0027+xw.xtczv:\u002744004\u0027,xt1=xw.xtdmc?\u0027;domain=\u0027+xw.xtdmc:(xt1!=\u0027\u0027)?\u0027;domain=\u0027+xw.xt1:\u0027\u0027,xt6=(xw.xtnv!=null)?xw.xtnv:xd,xt7=(xw.xtsdi!=null)?xw.xtsdi:(xw.xtsd!=null)?xw.xtsd+xtLogDom:(((xd.location.protocol==\u0027https:\u0027)?\u0027https:\/\/logs1279\u0027:\u0027http:\/\/logc279\u0027)+xtLogDom),xt36=(xw.xtsts!=null)?xw.xtsts:0,xt37=\u0027\u0027;if(xt54){var xturl=\u0027\u0027;try{xturl=xt6.location.href}catch(e){xturl=xw.location.href}xt37=xtestr(xturl,\/#.*\/,1);xt37=xt37?\u0027\u0026sta=\u0027+encodeURIComponent(xtclURL(xt37)):\u0027\u0027}var xt38=(xw.xtcustom!=null)?xtserial(xw.xtcustom):\u0027\u0027,xt8=(xw.xtsite!=null)?xw.xtsite:0,xt9=(xw.xtn2!=null)?\u0027\u0026s2=\u0027+xw.xtn2:\u0027\u0027,xt8b=((xt8==0)?\u0027\u0027:\u0027s=\u0027+xt8)+((xt36==0)?\u0027\u0027:((xt8==0)?\u0027sts=\u0027+xt36:\u0027\u0026sts=\u0027+xt36)),xtp=(xw.xtpage!=null)?xw.xtpage:\u0027\u0027,xt10=xw.xto_force?xw.xto_force.toLowerCase():null,xt11=(xt8==\u0027redirect\u0027)?true:false,xtdi=xw.xtdi?\u0027\u0026di=\u0027+xw.xtdi:\u0027\u0027,xt12=xw.xtidp?\u0027\u0026idpays=\u0027+xw.xtidp:\u0027\u0027,xt13=xw.xtidprov?\u0027\u0026idprov=\u0027+xw.xtidprov:\u0027\u0027,xtm=(xw.xtparam!=null)?xw.xtparam:\u0027\u0027;xt46=((typeof(xw.xtnopage)!=\u0027undefined\u0027)\u0026\u0026(xw.xtnopage==\u00271\u0027))?\u00270\u0027:xt46;xt50=((typeof(xw.xtergo)!=\u0027undefined\u0027)\u0026\u0026(xw.xtergo==\u00270\u0027))?\u00270\u0027:xt50;var xtclzone=((typeof(xw.scriptOnClickZone)!=\u0027undefined\u0027)\u0026\u0026(xt50==\u00271\u0027))?xw.scriptOnClickZone:0,xt15=(xw.xt_orderid!=null)?xw.xt_orderid:\u0027\u0027,xt17=(xw.xtidcart!=null)?xw.xtidcart:\u0027\u0027,xt44=(xw.xtprod_load!=null)?\u0027\u0026pdtl=\u0027+xw.xtprod_load:\u0027\u0027,xt47=(xw.xtcode!=\u0027\u0027)?\u0027\u0026code=\u0027+xw.xtcode:\u0027\u0027,xt60={i:[],u:[],d:[],l:[],e:[],p:[]};\r\nif(xw.addEventListener){xw.addEventListener(\u0027unload\u0027,function(){},false)}else if(xw.attachEvent){xw.attachEvent(\u0027onunload\u0027,function(){})}if(xd.addEventListener){xd.addEventListener(\u0027keydown\u0027,function(){xtkey=true},false);xd.addEventListener(\u0027keyup\u0027,function(){xtkey=false},false)}else if(xd.attachEvent){xd.attachEvent(\u0027onkeydown\u0027,function(){xtkey=true});xd.attachEvent(\u0027onkeyup\u0027,function(){xtkey=false})}\r\nvar xt18=(xw.roimt\u0026\u0026(xtm.indexOf(\u0027\u0026roimt\u0027,0)\u003C0))?\u0027\u0026roimt=\u0027+xw.roimt:\u0027\u0027,xtmc=(xtm.indexOf(\u0027\u0026mc=\u0027,0)\u003C0)?(xw.xtmc?\u0027\u0026mc=\u0027+xw.xtmc:xtf3(xtkwv)?\u0027\u0026mc=\u0027+xtf3(xtkwv):xtf3(\u0027xtmc\u0027)?\u0027\u0026mc=\u0027+xtf3(\u0027xtmc\u0027):\u0027\u0027):\u0027\u0027,xtcr=xtf3(\u0027xtcr\u0027)?\u0027\u0026mcrg=\u0027+xtf3(\u0027xtcr\u0027):\u0027\u0027,xtac=(xw.xtac\u0026\u0026(xtm.indexOf(\u0027\u0026ac=\u0027,0)\u003C0))?\u0027\u0026ac=\u0027+xw.xtac:\u0027\u0027,xtat=(xw.xtat\u0026\u0026(xtm.indexOf(\u0027\u0026at=\u0027,0)\u003C0))?\u0027\u0026at=\u0027+xw.xtat:\u0027\u0027,xtan=(xw.xtan\u0026\u0026(xtm.indexOf(\u0027\u0026an=\u0027,0)\u003C0))?\u0027\u0026an=\u0027+xw.xtan:\u0027\u0027,xtnp=(xtm.indexOf(\u0027\u0026np=\u0027,0)\u003C0)?(xw.xtnp?\u0027\u0026np=\u0027+xw.xtnp:xtf3(xtkwp)?\u0027\u0026np=\u0027+xtf3(xtkwp):xtf3(\u0027xtnp\u0027)?\u0027\u0026np=\u0027+xtf3(\u0027xtnp\u0027):\u0027\u0027):\u0027\u0027,xt19=((xw.xtprm!=null)\u0026\u0026(xtm.indexOf(\u0027\u0026x\u0027,0)\u003C0))?xw.xtprm:\u0027\u0027;xtm+=xt18+xtmc+xtcr+xtac+((xtan!=\u0027\u0027)?xtan:xtat)+xtnp+xt19+xt37;var xt20=\u0027\u0027;try{xt20=top.document.referrer}catch(e){try{xt20=xt6.referrer}catch(e){}};var xts=screen,xt21=new Date(),xt22=xt21.getTime()\/(1000*3600);\r\nfunction xtserial(obj){var t=typeof(obj);if(t!=\u0022object\u0022||obj===null){if(t==\u0022string\u0022)obj=encodeURIComponent(\u0027\u0022\u0027+obj+\u0027\u0022\u0027);return String(obj)}else{var n,v,json=[],arr=(obj\u0026\u0026obj.constructor==Array);for(n in obj){v=obj[n];t=typeof(v);if(t==\u0022string\u0022)v=encodeURIComponent(\u0027\u0022\u0027+v.replace(\/[^\\\\]\u0022\/g,\u0027\\\\\u0022\u0027)+\u0027\u0022\u0027);else if(t==\u0022object\u0022\u0026\u0026v!==null)v=xtserial(v);json.push((arr?\u0022\u0022:encodeURIComponent(\u0027\u0022\u0027+n+\u0027\u0022:\u0027))+String(v))}return(arr?\u0022[\u0022:\u0022{\u0022)+String(json)+(arr?\u0022]\u0022:\u0022}\u0022)}}\r\nfunction xtclURL(ch){return ch.replace(\/%3C\/g,\u0027\u003C\u0027).replace(\/%3E\/g,\u0027\u003E\u0027).replace(\/[\u003C\u003E]\/g,\u0027\u0027)}\r\nfunction xtf1(nom,xtenc){if(!xtnocookies){xtenc=((xtenc!=null)\u0026\u0026(xtenc!=xtud))?xtenc:\u00270\u0027;var cookies=xd.cookie,re=new RegExp(\u0027(?:^| )\u0027+nom+\u0027=([^;]+)\u0027),result=re.exec(cookies)||null;if(result){result=xtclURL(result[1]);if(xtenc!=\u00271\u0027){result=unescape(result)}}return result}else{return null}}\r\nfunction xt_addchain(val,varch){xtvarch=varch?varch:\u0027abmv\u0027;itemp=(!xtadch[xtvarch])?0:xtadch[xtvarch];itemp++;xtm+=\u0027\u0026\u0027+xtvarch+\u0027\u0027+itemp+\u0027=\u0027+val;xtadch[xtvarch]=itemp}if(typeof(xt_adch)==\u0027function\u0027){xt_adch()}\r\nfunction wck(p1,p2,p3,p4,fmt){p2=(fmt==0)?p2:escape(p2);if(!xtnocookies)xd.cookie=p1+\u0027=\u0027+p2+\u0027;expires=\u0027+p3.toGMTString()+\u0027;path=\/\u0027+p4}\r\nfunction xtf3(param,chba,a){try{var xtdeb=xt6.location.href}catch(e){var xtdeb=xw.location.href}var xturl=(chba==null||chba==xtud)?xtclURL(xtdeb.toLowerCase().replace(\/%3d\/g,\u0027=\u0027)):chba,xtpos=xturl.indexOf(param+\u0027=\u0027);if(xtpos\u003E0){var chq=xturl.substr(1),mq=chq.substr(chq.indexOf(param+\u0027=\u0027));if(a!=2){if(a!=1){try{mq=decodeURIComponent(mq)}catch(e){mq=unescape(mq)}}var cr=mq.match(\/(\\[[^\\]]*\\])\/g);if(cr){var str=\u0027\u0027;for(var i=0,l=cr.length;i\u003Cl;i++){str=cr[i].substring(1,cr[i].length-1);mq=mq.replace(str,encodeURIComponent(str))}}}var posa=mq.indexOf(\u0022#\u0022),pos=mq.search(\/\u0026.[^\u0026]+=\/gi);pos=(pos==-1)?((posa==-1)?mq.length:posa):((posa\u003E0\u0026\u0026posa\u003Cpos)?posa:pos);if(a==1){return decodeURIComponent(mq.substring(mq.indexOf(\u0027=\u0027)+1,pos))}else if(a==2){return mq.substring(mq.indexOf(\u0027=\u0027)+1,pos)}else{return mq.substring(mq.indexOf(\u0027=\u0027)+1,pos).replace(\u0027\u0026\u0027,\u0027%26\u0027)}}else{return null}}\r\nfunction xt_mvt(page,section,test,detail,varch){if(detail){for(var i=1;i\u003Cdetail.length+1;i++){test+=\u0027\u0026\u0027+((varch)?varch:\u0027abmv\u0027)+i+\u0022=\u0022+detail[i-1]}}xtf4(\u0027\u0027,\u0027\u0026p=\u0027+page+\u0027\u0026s2=\u0027+section+\u0027\u0026abmvc=\u0027+test+\u0022\u0026type=mvt\u0022)}\r\nfunction xt_med(type,section,page,x1,x2,x3,x4,x5){xt_ajout=((type==\u0027F\u0027)\u0026\u0026((x1==null)||(x1==xtud)))?\u0027\u0027:(type==\u0027M\u0027)?\u0027\u0026a=\u0027+x1+\u0027\u0026m1=\u0027+x2+\u0027\u0026m2=\u0027+x3+\u0027\u0026m3=\u0027+x4+\u0027\u0026m4=\u0027+x5:\u0027\u0026clic=\u0027+x1;xtf4(type,\u0027\u0026s2=\u0027+section+\u0027\u0026p=\u0027+page+xt_ajout,x2,x3)}\r\nxtfirst=((xtg.userAgent.indexOf(\u0027Safari\u0027)!=-1\u0026\u0026xtg.userAgent.indexOf(\u0027Chrome\u0027)\u003C0)||xtg.userAgent.indexOf(\u0027iPhone\u0027)!=-1||xtg.userAgent.indexOf(\u0027iPod\u0027)!=-1||xtg.userAgent.indexOf(\u0027iPad\u0027)!=-1||xtfirst||xw.xtidc||xtnocookies);if(xtfirst){var xt40=(xw.xtidc)?xw.xtidc:xtf1(\u0027xtidc\u0027);if(xt40==null){var xt40=Math.floor(Math.random()*999999),xtane=xt21.getYear();if(xtane\u003C100)xtane+=2000;if((xtane\u003E100)\u0026\u0026(xtane\u003C2000))xtane+=1900;var xt41=f_nb(xtane)+\u0027\u0027+f_nb(xt21.getMonth())+\u0027\u0027+f_nb(xt21.getDate())+\u0027\u0027+f_nb(xt21.getHours())+\u0027\u0027+f_nb(xt21.getMinutes())+\u0027\u0027+f_nb(xt21.getSeconds());xt40=xt41+\u0027\u0027+xt40}var xtdrc=new Date();xtdrc.setTime(xtdrc.getTime()+(315360000000));wck(\u0027xtidc\u0027,xt40,xtdrc,xt1,1);xt42=xtf1(\u0027xtidc\u0027);xt40+=(!xw.xtidc\u0026\u0026((xt42==null)||(xt42!=xt40)))?\u0027-NO\u0027:\u0027\u0027}\r\nfunction xt_ad(x1,x2,x3){xtf4(\u0027AT\u0027,\u0027\u0026atc=\u0027+x1+\u0027\u0026type=AT\u0026patc=\u0027+xtp+\u0027\u0026s2atc=\u0027+xw.xtn2,x2,x3)}\r\nfunction xt_adc(obj,x1,x2,x3){xtf4(\u0027AT\u0027,\u0027\u0026atc=\u0027+x1+\u0027\u0026type=AT\u0026patc=\u0027+xtp+\u0027\u0026s2atc=\u0027+xw.xtn2);return AT_click.do_navig(obj,x2,(x3)?\u0027_blank\u0027:null,true)}\r\nfunction xt_click(obj,type,n2,page,x1,x2,x3){xt_ajout=((type==\u0027F\u0027)\u0026\u0026((x1==null)||(x1==xtud)))?\u0027\u0027:\u0027\u0026clic=\u0027+x1;xtf4(type,\u0027\u0026s2=\u0027+n2+\u0027\u0026p=\u0027+page+xt_ajout);return AT_click.do_navig(obj,x2,(x3)?\u0027_blank\u0027:null,true)}\r\nfunction xt_form(obj,type,n2,page,x1,x2){xt_ajout=((type==\u0027F\u0027)\u0026\u0026((x1==null)||(x1==xtud)))?\u0027\u0027:\u0027\u0026clic=\u0027+x1;xtf4(type,\u0027\u0026s2=\u0027+n2+\u0027\u0026p=\u0027+page+xt_ajout);return AT_click.do_submit(obj,true,x2)}\r\nvar AT_click={id:0,objs:[],elem:function(a,d,e,b,c,g,h){var f={};f.urlDest=c;f.type=a;f.n2=d;f.label=e;f.typeClick=b;f.target=g;f.submit=!1===c?!1:!0;f.redir=null==h?!0:h;return f},addListener:function(a,d,e){window.addEventListener?a.addEventListener(d,e,!1):window.attachEvent\u0026\u0026a.attachEvent(\u0022on\u0022+d,e)},tag:function(a,d,e,b,c,g,h,f){if(a.setAttribute)this.addElem(a,d,e,b,c,g,h,f);else for(var k in a)a[k].setAttribute\u0026\u0026this.addElem(a[k],d,e,b,c,g,h,f)},addElem:function(a,d,e,b,c,g,h,f){this.id++;a.setAttribute(\u0022data-xtclickid\u0022,\r\nthis.id);this.objs[this.id]=this.elem(d,e,b,c,g,h,f);\u0022FORM\u0022!=a.nodeName?this.addListener(a,\u0022click\u0022,this.on_click_submit):this.addListener(a,\u0022submit\u0022,this.on_click_submit)},on_click_submit:function(a){try{var d=a.target||a.srcElement,e=d.getAttribute(\u0022data-xtclickid\u0022),b={},c=\u0022\u0022,g=a.defaultPrevented,h=AT_click;if(!e)for(var f=d.parentNode;f;){if(f.getAttribute(\u0022data-xtclickid\u0022)){e=f.getAttribute(\u0022data-xtclickid\u0022);break}f=f.parentNode}e\u0026\u0026(b=h.objs[e],\u0022AT\u0022!=b.type?c+=\u0022\u0026p=\u0022+b.label+(\u0022C\u0022==b.type?\u0022\u0026clic=\u0022+\r\nb.typeClick:\u0022\u0022):\u0022AT\u0022==b.type\u0026\u0026(c+=\u0022\u0026type=AT\u0026atc=\u0022+b.label),xtf4(b.type,\u0022\u0026s2=\u0022+b.n2+c),!g\u0026\u0026b.redir\u0026\u0026(a.preventDefault(),\u0022FORM\u0022!=d.nodeName?h.do_navig(d,b.urlDest,b.target):h.do_submit(d,null,b.submit)))}catch(k){}},do_navig:function(a,d,e,b){var c=null;if(\u0022A\u0022!=a.nodeName)for(var g=a.parentNode;g;){if(\u0022A\u0022==g.nodeName){c=g;break}g=g.parentNode}else c=a;if(c){if(c.target=e||a.target||\u0022_self\u0022,c.href=d||a.href||c.href,!b||b\u0026\u0026!xtkey)if(\u0022_self\u0022==c.target.toLowerCase()){if(setTimeout(\u0027self.location.href=\u0022\u0027+\r\nc.href+\u0027\u0022\u0027,xw.xttredir),b)return!1}else if(\u0022_top\u0022==c.target.toLowerCase()){if(setTimeout(\u0027top.location.href=\u0022\u0027+c.href+\u0027\u0022\u0027,xw.xttredir),b)return!1}else if(\u0022_parent\u0022==c.target.toLowerCase()){if(setTimeout(\u0027parent.location.href=\u0022\u0027+c.href+\u0027\u0022\u0027,xw.xttredir),b)return!1}else if(\u0022_blank\u0022==c.target.toLowerCase()\u0026\u0026(setTimeout(\u0027(xw.open(\u0022\u0027+c.href+\u0027\u0022,\u0022_blank\u0022)).focus();\u0027,1),b))return!1}else if(d||a.href)if(d=d?d:a.href,\u0022_blank\u0022==e)setTimeout(\u0027(xw.open(\u0022\u0027+d+\u0027\u0022,\u0022_blank\u0022)).focus();\u0027,1);else if(setTimeout(\u0027self.location.href=\u0022\u0027+\r\nd+\u0027\u0022\u0027,xw.xttredir),b)return!1;if(b)return xtkey=!1,!0},do_submit:function(a,d,e){if(e\u0026\u0026(setTimeout(function(){a.submit()},500),d\u0026\u0026e))return!1}};\r\nfunction xt_rm(x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14){var rmprm=\u0027\u0026p=\u0027+x3+\u0027\u0026s2=\u0027+x2+\u0027\u0026type=\u0027+x1+\u0027\u0026a=\u0027+x4+\u0027\u0026m5=\u0027+x11+\u0027\u0026m6=\u0027+x12+(((x5!=null)\u0026\u0026(x5!=\u00270\u0027))?\u0027\u0026\u0027+x5:\u0027\u0027)+(((x7!=null)\u0026\u0026(x4!=\u0027pause\u0027)\u0026\u0026(x4!=\u0027stop\u0027))?\u0027\u0026m1=\u0027+x7+\u0027\u0026\u0027+x8+\u0027\u0026m3=\u0027+x9+\u0027\u0026m4=\u0027+x10+\u0027\u0026m7=\u0027+x13+\u0027\u0026m8=\u0027+x14+\u0027\u0026prich=\u0027+xtp+\u0027\u0026s2rich=\u0027+xw.xtn2:\u0027\u0027)+(((x6!=null)\u0026\u0026(x6!=\u00270\u0027)\u0026\u0026(x7!=null))?\u0027\u0026rfsh=\u0027+x6:\u0027\u0027);xtf4(x1,rmprm);var t=new Date();if((x6!=null)\u0026\u0026(x6!=\u00270\u0027)\u0026\u0026((x4==\u0027play\u0027)||(x4==\u0027play\u0026buf=1\u0027)||(x4==\u0027refresh\u0027))){if(xt60.p[x1]\u0026\u0026(((t.getTime())-xt60.p[x1])\u003E1800000)){xt60.d[x1]=0}if(((x4==\u0027play\u0027)||(x4==\u0027play\u0026buf=1\u0027))\u0026\u0026!xt60.d[x1]){xt60.d[x1]=t.getTime()\/1e3;xt60.l[x1]=parseInt(x7);var y=Math.floor(x6),x=(y\u003E1500)?1500:(y\u003C5)?5:y;xt60.i[x1]=x;xt60.u[x1]=x;xt60.p[x1]=!1}else if(x4==\u0027refresh\u0027\u0026\u0026(x12==\u0027live\u0027||!xt60.l[x1]||(xt60.l[x1]\u003E300\u0026\u0026xt60.i[x1]*100\/xt60.l[x1]\u003C2))){var e=(xt60.p[x1])?xt60.e[x1]:(t.getTime()\/1e3)-xt60.d[x1];if(xt60.u[x1]*100\/(e+30)\u003C5){xt60.u[x1]=(e+30)\/100*5}if(xt60.p[x1]){xt60.p[x1]=!1;xt60.d[x1]=(t.getTime()\/1e3)-xt60.e[x1]}xt60.e[x1]=e}xtoid[x1]=xw.setTimeout(\u0022xt_rm(\u0027\u0022+x1+\u0022\u0027,\u0027\u0022+x2+\u0022\u0027,\u0027\u0022+x3+\u0022\u0027,\u0027refresh\u0027,\u00270\u0027,\u0027\u0022+x6+\u0022\u0027,null,\u0027\u0022+x8+\u0022\u0027,\u0027\u0022+x9+\u0022\u0027,\u0027\u0022+x10+\u0022\u0027,\u0027\u0022+x11+\u0022\u0027,\u0027\u0022+x12+\u0022\u0027)\u0022,xt60.u[x1]*1e3)}else if(((x4==\u0027pause\u0027)||(x4==\u0027stop\u0027))\u0026\u0026(xw.xtoid!=null)){xw.clearTimeout(xtoid[x1]);if(x4==\u0027stop\u0027){xt60.i[x1]=0}else{xt60.p[x1]=t.getTime()}}}\r\nfunction xtf4(x1,x2,x3,x4){if(((xtclzone==0)||(xtclzone==3)||(x1!=\u0027C\u0027))\u0026\u0026(x1!=\u0027P\u0027)){if(xtnop\u0026\u0026xt46==\u00270\u0027\u0026\u0026x1==\u0027F\u0027){Xt_param=Xt_param.replace(\u0027\u0026p=\u0027+xtf3(\u0027p\u0027,Xt_param,2),\u0027\u0027);Xt_param=Xt_param.replace(\u0027\u0026s2=\u0027+xtf3(\u0027s2\u0027,Xt_param),\u0027\u0027);if(!AT_hit.isPreviewOrPrerendering())AT_hit.sendTag(x1,null,null,x2);xtnop=false}else{AT_hit.sendTag(x1,x2)}}if((x3!=null)\u0026\u0026(x3!=xtud)\u0026\u0026(x1!=\u0027M\u0027)){if((x4==\u0027\u0027)||(x4==null)){xd.location=x3}else{xfen=window.open(x3,\u0027xfen\u0027,\u0027\u0027);xfen.focus()}}else{return}}\r\nfunction f_nb(a){a=a-Math.floor(a\/100)*100;if(a\u003C10){return\u00270\u0027+a}else{return a}}\r\nvar xtidpg=f_nb(xt21.getHours())+\u0027\u0027+f_nb(xt21.getMinutes())+\u0027\u0027+f_nb(xt21.getSeconds())+\u0027\u0027+xt_rd(7),xt23=0,xt16=\u0027\u0027,xt43=0;\r\nfunction xt_addProduct(rg,pdt,qtt,unp,dsc,dscc){xt23++;xt16+=\u0027\u0026pdt\u0027+xt23+\u0027=\u0027;xt16+=rg?rg+\u0027::\u0027:\u0027\u0027;xt16+=pdt?pdt:\u0027\u0027;xt16+=qtt?\u0027\u0026qte\u0027+xt23+\u0027=\u0027+qtt:\u0027\u0027;xt16+=unp?\u0027\u0026mt\u0027+xt23+\u0027=\u0027+unp:\u0027\u0027;xt16+=dsc?\u0027\u0026dsc\u0027+xt23+\u0027=\u0027+dsc:\u0027\u0027;xt16+=dscc?\u0027\u0026pcode\u0027+xt23+\u0027=\u0027+dscc:\u0027\u0027}\r\nfunction xt_rd(nb){return Math.floor(Math.random()*Math.pow(10,nb))}\r\nfunction xt_addProduct_v2(rg,pdt,qtt,unp,unpht,dsc,dscht,dscc,roimtp){xt23++;xt16+=\u0027\u0026pdt\u0027+xt23+\u0027=\u0027;xt16+=rg?rg+\u0027::\u0027:\u0027\u0027;xt16+=pdt?pdt:\u0027\u0027;xt16+=qtt?\u0027\u0026qte\u0027+xt23+\u0027=\u0027+qtt:\u0027\u0027;xt16+=unp?\u0027\u0026mt\u0027+xt23+\u0027=\u0027+unp:\u0027\u0027;xt16+=unpht?\u0027\u0026mtht\u0027+xt23+\u0027=\u0027+unpht:\u0027\u0027;xt16+=dsc?\u0027\u0026dsc\u0027+xt23+\u0027=\u0027+dsc:\u0027\u0027;xt16+=dscht?\u0027\u0026dscht\u0027+xt23+\u0027=\u0027+dscht:\u0027\u0027;xt16+=roimtp?\u0027\u0026roimt\u0027+xt23+\u0027=\u0027+roimtp:\u0027\u0027;xt16+=dscc?\u0027\u0026pcode\u0027+xt23+\u0027=\u0027+dscc:\u0027\u0027}\r\nfunction xt_addProduct_load(rg,pdt,xv){if(pdt){xt43++;xt44+=(xt43==1)?\u0027\u0026pdtl=\u0027:\u0027|\u0027;xt44+=rg?rg+\u0027::\u0027:\u0027\u0027;xt44+=pdt;xt44+=xv?\u0027;\u0027+xv:\u0027\u0027}}if(typeof(xt_cart)==\u0027function\u0027){xt_cart()}else{xt16=\u0027\u0027}\r\nfunction xtestr(str,expr,pos){var xtid=null;try{xtid=str.match(expr)[pos-1]}catch(e){xtid=null}return xtid}\r\nvar AT_hit={first:!0,referrer:(\u0022acc_dir\u0022==xtf3(\u0022xtref\u0022)?\u0022\u0022:null!=xtf3(\u0022xtref\u0022)?xtf3(\u0022xtref\u0022):\u0022acc_dir\u0022==xtf1(\u0022xtref\u0022)?\u0022\u0022:xtf1(\u0022xtref\u0022)||xt20.replace(\/[\u003C\u003E]\/g,\u0022\u0022)||\u0022\u0022).replace(\/[\u003C\u003E]\/g,\u0022\u0022).substring(0,1600),parse:function(c,a,h,e){var b=[\u0022\u0022];if(1600\u003E=a.length)b[0]=a;else{c=AT_hit.first\u0026\u0026\u0022F\u0022==c?xtidpg:xtidpg.substring(0,6)+xt_rd(8);var n=\u0022\u0022,p=\u0022\u0022,f,m={};f=[];var d=0;0\u003C=a.indexOf(\u0022\u0026ref=\u0022)\u0026\u0026(n=a.substring(a.indexOf(\u0022\u0026ref=\u0022)+1),a=a.replace(n,\u0022\u0022));if(e)for(var g in e)0\u003C=a.indexOf(\u0022\u0026\u0022+g+\u0022=\u0022)\u0026\u00261600\u003C(p=xtf3(g,\r\na,2)).length\u0026\u0026(a=a.replace(\u0022\u0026\u0022+g+\u0022=\u0022+p,\u0022\u0022),f=RegExp(\u0022[\u0022+e[g]+\u0022]\u0022,\u0022gi\u0022),m[g]=p.replace(\/\u0026\/g,\u0022%26\u0022).split(f));f=RegExp(\u0022[\u0022+h+\u0022]\u0022,\u0022gi\u0022);f=a.split(f);for(var l in f)1600\u003E=b[d].length+f[l].length+1?b[d]+=\u0022\u0022!=f[l]?\u0022\u0026\u0022+f[l]:\u0022\u0022:(b.push(\u0022\u0022),d++,b[d]=1600\u003Ef[l].length?b[d]+(\u0022\u0022!=f[l]?\u0022\u0026\u0022+f[l]:\u0022\u0022):b[d]+(\u0022\u0026mherr=1\u0026\u0022+f[l].substring(0,1600)));for(var k in m)for(l=\u0022\u0026\u0022+k+\u0022=\u0022,a=!1,h=m[k].length,g=0;g\u003Ch;g++)1600\u003E=b[d].length+m[k][g].length+1?(a||(b[d]+=l,a=!0),b[d]+=\u0022\u0022!=m[k][g]?m[k][g]+e[k]:\u0022\u0022):(b.push(l),d++,b[d]=1600\u003E\r\nm[k][g].length?b[d]+(\u0022\u0022!=m[k][g]?m[k][g]+e[k]:\u0022\u0022):b[d]+(\u0022mherr=1\u0022+e[k]));n\u0026\u0026(1600\u003E=b[d].length+n.length||(b.push(\u0022\u0022),d++),b[d]+=\u0022\u0026\u0022+n);for(e=0;e\u003Cb.length;e++)b[e]=\u0022\u0026mh=\u0022+(e+1)+\u0022-\u0022+b.length+\u0022-\u0022+c+b[e]}return b},sendTag:function(c,a,h,e){var b=[];h=h||Xt_id+xt8b;h+=xw.xtfirst?\u0022\u0026idclient=\u0022+xt40:\u0022\u0022;c=c||\u0022F\u0022;a=a||Xt_param;a+=(e?e:\u0022\u0022)+\u0022\u0026vtag=\u0022+xtv+AT_hit.localHour()+AT_hit.resolution();AT_hit.first\u0026\u0026\u0022F\u0022==c\u0026\u0026(h+=\u0022\u0022!=xt15||\u0022\u0022!=xt17?\u0022\u0026cmd=\u0022+xt15+\u0022\u0026idcart=\u0022+xt17:\u0022\u0022,a+=xt38?\u0022\u0026stc=\u0022+xt38:\u0022\u0022,a+=\u0022\u0026ref=\u0022+AT_hit.referrer.replace(\/\u0026\/g,\r\n\u0022$\u0022));b=AT_hit.parse(c,a,\u0022\u0026\u0022,{ati:\u0022,\u0022,atc:\u0022,\u0022,pdtl:\u0022|\u0022,stc:\u0022,\u0022,dz:\u0022|\u0022});for(a=0;a\u003Cb.length;a++)AT_hit.loadImage(h+b[a]);AT_hit.first\u0026\u0026\u0022F\u0022==c\u0026\u0026\u0022undefined\u0022!=typeof xtscript\u0026\u0026AT_hit.loadFile(\u0022script\u0022,xtscript,!0,\u0022text\/javascript\u0022);\u0022F\u0022==c\u0026\u0026(AT_hit.first=!1)},loadImage:function(c){var a=new Image;a.src=c;a.onload=function(){a.onload=null}},loadFile:function(c,a,h,e,b){c=document.createElement(c);c.type=e;c.async=h;c.src=a;(b||document.getElementsByTagName(\u0022head\u0022)[0]||document.getElementsByTagName(\u0022body\u0022)[0]||\r\ndocument.getElementsByTagName(\u0022script\u0022)[0].parentNode).insertBefore(c,null)},localHour:function(c){c=c?c:new Date;return\u0022\u0026hl=\u0022+c.getHours()+\u0022x\u0022+c.getMinutes()+\u0022x\u0022+c.getSeconds()},resolution:function(){if(4\u003C=parseFloat(xtg.appVersion))try{return\u0022\u0026r=\u0022+xts.width+\u0022x\u0022+xts.height+\u0022x\u0022+xts.pixelDepth+\u0022x\u0022+xts.colorDepth}catch(c){}return\u0022\u0022},prerenderDisplaying:function(){AT_hit.first\u0026\u0026(AT_hit.sendTag(\u0022F\u0022),\u0022\u0022!=xt44\u0026\u0026AT_hit.sendTag(\u0022PDT\u0022,xt44,null,\u0022\u0026type=PDT\u0026p=\u0022+xtp+(xw.xt_pageID?\u0022\u0026pid=\u0022+xw.xt_pageID+\u0022\u0026pchap=\u0022+\r\n(xw.xt_chap||\u0022\u0022)+\u0022\u0026pidt=\u0022+(xw.xt_pageDate||\u0022\u0022):\u0022\u0022)))},isPreviewOrPrerendering:function(){return window.navigator\u0026\u0026\u0022preview\u0022===window.navigator.loadPurpose\u0026\u0026-1!=xtg.userAgent.indexOf(\u0022Safari\u0022)\u0026\u00260\u003Extg.userAgent.indexOf(\u0022Chrome\u0022)?(xtpreview\u0026\u0026(AT_hit.sendTag(\u0022F\u0022,null,null,\u0022\u0026pvw=1\u0022),\u0022\u0022!=xt44\u0026\u0026AT_hit.sendTag(\u0022PDT\u0022,xt44,null,\u0022\u0026type=PDT\u0026p=\u0022+xtp+(xw.xt_pageID?\u0022\u0026pid=\u0022+xw.xt_pageID+\u0022\u0026pchap=\u0022+(xw.xt_chap||\u0022\u0022)+\u0022\u0026pidt=\u0022+(xw.xt_pageDate||\u0022\u0022):\u0022\u0022))),!0):\u0022prerender\u0022==xd.webkitVisibilityState?(xd.addEventListener(\u0022webkitvisibilitychange\u0022,\r\nAT_hit.prerenderDisplaying,!1),!0):!1}};\r\nfunction xt_ParseUrl(c,a,b,d){AT_hit.sendTag(b?\u0022F\u0022:\u0022old\u0022,a)};function xt_ParseUrl3(c,b,d,e,a,f,g){AT_hit.sendTag(\u0022\u0026ati=\u0022==a?\u0022AT\u0022:\u0022PDT\u0022,b,null,\u0022\u0026type=\u0022+(\u0022\u0026ati=\u0022==a?\u0022AT\u0022:\u0022PDT\u0022))};\r\nif((xt8!=0)||(xt36!=0)||(xt11)){if(xt48!=\u0027\u0027){var xtvid=xtf1(\u0027xtvid\u0027);if(!xtvid){xtvid=xt21.getTime()+\u0027\u0027+xt_rd(6);xt49=xtvid}var xtexp=new Date();xtexp.setMinutes(xtexp.getMinutes()+30);wck(\u0027xtvid\u0027,xtvid,xtexp,\u0027\u0027,1)}var xtpm=\u0027xtor\u0027+ xt8,xtpmd=\u0027xtdate\u0027+ xt8,xtpmc=\u0027xtocl\u0027+ xt8,xtpan=\u0027xtan\u0027+ xt8,xtpat=\u0027xtat\u0027+ xt8,xtpant=\u0027xtant\u0027+ xt8,xt24=xtf3(\u0027xtor\u0027),xtdtgo=xtf3(\u0027xtdt\u0027),xt26=xtf3(\u0027xtan\u0027),xt55=xtf3(\u0027xtat\u0027),xt27=xtf3(\u0027an\u0027,xtm),xt56=xtf3(\u0027at\u0027,xtm),xt28=xtf3(\u0027ac\u0027,xtm),cookie_xtpmc=xtf1(xtpmc),cookie_xtgo=xtf1(\u0027xtgo\u0027),cookie_xtord=xtf1(\u0027xtord\u0027),cookie_xtvrn=xtf1(\u0027xtvrn\u0027),xtocl=(cookie_xtpmc!=null)?cookie_xtpmc:\u0027$\u0027,xtord=(cookie_xtgo==\u00270\u0027)?cookie_xtord:null,xtgord=(cookie_xtgo!=null)?cookie_xtgo:\u00270\u0027,xtvrn=(cookie_xtvrn!=null)?cookie_xtvrn:\u0027$\u0027,xtgmt=xt21.getTime()\/60000,xtgo=(xtdtgo!=null\u0026\u0026xtf3(\u0027xts\u0027)==xt8)?(((xtgmt-xtdtgo)\u003C30)\u0026\u0026(xtgmt-xtdtgo)\u003E=0)?\u00272\u0027:\u00271\u0027:xtgord,xtpgt=(xtgord==\u00271\u0027)?\u0027\u0026pgt=\u0027+cookie_xtord:((xtgo==\u00271\u0027)\u0026\u0026(xt24!=null))?\u0027\u0026pgt=\u0027+xt24:\u0027\u0027,xto=(xt10!=null)?xt10:((xt24!=null)\u0026\u0026(xtgo==\u00270\u0027))?xt24:(!xt11)?xtord:null;\r\nxto=((xtocl.indexOf(\u0027$\u0027+xto+\u0027$\u0027)\u003C0)||(xtocl==\u0027$\u0027))?xto:null;var xtock=(xtgo==\u00270\u0027)?xto:(xtgord==\u00272\u0027)?cookie_xtord:(xtgo==\u00272\u0027)?xt24:null;if(xtock!=null){tmpxto=xtock.substring(0,xtock.indexOf(\u0027-\u0027));var xtdrm=xt4[tmpxto]}else{xtdrm=\u00271\u0027}if((xtdrm==null)||(xtdrm==xtud)){xtdrm=xt4[\u0027ad\u0027]}if((xt26==null)\u0026\u0026(!xt11)){xt26=xtf1(\u0027xtanrd\u0027)}if((xt55==null)\u0026\u0026(!xt11)){xt55=xtf1(\u0027xtatrd\u0027)}var xtanc=xtf1(xtpan),xtattc=xtf1(xtpat),xtanct=xtf1(xtpant),xtxp=new Date(),xt29=new Date(),xt30=new Date();\r\nif(!xt11){xtxp.setTime(xtxp.getTime()+(xtdrm*24*3600*1000))}else{xtxp.setTime(xtxp.getTime()+(xt5*1000))}xt30.setTime(xt30.getTime()+1800000);xt29.setTime(xt29.getTime()+(xt3*24*3600*1000));var xt31=(xt26!=null)?xt26.indexOf(\u0027-\u0027):0,xt57=(xt55!=null)?xt55.indexOf(\u0027-\u0027):0,xtan2=(xt27!=null)?\u0027\u0027:((xt26!=null)\u0026\u0026(xt31\u003E0))?\u0027\u0026ac=\u0027+xt26.substring(0,xt31)+\u0027\u0026ant=0\u0026an=\u0027+xt26.substring(xt31+1,xt26.length):(xtanc!=null)?\u0027\u0026anc=\u0027+xtanc+\u0027\u0026anct=\u0027+xtanct:\u0027\u0027,xtat2=(xt56!=null)?\u0027\u0027:((xt55!=null)\u0026\u0026(xt57\u003E0))?\u0027\u0026ac=\u0027+xt55.substring(0,xt57)+\u0027\u0026ant=0\u0026at=\u0027+xt55.substring(xt57+1,xt55.length):(xtattc!=null)?\u0027\u0026attc=\u0027+xtattc+\u0027\u0026anct=\u0027+xtanct:\u0027\u0027,xt32=(xtvrn.indexOf(\u0027$\u0027+xt8+\u0027$\u0027)\u003C0)?\u0027\u0026vrn=1\u0027:\u0027\u0027,xt35=((xtf3(\u0027xtatc\u0027)!=null)\u0026\u0026(xtf3(\u0027atc\u0027,xtm)==null))?\u0027\u0026atc=\u0027+xtf3(\u0027xtatc\u0027):\u0027\u0027;\r\nif(xt32!=\u0027\u0027){wck(\u0027xtvrn\u0027,(xtvrn.length\u003C141)?xtvrn+xt8+\u0027$\u0027:xtvrn.substring(0,141),xt29,xt1,0)}xt32+=(xto==null)?\u0027\u0027:\u0027\u0026xto=\u0027+xto;xt32+=((xtan2!=\u0027\u0027)?xtan2:xtat2)+xtpgt+xt35;if(xt27!=null){wck(xtpan,xt28+\u0027-\u0027+xt27,xt29,xt1,1);wck(xtpant,\u00271\u0027,xt29,xt1,1)}else if((xt26!=null)\u0026\u0026(xtanct!=\u00271\u0027)){wck(xtpan,xt26,xt29,xt1,1);wck(xtpant,\u00270\u0027,xt29,xt1,1)}if(xt56!=null){wck(xtpat,xt28+\u0027-\u0027+xt56,xt29,xt1,1);wck(xtpant,\u00271\u0027,xt29,xt1,1)}else if((xt55!=null)\u0026\u0026(xtanct!=\u00271\u0027)){wck(xtpat,xt55,xt29,xt1,1);wck(xtpant,\u00270\u0027,xt29,xt1,1)}\r\nvar xtor=xtf1(xtpm),xtor_duree=xtf1(xtpmd),xtdate2=(xtor_duree!=null)?new Date(xtor_duree):new Date(),xt34=xtdate2.getTime()\/(1000*3600),xtecart=(Math.floor(xt22-xt34)\u003E=0)?Math.floor(xt22-xt34):0;xt32+=(xtor==null)?\u0027\u0027:\u0027\u0026xtor=\u0027+xtor+\u0027\u0026roinbh=\u0027+xtecart;if(!xt11){if((xtock!=null)\u0026\u0026((xtocl.indexOf(\u0027$\u0027+escape(xtock)+\u0027$\u0027)\u003C0)||(xtocl==\u0027$\u0027))){wck(xtpmc,xtocl+xtock+\u0027$\u0027,xt30,xt1,1)}var xtnav=xtg.appName+\u0027 \u0027+xtg.appVersion,xtIE=(xtnav.indexOf(\u0027MSIE\u0027));if(xtIE\u003E=0){var xtvers=parseInt(xtnav.substr(xtIE+5));xtIE=true}else{xtvers=parseFloat(xtg.appVersion);xtIE=false}var xtnet=(xtnav.indexOf(\u0027Netscape\u0027)\u003E=0),xtmac=(xtnav.indexOf(\u0027Mac\u0027)\u003E=0),xtOP=(xtg.userAgent.indexOf(\u0027Opera\u0027)\u003E=0);if((xtIE)\u0026\u0026(xtvers\u003E=5)\u0026\u0026(!xtmac)\u0026\u0026(!xtOP)\u0026\u0026(!xt11)){try{xd.body.addBehavior(\u0027#default#clientCaps\u0027);var xtconn=\u0027\u0026cn=\u0027+xd.body.connectionType;xtconn+=\u0027\u0026ul=\u0027+xd.body.UserLanguage;xd.body.addBehavior(\u0027#default#homePage\u0027);var xthome=\u0027\u0027;xthome=(xd.body.isHomePage(location.href))?\u0027\u0026hm=1\u0027:\u0027\u0026hm=0\u0027;var xtresr=\u0027\u0026re=\u0027+xd.body.offsetWidth+\u0027x\u0027+xd.body.offsetHeight}catch(e){}}else{var xtconn=\u0027\u0027,xthome=\u0027\u0027;if(xtvers\u003E=5){xtresr=\u0027\u0026re=\u0027+xw.innerWidth+\u0027x\u0027+xw.innerHeight}else{xtresr=\u0027\u0027}}\r\nif((xtnet)\u0026\u0026(xtvers\u003E=4)||(xtOP)){var xtlang=\u0027\u0026lng=\u0027+xtg.language}else{if((xtIE)\u0026\u0026(xtvers\u003E=4)\u0026\u0026(!xtOP)){var xtlang=\u0027\u0026lng=\u0027+xtg.userLanguage}else{xtlang=\u0027\u0027}}wck(\u0027xtord\u0027,\u0027\u0027,xt21,xt1,1);if(xtock!=null){if((xtor==null)||(xt2==\u00271\u0027)){wck(xtpm,xtock,xtxp,xt1,1);wck(xtpmd,xt21,xtxp,xt1,1)}}var xt45=(xtdocl)?\u0027\u0026docl=\u0027+encodeURIComponent(xt6.location.href.replace(\/\u0026\/g,\u0027#ec#\u0027)):\u0027\u0027,Xt_param=xt9+\u0027\u0026p=\u0027+xtp+AT_hit.localHour()+xtdi+xt12+xt13+xt32+xt45+xt47+xtm+xtconn+xthome+xtlang+\u0027\u0026idp=\u0027+xtidpg;var xtvalCZ=xtf1(\u0027xtvalCZ\u0027,1);if(xtvalCZ!=null){Xt_param+=xtvalCZ.replace(\u0027\u0026c=\u0027,\u0027\u0026current=\u0027).replace(\u0027\u0026b=\u0027,\u0027\u0026before=\u0027).replace(\u0027\u0026a=\u0027,\u0027\u0026after=\u0027);var xtdateo=new Date();xtdateo.setTime(xtdateo.getTime()-3600000);wck(\u0027xtvalCZ\u0027,xtvalCZ,xtdateo,xt1,1)}var Xt_id=xt7+\u0027?\u0027;\r\nvar xtide=xtf1(\u0027xtide\u0027);if(xtock!=null){switch(tmpxto.toLowerCase()){case\u0027erec\u0027:case\u0027epr\u0027:case\u0027es\u0027:var xtmpide=null;try{var xtide_t=xtock.match(\/(\\[[^\\]]*\\])|([^\\-]+)|(-)\/g);var xtide_c=0;for(elem in xtide_t){if(xtide_t[elem]==\u0022-\u0022){xtide_c++}if(xtide_c==5\u0026\u0026xtide_t[elem]!=\u0022-\u0022){xtmpide=xtide_t[elem]}}}catch(e){xtmpide=null}if(xtmpide!=null){xtide=xtmpide;wck(\u0027xtide\u0027,xtide,xt29,\u0027\u0027,1)}break;default:break}}Xt_param+=\u0027\u0026jv=\u0027+(xtg.javaEnabled()?\u00271\u0027:\u00270\u0027)+xtresr+xt16+((xtide!=null)?\u0027\u0026ide=\u0027+xtide:\u0027\u0027);var Xt_i=Xt_id+Xt_param+\u0027\u0026ref=\u0027+AT_hit.referrer.replace(\/\u0026\/g,\u0027$\u0027);if(xt49){Xt_param+=\u0027\u0026lnk=\u0027+xt48+\u0027\u0026vid=\u0027+xt49}if(xt46!=\u00270\u0027\u0026\u0026!AT_hit.isPreviewOrPrerendering()){AT_hit.sendTag(\u0027F\u0027);if(xt44!=\u0027\u0027)AT_hit.sendTag(\u0027PDT\u0027,xt44,null,\u0027\u0026type=PDT\u0027+\u0027\u0026p=\u0027+xtp+(xw.xt_pageID?\u0027\u0026pid=\u0027+xw.xt_pageID+\u0027\u0026pchap=\u0027+(xw.xt_chap||\u0027\u0027)+\u0027\u0026pidt=\u0027+(xw.xt_pageDate||\u0027\u0027):\u0027\u0027))}}else{wck(\u0027xtgo\u0027,xtgo,xtxp,xt1,1);if(xt24!=null){wck(\u0027xtord\u0027,xt24,xtxp,xt1,1)}if(xt26!=null){wck(\u0027xtanrd\u0027,xt26,xtxp,xt1,1)}if(xt55!=null){wck(\u0027xtatrd\u0027,xt55,xtxp,xt1,1)}wck(\u0027xtref\u0027, AT_hit.referrer?AT_hit.referrer.replace(\/\u0026\/g, \u0027$\u0027):\u0027acc_dir\u0027, xtxp, xt1, 0);if(xw.xtloc!=null){xt6.location=xw.xtloc}}}\r\nif((xtclzone\u003E0)\u0026\u0026(typeof(xtNodesload)==\u0027function\u0027)){if(!xt58){xtNodesload()}else if(xw.addEventListener){xw.addEventListener(\u0027load\u0027,xtNodesload,false)}else if(xw.attachEvent){xw.attachEvent(\u0027onload\u0027,xtNodesload)}}"},"user":{"uid":0,"permissionsHash":"d25e590309288b4563bf5b9dde677872b7a10094cd3e23ac66e5b378f22f7fb9"}}</script>
+<script src="/sites/default/files/js/js_5SVVyW-sEyyHinOsqmUhMejD76GvBFqQ-WperADTXoM.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"6727f55db8","applicationID":"471954491","transactionName":"ZgdVbUUCX0pSB01ZC19NdlpDCl5XHBRYVwFuAVZaXwY=","queueTime":0,"applicationTime":38,"atts":"SkBWGw0YTEQ=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
